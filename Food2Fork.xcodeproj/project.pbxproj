@@ -104,6 +104,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF0C50A8213E8F0F003989E4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CF0C50AB213E9079003989E4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		CFE067C4213D6F23000E95FC = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +181,8 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CF0C50AB213E9079003989E4 /* Constants */,
+				CF0C50A8213E8F0F003989E4 /* Features */,
 				CFE067D2213D6F23000E95FC /* ViewController.swift */,
 				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
 			);
@@ -213,9 +229,11 @@
 			buildConfigurationList = CFE067F8213D6F25000E95FC /* Build configuration list for PBXNativeTarget "Food2Fork" */;
 			buildPhases = (
 				8C2AEC04F47DC2D98B6C2656 /* [CP] Check Pods Manifest.lock */,
+				CF0C50AC213E909B003989E4 /* R.swift */,
 				CFE067C9213D6F23000E95FC /* Sources */,
 				CFE067CA213D6F23000E95FC /* Frameworks */,
 				CFE067CB213D6F23000E95FC /* Resources */,
+				CF0C50AD213E90D5003989E4 /* SwiftLint */,
 				67BA5904C6DB56BA4521CA76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -339,15 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Food2ForkTests-checkManifestLockResult.txt",
 			);
@@ -361,15 +375,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
@@ -383,15 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Food2Fork-checkManifestLockResult.txt",
 			);
@@ -399,6 +405,34 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CF0C50AC213E909B003989E4 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Food2Fork/Sources/Constants\"";
+		};
+		CF0C50AD213E90D5003989E4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 /* End PBXShellScriptBuildPhase section */
 
