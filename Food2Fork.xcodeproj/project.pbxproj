@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
-		CF0C50AF213E9112003989E4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C50AE213E9112003989E4 /* Extensions.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D3213D6F23000E95FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D2213D6F23000E95FC /* ViewController.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
@@ -43,7 +42,6 @@
 		B2CE337691B93C009DA08834 /* Pods-Food2ForkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2ForkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF0C50AE213E9112003989E4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D2213D6F23000E95FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				CF0C50A8213E8F0F003989E4 /* Features */,
 				CFE067D2213D6F23000E95FC /* ViewController.swift */,
 				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
-				CF0C50AE213E9112003989E4 /* Extensions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -444,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF0C50AF213E9112003989E4 /* Extensions.swift in Sources */,
 				CFE067D3213D6F23000E95FC /* ViewController.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
