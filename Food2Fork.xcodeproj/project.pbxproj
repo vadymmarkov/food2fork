@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
+		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
+		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
+		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
+		CFA1FF45213ED674001394DB /* FavoritesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF44213ED674001394DB /* FavoritesNavigationController.swift */; };
+		CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF46213ED689001394DB /* SearchNavigationController.swift */; };
+		CFA1FF49213ED699001394DB /* DiscoveryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */; };
+		CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */; };
+		CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D3213D6F23000E95FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D2213D6F23000E95FC /* ViewController.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
@@ -42,6 +50,14 @@
 		B2CE337691B93C009DA08834 /* Pods-Food2ForkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2ForkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		CFA1FF44213ED674001394DB /* FavoritesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesNavigationController.swift; sourceTree = "<group>"; };
+		CFA1FF46213ED689001394DB /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationController.swift; sourceTree = "<group>"; };
+		CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D2213D6F23000E95FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +123,13 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CFA1FF4A213ED782001394DB /* App */,
+				CFA1FF39213ED480001394DB /* Dependencies */,
+				CFA1FF3E213ED597001394DB /* Discovery */,
+				CFA1FF40213ED5CF001394DB /* Favorites */,
+				CFA1FF4D213ED7CA001394DB /* Main */,
+				CFA1FF41213ED605001394DB /* Recipe */,
+				CFA1FF3F213ED5C6001394DB /* Search */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -116,6 +139,63 @@
 			children = (
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		CFA1FF39213ED480001394DB /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
+				CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		CFA1FF3E213ED597001394DB /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		CFA1FF3F213ED5C6001394DB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF46213ED689001394DB /* SearchNavigationController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CFA1FF40213ED5CF001394DB /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF44213ED674001394DB /* FavoritesNavigationController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CFA1FF41213ED605001394DB /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		CFA1FF4A213ED782001394DB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CFA1FF4D213ED7CA001394DB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		CFE067C4213D6F23000E95FC = {
@@ -443,7 +523,15 @@
 			files = (
 				CFE067D3213D6F23000E95FC /* ViewController.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
+				CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */,
+				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
+				CFA1FF45213ED674001394DB /* FavoritesNavigationController.swift in Sources */,
+				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
+				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,
+				CFA1FF49213ED699001394DB /* DiscoveryNavigationController.swift in Sources */,
+				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
+				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
