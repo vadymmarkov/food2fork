@@ -11,4 +11,5 @@ import Foundation
 struct APIConfig {
     let baseUrl = "http://food2fork.com/api"
     let key = "d48653216a845330b3419ee0f19e2b58"
+    let acceptHeader = "application/json"
 }
