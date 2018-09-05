@@ -1,5 +1,5 @@
 //
-//  ExploreNavigationController.swift
+//  SearchNavigationController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ExploreNavigationController: UINavigationController {
+final class SearchNavigationController: UINavigationController {
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init
@@ -26,5 +26,16 @@ final class ExploreNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = R.color.backgroundPrimary()
+        startSearch()
+    }
+}
+
+// MARK: - Flow
+
+private extension SearchNavigationController {
+    func startSearch() {
+        let viewController = controllerFactory.makeSearchViewController()
+        setViewControllers([viewController], animated: false)
     }
 }

@@ -16,11 +16,11 @@ final class DependencyContainer {
 
 extension DependencyContainer: ControllerFactory {
     func makeAppFlowController() -> AppFlowController {
-        return AppFlowController()
+        return AppFlowController(controllerFactory: self)
     }
 
     func makeMainTabBarController() -> MainTabBarController {
-        return MainTabBarController()
+        return MainTabBarController(controllerFactory: self)
     }
 
     func makeExploreNavigationController() -> ExploreNavigationController {
@@ -33,6 +33,10 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
+    func makeExploreViewController() -> ExploreViewController {
+        return ExploreViewController()
+    }
+
     func makeSearchNavigationController() -> SearchNavigationController {
         let controller = SearchNavigationController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
@@ -43,6 +47,10 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
+    func makeSearchViewController() -> SearchViewController {
+        return SearchViewController()
+    }
+
     func makeFavoritesNavigationController() -> FavoritesNavigationController {
         let controller = FavoritesNavigationController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
@@ -51,5 +59,9 @@ extension DependencyContainer: ControllerFactory {
             selectedImage: nil
         )
         return controller
+    }
+
+    func makeFavoritesViewController() -> FavoritesViewController {
+        return FavoritesViewController()
     }
 }

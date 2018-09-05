@@ -26,5 +26,16 @@ final class FavoritesNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = R.color.backgroundPrimary()
+        startFavorites()
+    }
+}
+
+// MARK: - Flow
+
+private extension FavoritesNavigationController {
+    func startFavorites() {
+        let viewController = controllerFactory.makeFavoritesViewController()
+        setViewControllers([viewController], animated: false)
     }
 }
