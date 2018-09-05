@@ -19,7 +19,7 @@ protocol ControllerFactory {
 
     func makeSearchNavigationController() -> SearchNavigationController
     func makeSearchViewController() -> SearchViewController
-    
+
     func makeFavoritesNavigationController() -> FavoritesNavigationController
     func makeFavoritesViewController() -> FavoritesViewController
 }
