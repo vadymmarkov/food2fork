@@ -25,6 +25,8 @@
 		CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA22140063600A39C71 /* ExploreViewController.swift */; };
 		CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */; };
 		CFA3DFA921400AF900A39C71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA821400AF900A39C71 /* SearchViewController.swift */; };
+		CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAC214016D200A39C71 /* Endpoint.swift */; };
+		CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAE214017A900A39C71 /* APIConfig.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
 		CFE067DB213D6F24000E95FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DA213D6F24000E95FC /* Images.xcassets */; };
@@ -73,6 +75,8 @@
 		CFA3DFA22140063600A39C71 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFA3DFA821400AF900A39C71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CFA3DFAC214016D200A39C71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CFA3DFAE214017A900A39C71 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D8213D6F23000E95FC /* Food2Fork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food2Fork.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3DFAA214012C700A39C71 /* Networking */,
 				CFA1FF3E213ED597001394DB /* Explore */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
 				CFA1FF4D213ED7CA001394DB /* Main */,
@@ -151,6 +156,7 @@
 			children = (
 				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
 				CFA3DF9D213FF56200A39C71 /* Fonts.swift */,
+				CFA3DFAE214017A900A39C71 /* APIConfig.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -238,6 +244,14 @@
 				CFA3DFA821400AF900A39C71 /* SearchViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CFA3DFAA214012C700A39C71 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3DFAC214016D200A39C71 /* Endpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CFE067C4213D6F23000E95FC = {
@@ -504,11 +518,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Malibu/Malibu.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/When/When.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Malibu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/When.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -582,7 +600,9 @@
 				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
 				CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */,
+				CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
+				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				CFA3DF9E213FF56200A39C71 /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
