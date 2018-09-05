@@ -15,7 +15,7 @@ enum Endpoint: RequestConvertible {
     static var headers: [String: String] = [:]
 
     case explore
-    case search(text: String)
+    case search(text: String, sort: Sort, page: Int)
     case recipe(id: Int)
 }
 
@@ -26,10 +26,34 @@ extension Endpoint {
         switch self {
         case .explore:
             return Request.get("search")
-        case .search(let text):
-            return Request.get("search")
-        case .recipe(let id):
-            return Request.get("")
+        case let .search(text, sort, page):
+            let parameters: [String: Any] = [
+                "q": text,
+                "sort": sort.rawValue,
+                "page": page
+            ]
+            return Request.get("search", parameters: parameters)
+        case let .recipe(id):
+            let parameters: [String: Any] = ["rId": id]
+            return Request.get("get", parameters: parameters)
         }
+    }
+}
+
+// MARK: - Helper types
+
+extension Endpoint {
+    enum Sort: String {
+        case rating = "r"
+        case trendingness = "t"
+    }
+}
+
+// MARK: - Configuration
+
+extension Endpoint {
+    static func configure(with config: APIConfig) {
+        baseUrl = config.baseUrl
+        headers = ["Accept": config.acceptHeader]
     }
 }

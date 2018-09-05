@@ -172,6 +172,7 @@
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DA46518321404D64005B3353 /* Models */,
 				CFA3DFA52140099E00A39C71 /* Controllers */,
 			);
 			path = Search;
@@ -358,6 +359,13 @@
 				CFE067F5213D6F25000E95FC /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA46518321404D64005B3353 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
