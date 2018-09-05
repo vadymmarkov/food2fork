@@ -14,7 +14,12 @@ protocol ControllerFactory {
     func makeAppFlowController() -> AppFlowController
     func makeMainTabBarController() -> MainTabBarController
 
-    func makeDiscoveryNavigationController() -> DiscoveryNavigationController
-    func makeFavoritesNavigationController() -> FavoritesNavigationController
+    func makeExploreNavigationController() -> ExploreNavigationController
+    func makeExploreViewController() -> ExploreViewController
+
     func makeSearchNavigationController() -> SearchNavigationController
+    func makeSearchViewController() -> SearchViewController
+    
+    func makeFavoritesNavigationController() -> FavoritesNavigationController
+    func makeFavoritesViewController() -> FavoritesViewController
 }

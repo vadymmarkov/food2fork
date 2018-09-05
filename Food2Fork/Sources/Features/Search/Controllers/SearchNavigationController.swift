@@ -1,5 +1,5 @@
 //
-//  MainTabBarController.swift
+//  SearchNavigationController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainTabBarController: UITabBarController {
+final class SearchNavigationController: UINavigationController {
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init
@@ -26,16 +26,16 @@ final class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = R.color.backgroundPrimary()
-        tabBar.tintColor = R.color.brand()
+        startSearch()
+    }
+}
 
-        let controllers = [
-            controllerFactory.makeExploreNavigationController(),
-            controllerFactory.makeSearchNavigationController(),
-            controllerFactory.makeFavoritesNavigationController()
-        ]
+// MARK: - Flow
 
-        setViewControllers(controllers, animated: false)
+private extension SearchNavigationController {
+    func startSearch() {
+        let viewController = controllerFactory.makeSearchViewController()
+        setViewControllers([viewController], animated: false)
     }
 }

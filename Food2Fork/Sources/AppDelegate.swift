@@ -12,12 +12,13 @@ import CoreData
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    private lazy var mainController = ViewController()
+    private lazy var dependencyContainer = DependencyContainer()
+    private lazy var appFlowController = self.dependencyContainer.makeAppFlowController()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = mainController
+        window?.rootViewController = appFlowController
         window?.makeKeyAndVisible()
 
         return true

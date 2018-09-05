@@ -1,5 +1,5 @@
 //
-//  MainTabBarController.swift
+//  FavoritesNavigationController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainTabBarController: UITabBarController {
+final class FavoritesNavigationController: UINavigationController {
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init
@@ -26,16 +26,16 @@ final class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = R.color.backgroundPrimary()
-        tabBar.tintColor = R.color.brand()
+        startFavorites()
+    }
+}
 
-        let controllers = [
-            controllerFactory.makeExploreNavigationController(),
-            controllerFactory.makeSearchNavigationController(),
-            controllerFactory.makeFavoritesNavigationController()
-        ]
+// MARK: - Flow
 
-        setViewControllers(controllers, animated: false)
+private extension FavoritesNavigationController {
+    func startFavorites() {
+        let viewController = controllerFactory.makeFavoritesViewController()
+        setViewControllers([viewController], animated: false)
     }
 }
