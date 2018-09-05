@@ -9,7 +9,6 @@
 import UIKit
 
 final class FavoritesNavigationController: UINavigationController {
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

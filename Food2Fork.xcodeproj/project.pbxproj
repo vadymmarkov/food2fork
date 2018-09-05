@@ -14,7 +14,7 @@
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
 		CFA1FF45213ED674001394DB /* FavoritesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF44213ED674001394DB /* FavoritesNavigationController.swift */; };
 		CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF46213ED689001394DB /* SearchNavigationController.swift */; };
-		CFA1FF49213ED699001394DB /* DiscoveryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */; };
+		CFA1FF49213ED699001394DB /* ExploreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF48213ED699001394DB /* ExploreNavigationController.swift */; };
 		CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */; };
 		CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		CFA1FF44213ED674001394DB /* FavoritesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesNavigationController.swift; sourceTree = "<group>"; };
 		CFA1FF46213ED689001394DB /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
-		CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationController.swift; sourceTree = "<group>"; };
+		CFA1FF48213ED699001394DB /* ExploreNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreNavigationController.swift; sourceTree = "<group>"; };
 		CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,9 +123,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CFA1FF4A213ED782001394DB /* App */,
-				CFA1FF39213ED480001394DB /* Dependencies */,
-				CFA1FF3E213ED597001394DB /* Discovery */,
+				CFA1FF3E213ED597001394DB /* Explore */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
 				CFA1FF4D213ED7CA001394DB /* Main */,
 				CFA1FF41213ED605001394DB /* Recipe */,
@@ -141,21 +139,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		CFA1FF39213ED480001394DB /* Dependencies */ = {
+		CFA1FF3E213ED597001394DB /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
-				CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */,
+				CFA1FF48213ED699001394DB /* ExploreNavigationController.swift */,
 			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		CFA1FF3E213ED597001394DB /* Discovery */ = {
-			isa = PBXGroup;
-			children = (
-				CFA1FF48213ED699001394DB /* DiscoveryNavigationController.swift */,
-			);
-			path = Discovery;
+			path = Explore;
 			sourceTree = "<group>";
 		};
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
@@ -186,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */,
+				CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */,
+				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -261,6 +252,7 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CFA1FF4A213ED782001394DB /* App */,
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CF0C50A8213E8F0F003989E4 /* Features */,
 				CFE067D2213D6F23000E95FC /* ViewController.swift */,
@@ -528,7 +520,7 @@
 				CFA1FF45213ED674001394DB /* FavoritesNavigationController.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
 				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,
-				CFA1FF49213ED699001394DB /* DiscoveryNavigationController.swift in Sources */,
+				CFA1FF49213ED699001394DB /* ExploreNavigationController.swift in Sources */,
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,

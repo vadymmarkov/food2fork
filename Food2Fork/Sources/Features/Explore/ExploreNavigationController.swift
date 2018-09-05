@@ -1,5 +1,5 @@
 //
-//  DiscoveryNavigationController.swift
+//  ExploreNavigationController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DiscoveryNavigationController: UINavigationController {
+final class ExploreNavigationController: UINavigationController {
 
     // MARK: - Lifecycle
 
