@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Food2Fork
+
+  Created by Markov, Vadym on 05/09/2018.
+  Copyright © 2018 FINN.no AS. All rights reserved.
+*/
+
+"explore" = "Explore";
+"search" = "Search";
+"favorites" = "Favorites";

@@ -17,6 +17,8 @@
 		CFA1FF49213ED699001394DB /* ExploreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF48213ED699001394DB /* ExploreNavigationController.swift */; };
 		CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */; };
 		CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */; };
+		CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */; };
+		CFA3DF92213FF1D800A39C71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFA3DF94213FF1D800A39C71 /* Localizable.strings */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D3213D6F23000E95FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D2213D6F23000E95FC /* ViewController.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
@@ -58,6 +60,8 @@
 		CFA1FF48213ED699001394DB /* ExploreNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreNavigationController.swift; sourceTree = "<group>"; };
 		CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		CFA1FF4E213ED7E1001394DB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		CFA3DF93213FF1D800A39C71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D2213D6F23000E95FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		CF0C50AB213E9079003989E4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */,
 				CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */,
 				CFE067DF213D6F24000E95FC /* Info.plist */,
+				CFA3DF94213FF1D800A39C71 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE067DE213D6F24000E95FC /* LaunchScreen.storyboard in Resources */,
+				CFA3DF92213FF1D800A39C71 /* Localizable.strings in Resources */,
 				CFE067DB213D6F24000E95FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +531,7 @@
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,
+				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +567,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CFA3DF94213FF1D800A39C71 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA3DF93213FF1D800A39C71 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
