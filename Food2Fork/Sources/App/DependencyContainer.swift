@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Malibu
 
 final class DependencyContainer {
-
+    private let apiConfig = APIConfig()
+    private lazy var networking: Networking<Endpoint> = {
+        let networking = Networking<Endpoint>()
+        Endpoint.configure(with: self.apiConfig)
+        networking.beforeEach = { request in
+            return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
+        }
+        return networking
+    }()
 }
 
 // MARK: - Controller Factory
