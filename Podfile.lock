@@ -1,24 +1,34 @@
 PODS:
+  - Malibu (7.0.2):
+    - When (~> 3.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
   - SwiftLint (0.27.0)
+  - When (3.0.3):
+    - When/Core (= 3.0.3)
+  - When/Core (3.0.3)
 
 DEPENDENCIES:
+  - Malibu (~> 7.0)
   - R.swift (~> 4.0)
   - SwiftLint (= 0.27.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Malibu
     - R.swift
     - R.swift.Library
     - SwiftLint
+    - When
 
 SPEC CHECKSUMS:
+  Malibu: 5a98bf59b59f24f6fa5664e0ffebf0da1a0e807d
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  When: 4ff08e016ff5b70ad7fcfdc2b7de0825b60b3ec6
 
-PODFILE CHECKSUM: 5b740b1c510f98ca70fd66001be2ca2e97703d86
+PODFILE CHECKSUM: db1c93acfb7a4170167167d910df7ca45cdbc69b
 
 COCOAPODS: 1.5.3
