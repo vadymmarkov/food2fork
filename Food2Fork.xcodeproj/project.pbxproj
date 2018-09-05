@@ -33,6 +33,21 @@
 		CFE067DE213D6F24000E95FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */; };
 		CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */; };
 		CFE067F4213D6F25000E95FC /* Food2ForkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */; };
+		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
+		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
+		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
+		DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518C21405F4A005B3353 /* ExploreCollectionViewCell.swift */; };
+		DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */; };
+		DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519021406177005B3353 /* UIView+Extensions.swift */; };
+		DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651922140619A005B3353 /* UITableView+Extensions.swift */; };
+		DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */; };
+		DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651972140655D005B3353 /* ExploreLogicController.swift */; };
+		DA46519A214065EF005B3353 /* ExploreState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465199214065EF005B3353 /* ExploreState.swift */; };
+		DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519B214066A6005B3353 /* Promise+Networking.swift */; };
+		DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519D2140670F005B3353 /* Data+Decodable.swift */; };
+		DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651A521406EEF005B3353 /* ImageLoader.swift */; };
+		DA4651A921408AFA005B3353 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = DA4651A821408AFA005B3353 /* recipes.json */; };
+		DA4651AB21408B6E005B3353 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = DA4651AA21408B6E005B3353 /* recipe.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +104,22 @@
 		CFE067EF213D6F25000E95FC /* Food2ForkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Food2ForkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food2ForkUITests.swift; sourceTree = "<group>"; };
 		CFE067F5213D6F25000E95FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
+		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
+		DA46518C21405F4A005B3353 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraints+Extensions.swift"; sourceTree = "<group>"; };
+		DA46519021406177005B3353 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DA4651922140619A005B3353 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		DA4651972140655D005B3353 /* ExploreLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicController.swift; sourceTree = "<group>"; };
+		DA465199214065EF005B3353 /* ExploreState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreState.swift; sourceTree = "<group>"; };
+		DA46519B214066A6005B3353 /* Promise+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Networking.swift"; sourceTree = "<group>"; };
+		DA46519D2140670F005B3353 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
+		DA4651A221406BF0005B3353 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DA4651A521406EEF005B3353 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		DA4651A821408AFA005B3353 /* recipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
+		DA4651AA21408B6E005B3353 /* recipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +163,7 @@
 		C59FC5933FD3C13035FAA4AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA4651A221406BF0005B3353 /* Security.framework */,
 				2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */,
 				CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */,
 			);
@@ -141,6 +173,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DA4651A421406EDE005B3353 /* Cache */,
 				CFA3DFAA214012C700A39C71 /* Networking */,
 				CFA1FF3E213ED597001394DB /* Explore */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
@@ -164,7 +197,9 @@
 		CFA1FF3E213ED597001394DB /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DA4651962140654D005B3353 /* Logic */,
 				CFA3DFA12140062000A39C71 /* Controllers */,
+				DA46518B21405F39005B3353 /* Views */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -189,6 +224,7 @@
 		CFA1FF41213ED605001394DB /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				DA46518821405888005B3353 /* Models */,
 				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
 			);
 			path = Recipe;
@@ -197,6 +233,7 @@
 		CFA1FF4A213ED782001394DB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
 				CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */,
 				CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */,
 				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
@@ -216,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
+				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
+				DA46519021406177005B3353 /* UIView+Extensions.swift */,
+				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
+				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA3DFAC214016D200A39C71 /* Endpoint.swift */,
+				DA46519B214066A6005B3353 /* Promise+Networking.swift */,
+				DA46519D2140670F005B3353 /* Data+Decodable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -307,6 +350,7 @@
 		CFE06801213D7399000E95FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA4651A721408AEA005B3353 /* Mocks */,
 				CFE067DF213D6F24000E95FC /* Info.plist */,
 				CFA3DF9F213FF75700A39C71 /* Colors.xcassets */,
 				CFE067DA213D6F24000E95FC /* Images.xcassets */,
@@ -320,7 +364,6 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
 				CFA1FF4A213ED782001394DB /* App */,
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CFA3DF96213FF37E00A39C71 /* Extensions */,
@@ -364,8 +407,52 @@
 		DA46518321404D64005B3353 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA46518421405229005B3353 /* SearchNetworkResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA46518821405888005B3353 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA46518621405441005B3353 /* Recipe.swift */,
+				DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA46518B21405F39005B3353 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA46518C21405F4A005B3353 /* ExploreCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA4651962140654D005B3353 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				DA4651972140655D005B3353 /* ExploreLogicController.swift */,
+				DA465199214065EF005B3353 /* ExploreState.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		DA4651A421406EDE005B3353 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		DA4651A721408AEA005B3353 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DA4651A821408AFA005B3353 /* recipes.json */,
+				DA4651AA21408B6E005B3353 /* recipe.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +564,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4651A921408AFA005B3353 /* recipes.json in Resources */,
+				DA4651AB21408B6E005B3353 /* recipe.json in Resources */,
 				CFE067DE213D6F24000E95FC /* LaunchScreen.storyboard in Resources */,
 				CFA3DFA0213FF75700A39C71 /* Colors.xcassets in Resources */,
 				CFA3DF92213FF1D800A39C71 /* Localizable.strings in Resources */,
@@ -595,23 +684,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */,
+				DA46519A214065EF005B3353 /* ExploreState.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */,
 				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
+				DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */,
 				CFA1FF45213ED674001394DB /* FavoritesNavigationController.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
+				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,
+				DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */,
 				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,
 				CFA1FF49213ED699001394DB /* ExploreNavigationController.swift in Sources */,
+				DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */,
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
+				DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA3DFA921400AF900A39C71 /* SearchViewController.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
+				DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */,
+				DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */,
 				CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */,
+				DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */,
 				CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
+				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
+				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
+				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,
 				CFA3DF9E213FF56200A39C71 /* Fonts.swift in Sources */,
+				DA46518721405441005B3353 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +824,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -775,6 +878,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -793,6 +897,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.finn.Food2Fork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,6 +916,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.finn.Food2Fork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
