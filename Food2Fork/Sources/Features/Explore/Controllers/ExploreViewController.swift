@@ -14,11 +14,23 @@ protocol ExploreViewControllerDelegate: AnyObject {
 
 final class ExploreViewController: UIViewController {
     weak var delegate: ExploreViewControllerDelegate?
-    private let recipes = [Recipe]()
+    private var recipes = [Recipe]()
+    private let logicController: ExploreLogicController
+    private let imageService: ImageLoader = .init()
+
     private lazy var collectionView: UICollectionView = self.makeCollectionView()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
+    }
+
+    init(logicController: ExploreLogicController) {
+        self.logicController = logicController
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Lifecycle
@@ -26,12 +38,31 @@ final class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = R.string.localizable.explore()
-
         view.backgroundColor = R.color.backgroundPrimary()
         view.addSubview(collectionView)
         NSLayoutConstraint.pin(collectionView, toView: view)
+    }
 
-        collectionView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        render(.loading)
+        logicController.load(then: { [weak self] state in
+            self?.render(state)
+        })
+    }
+
+    // MARK: - Rendering
+
+    func render(_ state: ExploreState) {
+        switch state {
+        case .loading:
+            break
+        case .presenting(let recipes):
+            self.recipes = recipes
+            collectionView.reloadData()
+        case .failed(let error):
+            break
+        }
     }
 }
 
@@ -46,6 +77,10 @@ extension ExploreViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(type: ExploreCollectionViewCell.self, indexPath: indexPath)
         let recipe = recipes[indexPath.item]
+        cell.titleLabel.text = recipe.title
+        cell.subtitleLabel.text = recipe.publisher
+        cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
+        imageService.loadImage(at: recipe.imageUrl, to: cell.imageView)
         return cell
     }
 }
@@ -64,6 +99,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
+        collectionView.backgroundColor = R.color.backgroundPrimary()
         collectionView.register(type: ExploreCollectionViewCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -74,13 +110,13 @@ private extension ExploreViewController {
         let padding: CGFloat = 16
         let screenWidth = UIScreen.main.bounds.width
         let itemsPerRow: CGFloat = 2
-        let size = (screenWidth - 4 * padding) / itemsPerRow
+        let width = (screenWidth - 3 * padding) / itemsPerRow
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = padding
         layout.minimumLineSpacing = padding
         layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        layout.itemSize = CGSize(width: size, height: size)
+        layout.itemSize = CGSize(width: width, height: width * 1.5)
         return layout
     }
 }

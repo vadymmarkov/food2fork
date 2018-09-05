@@ -12,9 +12,9 @@ extension NSLayoutConstraint {
     /// Add layout constraints to a view.
     @discardableResult
     static func constrain(activate: Bool = true,
-                          _ constraints: NSLayoutConstraint?...) -> [NSLayoutConstraint] {
+                          _ constraints: NSLayoutConstraint...) -> [NSLayoutConstraint] {
         for constraint in constraints {
-            (constraint?.firstItem as? UIView)?.translatesAutoresizingMaskIntoConstraints = false
+            (constraint.firstItem as? UIView)?.translatesAutoresizingMaskIntoConstraints = false
         }
 
         if activate {

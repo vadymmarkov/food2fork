@@ -12,13 +12,24 @@ import Malibu
 final class DependencyContainer {
     private let apiConfig = APIConfig()
     private lazy var networking: Networking<Endpoint> = {
-        let networking = Networking<Endpoint>()
+        let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
         Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
         }
         return networking
     }()
+
+    let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
+        switch endpoint {
+        case .explore:
+            return Mock(fileName: "recipes.json")
+        case .search:
+            return Mock(fileName: "recipes.json")
+        case .recipe:
+            return Mock(fileName: "recipe.json")
+        }
+    }
 }
 
 // MARK: - Controller Factory
@@ -43,7 +54,8 @@ extension DependencyContainer: ControllerFactory {
     }
 
     func makeExploreViewController() -> ExploreViewController {
-        return ExploreViewController()
+        let logicController = ExploreLogicController(networking: networking)
+        return ExploreViewController(logicController: logicController)
     }
 
     func makeSearchNavigationController() -> SearchNavigationController {

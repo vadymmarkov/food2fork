@@ -6,4 +6,8 @@
 //  Copyright © 2018 FINN.no AS. All rights reserved.
 //
 
-import Foundation
+enum ExploreState {
+    case loading
+    case presenting([Recipe])
+    case failed(Error)
+}

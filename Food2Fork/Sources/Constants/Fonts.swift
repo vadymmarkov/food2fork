@@ -9,7 +9,15 @@
 import UIKit
 
 extension R.font {
-    var title: UIFont {
-        return UIFont.systemFont(ofSize: 18, weight: .semibold)
+    static var cellText: UIFont {
+        return UIFont.systemFont(ofSize: 16, weight: .regular)
+    }
+
+    static var cellSubtitle: UIFont {
+        return UIFont.systemFont(ofSize: 12, weight: .light)
+    }
+
+    static var cellAccessory: UIFont {
+        return UIFont.systemFont(ofSize: 12, weight: .semibold)
     }
 }
