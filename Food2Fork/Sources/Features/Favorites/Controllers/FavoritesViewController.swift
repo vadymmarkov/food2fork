@@ -10,7 +10,7 @@ import UIKit
 
 final class FavoritesViewController: UIViewController {
     // MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.backgroundPrimary()
