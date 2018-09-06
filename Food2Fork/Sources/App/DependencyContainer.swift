@@ -68,8 +68,11 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
-    func makeSearchViewController() -> SearchViewController {
-        return SearchViewController()
+    func makeSearchFlowController() -> SearchFlowController {
+        return SearchFlowController(
+            logicController: SearchLogicController(diskCache: DiskCache()),
+            controllerFactory: self
+        )
     }
 
     func makeFavoritesNavigationController() -> FavoritesNavigationController {
@@ -84,5 +87,13 @@ extension DependencyContainer: ControllerFactory {
 
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController()
+    }
+
+    func makeInfoViewController(image: UIImage?, title: String, text: String?) -> InfoViewController {
+        let viewController = InfoViewController()
+        viewController.imageView.image = image
+        viewController.titleLabel.text = title
+        viewController.textLabel.text = text
+        return viewController
     }
 }

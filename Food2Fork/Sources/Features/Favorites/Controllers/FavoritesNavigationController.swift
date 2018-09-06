@@ -26,7 +26,7 @@ final class FavoritesNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.backgroundPrimary()
+        view.backgroundColor = R.color.seashell()
         startFavorites()
     }
 }

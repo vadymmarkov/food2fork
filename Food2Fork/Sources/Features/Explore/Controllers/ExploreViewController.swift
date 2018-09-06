@@ -38,7 +38,7 @@ final class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = R.string.localizable.explore()
-        view.backgroundColor = R.color.backgroundPrimary()
+        view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
@@ -99,7 +99,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
-        collectionView.backgroundColor = R.color.backgroundPrimary()
+        collectionView.backgroundColor = R.color.seashell()
         collectionView.register(type: ExploreCollectionViewCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self

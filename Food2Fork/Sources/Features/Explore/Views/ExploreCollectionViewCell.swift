@@ -18,16 +18,16 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
 
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = R.color.brand()
-        label.font = R.font.cellText
+        label.textColor = R.color.oil()
+        label.font = .body
         label.numberOfLines = 3
         return label
     }()
 
     private(set) lazy var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = R.color.brand()
-        label.font = R.font.cellSubtitle
+        label.textColor = R.color.steel()
+        label.font = .subtitle
         label.numberOfLines = 2
         return label
     }()
@@ -35,7 +35,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
     private(set) lazy var accessoryLabel: UILabel = {
         let label = UILabel()
         label.textColor = R.color.brand()
-        label.font = R.font.cellAccessory
+        label.font = .accessory
         return label
     }()
 
@@ -55,9 +55,15 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
 
     private func setupStyles() {
+        contentView.backgroundColor = R.color.milk()
         contentView.clipsToBounds = true
-        contentView.backgroundColor = R.color.backgroundSecondary()
         contentView.layer.cornerRadius = 10
+
+        layer.cornerRadius = contentView.layer.cornerRadius
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowOffset = CGSize(width: 1, height: 1)
+        layer.shadowRadius = 4
+        layer.shadowOpacity = 0.4
     }
 
     private func setupConstraints() {

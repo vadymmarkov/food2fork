@@ -18,8 +18,10 @@ protocol ControllerFactory {
     func makeExploreViewController() -> ExploreViewController
 
     func makeSearchNavigationController() -> SearchNavigationController
-    func makeSearchViewController() -> SearchViewController
+    func makeSearchFlowController() -> SearchFlowController
 
     func makeFavoritesNavigationController() -> FavoritesNavigationController
     func makeFavoritesViewController() -> FavoritesViewController
+
+    func makeInfoViewController(image: UIImage?, title: String, text: String?) -> InfoViewController
 }
