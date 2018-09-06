@@ -26,15 +26,15 @@ final class SearchNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.backgroundPrimary()
-        startSearch()
+        view.backgroundColor = R.color.seashell()
+        startSearchInfo()
     }
 }
 
 // MARK: - Flow
 
 private extension SearchNavigationController {
-    func startSearch() {
+    func startSearchInfo() {
         let viewController = controllerFactory.makeSearchViewController()
         setViewControllers([viewController], animated: false)
     }

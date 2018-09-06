@@ -33,6 +33,11 @@
 		CFE067DE213D6F24000E95FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */; };
 		CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */; };
 		CFE067F4213D6F25000E95FC /* Food2ForkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */; };
+		DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E22141C77200933167 /* InfoViewController.swift */; };
+		DA25B0E52141D5EA00933167 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E42141D5EA00933167 /* DiskCache.swift */; };
+		DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E82141DAC000933167 /* SearchLogicController.swift */; };
+		DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0EB2141DAE000933167 /* SearchState.swift */; };
+		DA25B0EE2141DF3300933167 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -104,6 +109,11 @@
 		CFE067EF213D6F25000E95FC /* Food2ForkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Food2ForkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food2ForkUITests.swift; sourceTree = "<group>"; };
 		CFE067F5213D6F25000E95FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA25B0E22141C77200933167 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		DA25B0E42141D5EA00933167 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		DA25B0E82141DAC000933167 /* SearchLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicController.swift; sourceTree = "<group>"; };
+		DA25B0EB2141DAE000933167 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
+		DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -173,6 +183,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B0E12141C76400933167 /* Info */,
 				DA4651A421406EDE005B3353 /* Cache */,
 				CFA3DFAA214012C700A39C71 /* Networking */,
 				CFA1FF3E213ED597001394DB /* Explore */,
@@ -207,6 +218,7 @@
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B0EA2141DAC700933167 /* Logic */,
 				DA46518321404D64005B3353 /* Models */,
 				CFA3DFA52140099E00A39C71 /* Controllers */,
 			);
@@ -284,6 +296,7 @@
 			children = (
 				CFA1FF46213ED689001394DB /* SearchNavigationController.swift */,
 				CFA3DFA821400AF900A39C71 /* SearchViewController.swift */,
+				DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +304,7 @@
 		CFA3DFAA214012C700A39C71 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
 				CFA3DFAC214016D200A39C71 /* Endpoint.swift */,
 				DA46519B214066A6005B3353 /* Promise+Networking.swift */,
 				DA46519D2140670F005B3353 /* Data+Decodable.swift */,
@@ -404,6 +418,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DA25B0E12141C76400933167 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B0E22141C77200933167 /* InfoViewController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		DA25B0EA2141DAC700933167 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B0E82141DAC000933167 /* SearchLogicController.swift */,
+				DA25B0EB2141DAE000933167 /* SearchState.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		DA46518321404D64005B3353 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +472,7 @@
 		DA4651A421406EDE005B3353 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
+				DA25B0E42141D5EA00933167 /* DiskCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -701,18 +732,23 @@
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA3DFA921400AF900A39C71 /* SearchViewController.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchNavigationController.swift in Sources */,
+				DA25B0E52141D5EA00933167 /* DiskCache.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
 				DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */,
 				DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */,
 				CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */,
 				DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */,
 				CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */,
+				DA25B0EE2141DF3300933167 /* SearchResultsViewController.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
+				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
+				DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */,
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,
 				CFA3DF9E213FF56200A39C71 /* Fonts.swift in Sources */,
+				DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */,
 				DA46518721405441005B3353 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
