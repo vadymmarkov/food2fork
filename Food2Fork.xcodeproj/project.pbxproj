@@ -10,6 +10,7 @@
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
+		CF5FAC2A2142C3EA00654E90 /* UIbutton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -37,7 +38,7 @@
 		DA25B0E52141D5EA00933167 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E42141D5EA00933167 /* DiskCache.swift */; };
 		DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E82141DAC000933167 /* SearchLogicController.swift */; };
 		DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0EB2141DAE000933167 /* SearchState.swift */; };
-		DA25B0EE2141DF3300933167 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */; };
+		DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0ED2141DF3300933167 /* SearchViewController.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -80,6 +81,7 @@
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
+		CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIbutton+Background.swift"; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 		DA25B0E42141D5EA00933167 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		DA25B0E82141DAC000933167 /* SearchLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicController.swift; sourceTree = "<group>"; };
 		DA25B0EB2141DAE000933167 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
-		DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		DA25B0ED2141DF3300933167 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				DA46519021406177005B3353 /* UIView+Extensions.swift */,
 				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
 				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
+				CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA1FF46213ED689001394DB /* SearchFlowController.swift */,
-				DA25B0ED2141DF3300933167 /* SearchResultsViewController.swift */,
+				DA25B0ED2141DF3300933167 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				CFA1FF49213ED699001394DB /* ExploreFlowController.swift in Sources */,
 				DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */,
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
+				CF5FAC2A2142C3EA00654E90 /* UIbutton+Background.swift in Sources */,
 				DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchFlowController.swift in Sources */,
@@ -739,7 +743,7 @@
 				CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */,
 				DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */,
 				CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */,
-				DA25B0EE2141DF3300933167 /* SearchResultsViewController.swift in Sources */,
+				DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
 				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
 				DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */,

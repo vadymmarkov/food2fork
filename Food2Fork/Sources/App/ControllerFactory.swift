@@ -22,5 +22,8 @@ protocol ControllerFactory {
     func makeFavoritesFlowController() -> FavoritesFlowController
     func makeFavoritesViewController() -> FavoritesViewController
 
-    func makeSearchViewController(delegate: SearchResultsViewControllerDelegate?) -> UIViewController
+    func makeSearchViewController() -> SearchViewController
+
+    func makeInfoViewController() -> InfoViewController
+    func makeErrorViewController() -> InfoViewController
 }
