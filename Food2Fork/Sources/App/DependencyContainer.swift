@@ -83,26 +83,22 @@ extension DependencyContainer: ControllerFactory {
         return FavoritesViewController()
     }
 
-    func makeSearchViewController(delegate: SearchResultsViewControllerDelegate?) -> UIViewController {
-        let searchResultsViewController = SearchResultsViewController(
-            logicController: SearchLogicController(networking: networking),
-            imageLoader: imageLoader
+    func makeSearchViewController() -> SearchViewController {
+        return SearchViewController(
+            controllerFactory: self,
+            logicController: SearchLogicController(networking: networking)
         )
-        searchResultsViewController.delegate = delegate
+    }
 
-        let searchController = UISearchController(searchResultsController: searchResultsViewController)
-        searchController.searchResultsUpdater = searchResultsViewController
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = R.string.localizable.searchPlaceholder()
+    func makeInfoViewController() -> InfoViewController {
+        return InfoViewController()
+    }
 
-        let infoViewController = InfoViewController()
-        infoViewController.navigationItem.title = R.string.localizable.search()
-        infoViewController.imageView.image = R.image.tabSearch()
-        infoViewController.titleLabel.text = R.string.localizable.searchInfoTitle()
-        infoViewController.textLabel.text = R.string.localizable.searchInfoText()
-        infoViewController.navigationItem.searchController = searchController
-        infoViewController.definesPresentationContext = true
-
-        return infoViewController
+    func makeErrorViewController() -> InfoViewController {
+        let viewController = InfoViewController()
+        viewController.titleLabel.text = R.string.localizable.errorTitle()
+        viewController.button.setTitle(R.string.localizable.errorButton(), for: .normal)
+        viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
+        return viewController
     }
 }

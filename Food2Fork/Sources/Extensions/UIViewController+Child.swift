@@ -27,4 +27,10 @@ extension UIViewController {
         removeFromParentViewController()
         view.removeFromSuperview()
     }
+
+    func removeAllChildControllers() {
+        childViewControllers.forEach { controller in
+            controller.removeFromParent()
+        }
+    }
 }
