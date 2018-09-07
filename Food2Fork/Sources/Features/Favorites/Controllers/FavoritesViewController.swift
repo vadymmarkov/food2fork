@@ -13,7 +13,7 @@ final class FavoritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.backgroundPrimary()
+        view.backgroundColor = R.color.seashell()
         navigationItem.title = R.string.localizable.favorites()
     }
 }

@@ -8,16 +8,20 @@
 
 import UIKit
 
-extension R.font {
-    static var cellText: UIFont {
-        return UIFont.systemFont(ofSize: 16, weight: .regular)
+extension UIFont {
+    static var title: UIFont {
+        return UIFont.systemFont(ofSize: 18, weight: .semibold)
     }
 
-    static var cellSubtitle: UIFont {
+    static var body: UIFont {
+        return UIFont.systemFont(ofSize: 14, weight: .regular)
+    }
+
+    static var subtitle: UIFont {
         return UIFont.systemFont(ofSize: 12, weight: .light)
     }
 
-    static var cellAccessory: UIFont {
+    static var accessory: UIFont {
         return UIFont.systemFont(ofSize: 12, weight: .semibold)
     }
 }

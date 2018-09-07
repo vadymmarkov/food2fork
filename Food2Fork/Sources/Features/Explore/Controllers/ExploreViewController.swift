@@ -16,7 +16,7 @@ final class ExploreViewController: UIViewController {
     weak var delegate: ExploreViewControllerDelegate?
     private var recipes = [Recipe]()
     private let logicController: ExploreLogicController
-    private let imageService: ImageLoader = .init()
+    private let imageLoader: ImageLoader
 
     private lazy var collectionView: UICollectionView = self.makeCollectionView()
 
@@ -24,8 +24,11 @@ final class ExploreViewController: UIViewController {
         return .default
     }
 
-    init(logicController: ExploreLogicController) {
+    // MARK: - Init
+
+    init(logicController: ExploreLogicController, imageLoader: ImageLoader) {
         self.logicController = logicController
+        self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -38,7 +41,7 @@ final class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = R.string.localizable.explore()
-        view.backgroundColor = R.color.backgroundPrimary()
+        view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
@@ -53,7 +56,7 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Rendering
 
-    func render(_ state: ExploreState) {
+    private func render(_ state: ExploreState) {
         switch state {
         case .loading:
             break
@@ -80,7 +83,7 @@ extension ExploreViewController: UICollectionViewDataSource {
         cell.titleLabel.text = recipe.title
         cell.subtitleLabel.text = recipe.publisher
         cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
-        imageService.loadImage(at: recipe.imageUrl, to: cell.imageView)
+        imageLoader.loadImage(at: recipe.imageUrl, to: cell.imageView)
         return cell
     }
 }
@@ -99,7 +102,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
-        collectionView.backgroundColor = R.color.backgroundPrimary()
+        collectionView.backgroundColor = R.color.seashell()
         collectionView.register(type: ExploreCollectionViewCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self

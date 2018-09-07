@@ -1,5 +1,5 @@
 //
-//  FavoritesNavigationController.swift
+//  ExploreFlowController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class FavoritesNavigationController: UINavigationController {
+final class ExploreFlowController: UINavigationController {
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init
@@ -26,16 +26,16 @@ final class FavoritesNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.backgroundPrimary()
-        startFavorites()
+        view.backgroundColor = R.color.seashell()
+        startExplore()
     }
 }
 
 // MARK: - Flow
 
-private extension FavoritesNavigationController {
-    func startFavorites() {
-        let viewController = controllerFactory.makeFavoritesViewController()
+private extension ExploreFlowController {
+    func startExplore() {
+        let viewController = controllerFactory.makeExploreViewController()
         setViewControllers([viewController], animated: false)
     }
 }
