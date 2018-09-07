@@ -10,9 +10,6 @@ import UIKit
 
 final class SearchFlowController: UINavigationController {
     private let controllerFactory: ControllerFactory
-    private lazy var searchController = UISearchController(
-        searchResultsController: SearchResultsViewController()
-    )
 
     // MARK: - Init
 

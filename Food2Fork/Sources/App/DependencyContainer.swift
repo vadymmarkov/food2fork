@@ -11,6 +11,7 @@ import Malibu
 
 final class DependencyContainer {
     private let apiConfig = APIConfig()
+    private let imageLoader = ImageLoader()
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
         Endpoint.configure(with: self.apiConfig)
@@ -20,7 +21,7 @@ final class DependencyContainer {
         return networking
     }()
 
-    let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
+    private let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
         switch endpoint {
         case .explore:
             return Mock(fileName: "recipes.json")
@@ -55,7 +56,7 @@ extension DependencyContainer: ControllerFactory {
 
     func makeExploreViewController() -> ExploreViewController {
         let logicController = ExploreLogicController(networking: networking)
-        return ExploreViewController(logicController: logicController)
+        return ExploreViewController(logicController: logicController, imageLoader: imageLoader)
     }
 
     func makeSearchFlowController() -> SearchFlowController {
@@ -83,7 +84,10 @@ extension DependencyContainer: ControllerFactory {
     }
 
     func makeSearchViewController(delegate: SearchResultsViewControllerDelegate?) -> UIViewController {
-        let searchResultsViewController = SearchResultsViewController()
+        let searchResultsViewController = SearchResultsViewController(
+            logicController: SearchLogicController(networking: networking),
+            imageLoader: imageLoader
+        )
         searchResultsViewController.delegate = delegate
 
         let searchController = UISearchController(searchResultsController: searchResultsViewController)
