@@ -15,7 +15,7 @@ enum Endpoint: RequestConvertible {
     static var headers: [String: String] = [:]
 
     case explore
-    case search(text: String, sort: Sort, page: Int)
+    case search(text: String, sort: SearchSort, page: Int)
     case recipe(id: Int)
 }
 
@@ -37,15 +37,6 @@ extension Endpoint {
             let parameters: [String: Any] = ["rId": id]
             return Request.get("get", parameters: parameters)
         }
-    }
-}
-
-// MARK: - Helper types
-
-extension Endpoint {
-    enum Sort: String {
-        case rating = "r"
-        case trendingness = "t"
     }
 }
 

@@ -27,13 +27,13 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = R.color.backgroundPrimary()
+        view.backgroundColor = R.color.seashell()
         tabBar.tintColor = R.color.brand()
 
         let controllers = [
-            controllerFactory.makeExploreNavigationController(),
-            controllerFactory.makeSearchNavigationController(),
-            controllerFactory.makeFavoritesNavigationController()
+            controllerFactory.makeExploreFlowController(),
+            controllerFactory.makeSearchFlowController(),
+            controllerFactory.makeFavoritesFlowController()
         ]
 
         setViewControllers(controllers, animated: false)

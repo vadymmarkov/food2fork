@@ -9,3 +9,10 @@
 "explore" = "Explore";
 "search" = "Search";
 "favorites" = "Favorites";
+
+"search.info.title" = "Find the recipes you love";
+"search.info.text" = "Search by name or ingredients and save your favorites for later.";
+"search.placeholder" = "Search by ingridients or name";
+
+"error.title" = "Oops!";
+"error.button" = "Retry";

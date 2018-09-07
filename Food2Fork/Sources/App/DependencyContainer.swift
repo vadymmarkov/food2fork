@@ -11,6 +11,7 @@ import Malibu
 
 final class DependencyContainer {
     private let apiConfig = APIConfig()
+    private let imageLoader = ImageLoader()
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
         Endpoint.configure(with: self.apiConfig)
@@ -20,7 +21,7 @@ final class DependencyContainer {
         return networking
     }()
 
-    let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
+    private let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
         switch endpoint {
         case .explore:
             return Mock(fileName: "recipes.json")
@@ -43,8 +44,8 @@ extension DependencyContainer: ControllerFactory {
         return MainTabBarController(controllerFactory: self)
     }
 
-    func makeExploreNavigationController() -> ExploreNavigationController {
-        let controller = ExploreNavigationController(controllerFactory: self)
+    func makeExploreFlowController() -> ExploreFlowController {
+        let controller = ExploreFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.explore(),
             image: R.image.tabExplore(),
@@ -55,11 +56,11 @@ extension DependencyContainer: ControllerFactory {
 
     func makeExploreViewController() -> ExploreViewController {
         let logicController = ExploreLogicController(networking: networking)
-        return ExploreViewController(logicController: logicController)
+        return ExploreViewController(logicController: logicController, imageLoader: imageLoader)
     }
 
-    func makeSearchNavigationController() -> SearchNavigationController {
-        let controller = SearchNavigationController(controllerFactory: self)
+    func makeSearchFlowController() -> SearchFlowController {
+        let controller = SearchFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.search(),
             image: R.image.tabSearch(),
@@ -68,12 +69,8 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
-    func makeSearchViewController() -> SearchViewController {
-        return SearchViewController()
-    }
-
-    func makeFavoritesNavigationController() -> FavoritesNavigationController {
-        let controller = FavoritesNavigationController(controllerFactory: self)
+    func makeFavoritesFlowController() -> FavoritesFlowController {
+        let controller = FavoritesFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.favorites(),
             image: R.image.tabFavorites(),
@@ -84,5 +81,24 @@ extension DependencyContainer: ControllerFactory {
 
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController()
+    }
+
+    func makeSearchViewController() -> SearchViewController {
+        return SearchViewController(
+            controllerFactory: self,
+            logicController: SearchLogicController(networking: networking)
+        )
+    }
+
+    func makeInfoViewController() -> InfoViewController {
+        return InfoViewController()
+    }
+
+    func makeErrorViewController() -> InfoViewController {
+        let viewController = InfoViewController()
+        viewController.titleLabel.text = R.string.localizable.errorTitle()
+        viewController.button.setTitle(R.string.localizable.errorButton(), for: .normal)
+        viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
+        return viewController
     }
 }
