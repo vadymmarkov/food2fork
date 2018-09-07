@@ -8,11 +8,25 @@
 
 import UIKit
 
+protocol SearchResultsViewControllerDelegate: AnyObject {
+
+}
+
 final class SearchResultsViewController: UIViewController {
+    weak var delegate: SearchResultsViewControllerDelegate?
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension SearchResultsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        //let searchBar = searchController.searchBar
     }
 }

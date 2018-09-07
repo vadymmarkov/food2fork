@@ -31,9 +31,9 @@ final class MainTabBarController: UITabBarController {
         tabBar.tintColor = R.color.brand()
 
         let controllers = [
-            controllerFactory.makeExploreNavigationController(),
-            controllerFactory.makeSearchNavigationController(),
-            controllerFactory.makeFavoritesNavigationController()
+            controllerFactory.makeExploreFlowController(),
+            controllerFactory.makeSearchFlowController(),
+            controllerFactory.makeFavoritesFlowController()
         ]
 
         setViewControllers(controllers, animated: false)

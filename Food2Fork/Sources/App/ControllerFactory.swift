@@ -14,14 +14,13 @@ protocol ControllerFactory {
     func makeAppFlowController() -> AppFlowController
     func makeMainTabBarController() -> MainTabBarController
 
-    func makeExploreNavigationController() -> ExploreNavigationController
+    func makeExploreFlowController() -> ExploreFlowController
     func makeExploreViewController() -> ExploreViewController
 
-    func makeSearchNavigationController() -> SearchNavigationController
     func makeSearchFlowController() -> SearchFlowController
 
-    func makeFavoritesNavigationController() -> FavoritesNavigationController
+    func makeFavoritesFlowController() -> FavoritesFlowController
     func makeFavoritesViewController() -> FavoritesViewController
 
-    func makeInfoViewController(image: UIImage?, title: String, text: String?) -> InfoViewController
+    func makeSearchViewController(delegate: SearchResultsViewControllerDelegate?) -> UIViewController
 }

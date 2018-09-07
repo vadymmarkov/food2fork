@@ -7,7 +7,7 @@
 //
 
 enum SearchState {
-    case presentingRecentSearches([Recipe])
-    case presentingSearchResults([Recipe])
-    case error(Error)
+    case loading
+    case presenting([Recipe])
+    case failed(Error)
 }

@@ -43,8 +43,8 @@ extension DependencyContainer: ControllerFactory {
         return MainTabBarController(controllerFactory: self)
     }
 
-    func makeExploreNavigationController() -> ExploreNavigationController {
-        let controller = ExploreNavigationController(controllerFactory: self)
+    func makeExploreFlowController() -> ExploreFlowController {
+        let controller = ExploreFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.explore(),
             image: R.image.tabExplore(),
@@ -58,8 +58,8 @@ extension DependencyContainer: ControllerFactory {
         return ExploreViewController(logicController: logicController)
     }
 
-    func makeSearchNavigationController() -> SearchNavigationController {
-        let controller = SearchNavigationController(controllerFactory: self)
+    func makeSearchFlowController() -> SearchFlowController {
+        let controller = SearchFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.search(),
             image: R.image.tabSearch(),
@@ -68,15 +68,8 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
-    func makeSearchFlowController() -> SearchFlowController {
-        return SearchFlowController(
-            logicController: SearchLogicController(diskCache: DiskCache()),
-            controllerFactory: self
-        )
-    }
-
-    func makeFavoritesNavigationController() -> FavoritesNavigationController {
-        let controller = FavoritesNavigationController(controllerFactory: self)
+    func makeFavoritesFlowController() -> FavoritesFlowController {
+        let controller = FavoritesFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
             title: R.string.localizable.favorites(),
             image: R.image.tabFavorites(),
@@ -89,11 +82,23 @@ extension DependencyContainer: ControllerFactory {
         return FavoritesViewController()
     }
 
-    func makeInfoViewController(image: UIImage?, title: String, text: String?) -> InfoViewController {
-        let viewController = InfoViewController()
-        viewController.imageView.image = image
-        viewController.titleLabel.text = title
-        viewController.textLabel.text = text
-        return viewController
+    func makeSearchViewController(delegate: SearchResultsViewControllerDelegate?) -> UIViewController {
+        let searchResultsViewController = SearchResultsViewController()
+        searchResultsViewController.delegate = delegate
+
+        let searchController = UISearchController(searchResultsController: searchResultsViewController)
+        searchController.searchResultsUpdater = searchResultsViewController
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = R.string.localizable.searchPlaceholder()
+
+        let infoViewController = InfoViewController()
+        infoViewController.navigationItem.title = R.string.localizable.search()
+        infoViewController.imageView.image = R.image.tabSearch()
+        infoViewController.titleLabel.text = R.string.localizable.searchInfoTitle()
+        infoViewController.textLabel.text = R.string.localizable.searchInfoText()
+        infoViewController.navigationItem.searchController = searchController
+        infoViewController.definesPresentationContext = true
+
+        return infoViewController
     }
 }

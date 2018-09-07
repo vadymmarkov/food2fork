@@ -1,5 +1,5 @@
 //
-//  FavoritesNavigationController.swift
+//  SearchFlowController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-final class FavoritesNavigationController: UINavigationController {
+final class SearchFlowController: UINavigationController {
     private let controllerFactory: ControllerFactory
+    private lazy var searchController = UISearchController(
+        searchResultsController: SearchResultsViewController()
+    )
 
     // MARK: - Init
 
@@ -27,15 +30,21 @@ final class FavoritesNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        startFavorites()
+        startSearchInfo()
     }
 }
 
 // MARK: - Flow
 
-private extension FavoritesNavigationController {
-    func startFavorites() {
-        let viewController = controllerFactory.makeFavoritesViewController()
-        setViewControllers([viewController], animated: false)
+private extension SearchFlowController {
+    func startSearchInfo() {
+        let infoViewController = controllerFactory.makeSearchViewController(delegate: self)
+        setViewControllers([infoViewController], animated: false)
     }
+}
+
+// MARK: - SearchResultsViewControllerDelegate
+
+extension SearchFlowController: SearchResultsViewControllerDelegate {
+
 }
