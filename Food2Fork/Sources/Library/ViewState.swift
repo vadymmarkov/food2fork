@@ -1,13 +1,13 @@
 //
-//  ExploreState.swift
+//  ViewState.swift
 //  Food2Fork
 //
-//  Created by Vadym Markov on 05/09/2018.
+//  Created by Vadym Markov on 08/09/2018.
 //  Copyright © 2018 FINN.no AS. All rights reserved.
 //
 
-enum ExploreState {
+enum ViewState<T> {
     case loading
-    case presenting([Recipe])
+    case presenting(T)
     case failed(Error)
 }

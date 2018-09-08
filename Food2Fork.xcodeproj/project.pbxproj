@@ -37,8 +37,9 @@
 		DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E22141C77200933167 /* InfoViewController.swift */; };
 		DA25B0E52141D5EA00933167 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E42141D5EA00933167 /* DiskCache.swift */; };
 		DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E82141DAC000933167 /* SearchLogicController.swift */; };
-		DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0EB2141DAE000933167 /* SearchState.swift */; };
 		DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0ED2141DF3300933167 /* SearchViewController.swift */; };
+		DA25B0F12143EFB900933167 /* FavoritesLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F02143EFB900933167 /* FavoritesLogicController.swift */; };
+		DA25B0F52143F04D00933167 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F42143F04D00933167 /* ViewState.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -48,7 +49,6 @@
 		DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651922140619A005B3353 /* UITableView+Extensions.swift */; };
 		DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */; };
 		DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651972140655D005B3353 /* ExploreLogicController.swift */; };
-		DA46519A214065EF005B3353 /* ExploreState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465199214065EF005B3353 /* ExploreState.swift */; };
 		DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519B214066A6005B3353 /* Promise+Networking.swift */; };
 		DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519D2140670F005B3353 /* Data+Decodable.swift */; };
 		DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651A521406EEF005B3353 /* ImageLoader.swift */; };
@@ -114,8 +114,9 @@
 		DA25B0E22141C77200933167 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		DA25B0E42141D5EA00933167 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		DA25B0E82141DAC000933167 /* SearchLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicController.swift; sourceTree = "<group>"; };
-		DA25B0EB2141DAE000933167 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
 		DA25B0ED2141DF3300933167 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DA25B0F02143EFB900933167 /* FavoritesLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesLogicController.swift; sourceTree = "<group>"; };
+		DA25B0F42143F04D00933167 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		DA4651922140619A005B3353 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		DA4651972140655D005B3353 /* ExploreLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicController.swift; sourceTree = "<group>"; };
-		DA465199214065EF005B3353 /* ExploreState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreState.swift; sourceTree = "<group>"; };
 		DA46519B214066A6005B3353 /* Promise+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Networking.swift"; sourceTree = "<group>"; };
 		DA46519D2140670F005B3353 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
 		DA4651A221406BF0005B3353 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -230,6 +230,7 @@
 		CFA1FF40213ED5CF001394DB /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B0EF2143EFAB00933167 /* Logic */,
 				CFA3DFA42140098E00A39C71 /* Controllers */,
 			);
 			path = Favorites;
@@ -380,6 +381,7 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B0F32143F03100933167 /* Library */,
 				CFA1FF4A213ED782001394DB /* App */,
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CFA3DF96213FF37E00A39C71 /* Extensions */,
@@ -432,9 +434,24 @@
 			isa = PBXGroup;
 			children = (
 				DA25B0E82141DAC000933167 /* SearchLogicController.swift */,
-				DA25B0EB2141DAE000933167 /* SearchState.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		DA25B0EF2143EFAB00933167 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B0F02143EFB900933167 /* FavoritesLogicController.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		DA25B0F32143F03100933167 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B0F42143F04D00933167 /* ViewState.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		DA46518321404D64005B3353 /* Models */ = {
@@ -467,7 +484,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4651972140655D005B3353 /* ExploreLogicController.swift */,
-				DA465199214065EF005B3353 /* ExploreState.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -718,7 +734,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */,
-				DA46519A214065EF005B3353 /* ExploreState.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */,
 				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
@@ -731,6 +746,7 @@
 				CFA1FF49213ED699001394DB /* ExploreFlowController.swift in Sources */,
 				DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */,
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
+				DA25B0F12143EFB900933167 /* FavoritesLogicController.swift in Sources */,
 				CF5FAC2A2142C3EA00654E90 /* UIbutton+Background.swift in Sources */,
 				DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
@@ -746,11 +762,11 @@
 				DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
 				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
-				DA25B0EC2141DAE000933167 /* SearchState.swift in Sources */,
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,
+				DA25B0F52143F04D00933167 /* ViewState.swift in Sources */,
 				CFA3DF9E213FF56200A39C71 /* Fonts.swift in Sources */,
 				DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */,
 				DA46518721405441005B3353 /* Recipe.swift in Sources */,

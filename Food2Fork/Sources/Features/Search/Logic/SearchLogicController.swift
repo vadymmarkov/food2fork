@@ -10,7 +10,7 @@ import Malibu
 import When
 
 final class SearchLogicController {
-    typealias Handler = (SearchState) -> Void
+    typealias Handler = (ViewState<[Recipe]>) -> Void
 
     private let networking: Networking<Endpoint>
     private weak var currentRequestPromise: Promise<SearchNetworkResponse>?

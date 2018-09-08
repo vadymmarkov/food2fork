@@ -10,7 +10,7 @@ import UIKit
 import Malibu
 
 final class ExploreLogicController {
-    typealias Handler = (ExploreState) -> Void
+    typealias Handler = (ViewState<[Recipe]>) -> Void
     private typealias ExploreNetworkResponse = SearchNetworkResponse
 
     private let networking: Networking<Endpoint>
