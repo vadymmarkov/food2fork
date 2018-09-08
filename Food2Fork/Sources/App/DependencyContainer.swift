@@ -56,7 +56,11 @@ extension DependencyContainer: ControllerFactory {
 
     func makeExploreViewController() -> ExploreViewController {
         let logicController = ExploreLogicController(networking: networking)
-        return ExploreViewController(logicController: logicController, imageLoader: imageLoader)
+        return ExploreViewController(
+            controllerFactory: self,
+            logicController: logicController,
+            imageLoader: imageLoader
+        )
     }
 
     func makeSearchFlowController() -> SearchFlowController {
@@ -80,7 +84,10 @@ extension DependencyContainer: ControllerFactory {
     }
 
     func makeFavoritesViewController() -> FavoritesViewController {
-        return FavoritesViewController()
+        return FavoritesViewController(
+            controllerFactory: self,
+            logicController: FavoritesLogicController()
+        )
     }
 
     func makeSearchViewController() -> SearchViewController {
@@ -94,9 +101,10 @@ extension DependencyContainer: ControllerFactory {
         return InfoViewController()
     }
 
-    func makeErrorViewController() -> InfoViewController {
+    func makeErrorViewController(with error: Error) -> InfoViewController {
         let viewController = InfoViewController()
         viewController.titleLabel.text = R.string.localizable.errorTitle()
+        viewController.textLabel.text = error.localizedDescription
         viewController.button.setTitle(R.string.localizable.errorButton(), for: .normal)
         viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
         return viewController

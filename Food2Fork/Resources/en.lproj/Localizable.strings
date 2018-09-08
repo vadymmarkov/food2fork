@@ -14,5 +14,8 @@
 "search.info.text" = "Search by name or ingredients and save your favorites for later.";
 "search.placeholder" = "Search by ingridients or name";
 
+"favorites.info.title" = "No results";
+"favorites.info.text" = "You haven't added any recipes to your favorites yet.";
+
 "error.title" = "Oops!";
 "error.button" = "Retry";

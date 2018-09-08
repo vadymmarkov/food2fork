@@ -14,9 +14,10 @@ protocol ExploreViewControllerDelegate: AnyObject {
 
 final class ExploreViewController: UIViewController {
     weak var delegate: ExploreViewControllerDelegate?
-    private var recipes = [Recipe]()
+    private let controllerFactory: ControllerFactory
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
+    private var recipes = [Recipe]()
 
     private lazy var collectionView: UICollectionView = self.makeCollectionView()
 
@@ -26,7 +27,10 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Init
 
-    init(logicController: ExploreLogicController, imageLoader: ImageLoader) {
+    init(controllerFactory: ControllerFactory,
+         logicController: ExploreLogicController,
+         imageLoader: ImageLoader) {
+        self.controllerFactory = controllerFactory
         self.logicController = logicController
         self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
@@ -48,15 +52,21 @@ final class ExploreViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadContent()
+    }
+
+    // MARK: - Content
+
+    private func loadContent() {
         render(.loading)
         logicController.load(then: { [weak self] state in
             self?.render(state)
         })
     }
 
-    // MARK: - Rendering
+    private func render(_ state: ViewState<[Recipe]>) {
+        removeAllChildControllers()
 
-    private func render(_ state: ExploreState) {
         switch state {
         case .loading:
             break
@@ -66,6 +76,12 @@ final class ExploreViewController: UIViewController {
         case .failed(let error):
             break
         }
+    }
+
+    // MARK: - Actions
+
+    @objc private func handleRetryButtonTap() {
+        loadContent()
     }
 }
 
@@ -97,7 +113,7 @@ extension ExploreViewController: UICollectionViewDelegate {
     }
 }
 
-// MARK: - Subviews factory
+// MARK: - Factory
 
 private extension ExploreViewController {
     func makeCollectionView() -> UICollectionView {
@@ -121,5 +137,11 @@ private extension ExploreViewController {
         layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         return layout
+    }
+
+    func makeErrorViewController(with error: Error) -> UIViewController {
+        let viewController = controllerFactory.makeErrorViewController(with: error)
+        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
+        return viewController
     }
 }
