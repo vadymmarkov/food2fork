@@ -25,5 +25,5 @@ protocol ControllerFactory {
     func makeSearchViewController() -> SearchViewController
 
     func makeInfoViewController() -> InfoViewController
-    func makeErrorViewController() -> InfoViewController
+    func makeErrorViewController(with error: Error) -> InfoViewController
 }
