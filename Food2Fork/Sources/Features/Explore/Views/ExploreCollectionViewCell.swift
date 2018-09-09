@@ -36,6 +36,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = R.color.brand()
         label.font = .accessory
+        label.textAlignment = .right
         return label
     }()
 
@@ -67,7 +68,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupConstraints() {
-        let spacing: CGFloat = 16
+        let spacing = Dimensions.spacingMax
 
         NSLayoutConstraint.constrain(
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -76,8 +77,8 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
             imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5),
 
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: spacing),
-            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
 
             subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -spacing),
             subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),

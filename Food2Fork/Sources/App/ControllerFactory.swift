@@ -23,6 +23,7 @@ protocol ControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController
 
     func makeSearchViewController() -> SearchViewController
+    func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController
 
     func makeInfoViewController() -> InfoViewController
     func makeErrorViewController(with error: Error) -> InfoViewController

@@ -47,6 +47,8 @@
 		DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */; };
 		DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10F21455F6800933167 /* RecipeHeaderView.swift */; };
 		DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1112145618C00933167 /* RecipeIngredientsView.swift */; };
+		DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11321456BF000933167 /* RecipeLogicController.swift */; };
+		DA25B1162145704C00933167 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1152145704C00933167 /* Dimensions.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -131,6 +133,8 @@
 		DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManagedObjectConvertibleTests.swift; sourceTree = "<group>"; };
 		DA25B10F21455F6800933167 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
 		DA25B1112145618C00933167 /* RecipeIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsView.swift; sourceTree = "<group>"; };
+		DA25B11321456BF000933167 /* RecipeLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLogicController.swift; sourceTree = "<group>"; };
+		DA25B1152145704C00933167 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
 				CFA3DF9D213FF56200A39C71 /* Fonts.swift */,
 				CFA3DFAE214017A900A39C71 /* APIConfig.swift */,
+				DA25B1152145704C00933167 /* Dimensions.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				DA25B10E21455F5900933167 /* View */,
 				DA46518821405888005B3353 /* Models */,
 				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
+				DA25B11321456BF000933167 /* RecipeLogicController.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -820,6 +826,7 @@
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
 				CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
+				DA25B1162145704C00933167 /* Dimensions.swift in Sources */,
 				DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */,
 				DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */,
 				CFA3DFA32140063600A39C71 /* ExploreViewController.swift in Sources */,
@@ -830,6 +837,7 @@
 				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
 				DA25B1012145476B00933167 /* ModelController.swift in Sources */,
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
+				DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,

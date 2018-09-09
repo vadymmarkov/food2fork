@@ -20,6 +20,7 @@ final class RecipeIngredientsView: UIView {
         let label = UILabel()
         label.textColor = R.color.steel()
         label.font = .body
+        label.numberOfLines = 0
         return label
     }()
 
@@ -38,14 +39,16 @@ final class RecipeIngredientsView: UIView {
     // MARK: - Layout
 
     private func setupConstraints() {
+        let spacing: CGFloat = 16
+
         NSLayoutConstraint.constrain(
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: spacing),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -spacing),
 
             textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            textLabel.widthAnchor.constraint(equalTo: titleLabel.widthAnchor),
+            textLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            textLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
 
             bottomAnchor.constraint(equalTo: textLabel.bottomAnchor)
         )

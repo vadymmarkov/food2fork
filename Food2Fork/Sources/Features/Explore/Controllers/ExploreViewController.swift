@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ExploreViewControllerDelegate: AnyObject {
-    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe: Recipe)
+    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe recipe: Recipe)
 }
 
 final class ExploreViewController: UIViewController {
@@ -74,7 +74,7 @@ final class ExploreViewController: UIViewController {
             self.recipes = recipes
             collectionView.reloadData()
         case .failed(let error):
-            break
+            add(childController: makeErrorViewController(with: error))
         }
     }
 
