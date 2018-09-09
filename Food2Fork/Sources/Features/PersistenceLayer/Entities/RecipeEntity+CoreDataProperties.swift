@@ -19,12 +19,12 @@ extension RecipeEntity: FetchRequestCreating {
         return NSFetchRequest<RecipeEntity>(entityName: "RecipeEntity")
     }
 
-    @NSManaged public var uid: String
-    @NSManaged public var title: String
-    @NSManaged public var imageUrl: String
-    @NSManaged public var socialRank: Double
-    @NSManaged public var sourceUrl: String
-    @NSManaged public var publisher: String
-    @NSManaged public var publisherUrl: String
-    @NSManaged public var ingredients: String?
+    @NSManaged var uid: String
+    @NSManaged var title: String
+    @NSManaged var imageUrl: String
+    @NSManaged var socialRank: Double
+    @NSManaged var sourceUrl: String
+    @NSManaged var publisher: String
+    @NSManaged var publisherUrl: String
+    @NSManaged var ingredients: String?
 }

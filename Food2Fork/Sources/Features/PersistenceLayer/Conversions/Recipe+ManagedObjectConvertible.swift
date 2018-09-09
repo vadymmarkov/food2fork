@@ -21,7 +21,7 @@ extension Recipe: ManagedObjectConvertible {
             publisher: managedObject.publisher,
             publisherUrl: managedObject.publisherUrl,
             ingredients: managedObject.ingredients?.components(separatedBy: Recipe.separator),
-            isFavorite: false
+            isFavorite: true
         )
     }
 

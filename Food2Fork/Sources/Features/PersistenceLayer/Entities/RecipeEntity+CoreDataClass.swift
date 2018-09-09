@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(RecipeEntity)
-public final class RecipeEntity: NSManagedObject {
+final class RecipeEntity: NSManagedObject {
 
 }

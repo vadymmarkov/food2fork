@@ -19,6 +19,8 @@ final class ExploreViewController: UIViewController {
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
 
+    private lazy var refreshControl = UIRefreshControl()
+
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = R.color.seashell()
@@ -29,7 +31,7 @@ final class ExploreViewController: UIViewController {
     }()
 
     private lazy var collectionViewLayout: UICollectionViewLayout = {
-        let spacing: CGFloat = 16
+        let spacing: CGFloat = Dimensions.spacingMax
         let screenWidth = UIScreen.main.bounds.width
         let itemsPerRow: CGFloat = 2
         let width = (screenWidth - 3 * spacing) / itemsPerRow
@@ -41,10 +43,6 @@ final class ExploreViewController: UIViewController {
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         return layout
     }()
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
 
     // MARK: - Init
 
@@ -68,6 +66,8 @@ final class ExploreViewController: UIViewController {
         navigationItem.title = R.string.localizable.explore()
         view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
+        collectionView.insertSubview(refreshControl, at: 0)
+        refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
 
@@ -78,7 +78,7 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Content
 
-    private func loadContent() {
+    @objc private func loadContent() {
         render(.loading)
         logicController.load(then: { [weak self] state in
             self?.render(state)
@@ -99,12 +99,10 @@ final class ExploreViewController: UIViewController {
             collectionView.reloadData()
             add(childController: makeErrorViewController(with: error))
         }
-    }
 
-    // MARK: - Actions
-
-    @objc private func handleRetryButtonTap() {
-        loadContent()
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
     }
 }
 
@@ -142,7 +140,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
+        viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
         return viewController
     }
 }

@@ -13,6 +13,15 @@ extension UIView {
         subviews.forEach(addSubview)
     }
 
+    func makeSnapshot() -> UIImageView {
+        UIGraphicsBeginImageContext(frame.size)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return UIImageView(image: image)
+    }
+
     static var identifier: String {
         return String(reflecting: self)
     }

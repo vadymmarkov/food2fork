@@ -1,5 +1,5 @@
 //
-//  UIbutton+Background.swift
+//  UIButton+Background.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 07/09/2018.
@@ -20,6 +20,6 @@ extension UIButton {
         let colorImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        self.setBackgroundImage(colorImage, for: forState)
+        setBackgroundImage(colorImage, for: forState)
     }
 }
