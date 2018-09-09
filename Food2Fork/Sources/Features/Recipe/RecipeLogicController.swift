@@ -1,8 +1,8 @@
 //
-//  ExploreLogicController.swift
+//  RecipeLogicController.swift
 //  Food2Fork
 //
-//  Created by Vadym Markov on 05/09/2018.
+//  Created by Vadym Markov on 09/09/2018.
 //  Copyright © 2018 FINN.no AS. All rights reserved.
 //
 
@@ -10,12 +10,11 @@ import UIKit
 import Malibu
 import When
 
-final class ExploreLogicController {
-    typealias Handler = (ViewState<[Recipe]>) -> Void
-    private typealias ExploreNetworkResponse = SearchNetworkResponse
+final class RecipeLogicController {
+    typealias Handler = (ViewState<Recipe>) -> Void
 
     private let networking: Networking<Endpoint>
-    private weak var currentRequestPromise: Promise<ExploreNetworkResponse>?
+    private weak var currentRequestPromise: Promise<RecipeNetworkResponse>?
 
     // MARK: - Init
 
@@ -25,14 +24,14 @@ final class ExploreLogicController {
 
     // MARK: - Logic
 
-    func load(then handler: @escaping Handler) {
+    func load(id: String, then handler: @escaping Handler) {
         currentRequestPromise?.cancel()
-        networking
-            .request(.explore)
+        currentRequestPromise = networking
+            .request(.recipe(id: id))
             .validateStatusCodes()
-            .decode(ExploreNetworkResponse.self)
+            .decode(RecipeNetworkResponse.self)
             .done({ response in
-                handler(.presenting(response.recipes))
+                handler(.presenting(response.recipe))
             })
             .fail({ error in
                 handler(.failed(error))

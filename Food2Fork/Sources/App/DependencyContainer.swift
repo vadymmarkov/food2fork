@@ -98,6 +98,15 @@ extension DependencyContainer: ControllerFactory {
         )
     }
 
+    func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController {
+        return RecipeViewController(
+            recipe: recipe,
+            controllerFactory: self,
+            logicController: RecipeLogicController(networking: networking),
+            imageLoader: imageLoader
+        )
+    }
+
     func makeInfoViewController() -> InfoViewController {
         return InfoViewController()
     }
