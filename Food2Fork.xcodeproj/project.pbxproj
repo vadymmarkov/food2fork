@@ -53,6 +53,7 @@
 		DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */; };
 		DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1212145B08400933167 /* RoundedLabel.swift */; };
 		DA25B1242145B40000933167 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1232145B40000933167 /* UIViewController+Alert.swift */; };
+		DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -143,6 +144,7 @@
 		DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapConfiguring.swift; sourceTree = "<group>"; };
 		DA25B1212145B08400933167 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		DA25B1232145B40000933167 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -258,8 +260,9 @@
 		CFA1FF40213ED5CF001394DB /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B0EF2143EFAB00933167 /* Logic */,
 				CFA3DFA42140098E00A39C71 /* Controllers */,
+				DA25B0EF2143EFAB00933167 /* Logic */,
+				DA25B1252145C17E00933167 /* Views */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -537,6 +540,14 @@
 				DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */,
 			);
 			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		DA25B1252145C17E00933167 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DA46518321404D64005B3353 /* Models */ = {
@@ -839,6 +850,7 @@
 				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,
 				CFA1FF49213ED699001394DB /* ExploreFlowController.swift in Sources */,
 				DA25B0FB214537F900933167 /* Recipe+ManagedObjectConvertible.swift in Sources */,
+				DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */,
 				DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */,
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
 				DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */,

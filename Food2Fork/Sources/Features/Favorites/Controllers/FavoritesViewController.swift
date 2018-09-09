@@ -18,15 +18,15 @@ final class FavoritesViewController: UIViewController {
     weak var delegate: FavoritesViewControllerDelegate?
     private let controllerFactory: ControllerFactory
     private let logicController: FavoritesLogicController
+    private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = R.color.milk()
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.estimatedRowHeight = 80
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(type: UITableViewCell.self)
+        tableView.separatorStyle = .none
+        tableView.register(type: FavoriteTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         return tableView
@@ -34,9 +34,12 @@ final class FavoritesViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory, logicController: FavoritesLogicController) {
+    init(controllerFactory: ControllerFactory,
+         logicController: FavoritesLogicController,
+         imageLoader: ImageLoader) {
         self.controllerFactory = controllerFactory
         self.logicController = logicController
+        self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -107,11 +110,12 @@ extension FavoritesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(type: UITableViewCell.self, indexPath: indexPath)
+        let cell = tableView.dequeue(type: FavoriteTableViewCell.self, indexPath: indexPath)
         let recipe = recipes[indexPath.row]
-        cell.textLabel?.font = .body
-        cell.textLabel?.textColor = R.color.oil()
-        cell.textLabel?.text = recipe.title
+        cell.titleLabel.text = recipe.title
+        cell.subtitleLabel.text = recipe.publisher
+        cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
+        imageLoader.loadImage(at: recipe.imageUrl, to: cell.coverImageView)
         return cell
     }
 }
@@ -119,6 +123,10 @@ extension FavoritesViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension FavoritesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.row]
         delegate?.favoritesViewController(self, didSelectRecipe: recipe)
