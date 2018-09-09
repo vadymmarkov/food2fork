@@ -216,12 +216,12 @@
 			isa = PBXGroup;
 			children = (
 				DA25B11C21458AD500933167 /* Bootstrap */,
-				DA25B0E12141C76400933167 /* Info */,
-				DA4651A421406EDE005B3353 /* PersistenceLayer */,
-				CFA3DFAA214012C700A39C71 /* Networking */,
 				CFA1FF3E213ED597001394DB /* Explore */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
+				DA25B0E12141C76400933167 /* Info */,
 				CFA1FF4D213ED7CA001394DB /* Main */,
+				CFA3DFAA214012C700A39C71 /* Networking */,
+				DA4651A421406EDE005B3353 /* PersistenceLayer */,
 				CFA1FF41213ED605001394DB /* Recipe */,
 				CFA1FF3F213ED5C6001394DB /* Search */,
 			);
@@ -231,10 +231,10 @@
 		CF0C50AB213E9079003989E4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
-				CFA3DF9D213FF56200A39C71 /* Fonts.swift */,
 				CFA3DFAE214017A900A39C71 /* APIConfig.swift */,
 				DA25B1152145704C00933167 /* Dimensions.swift */,
+				CFA3DF9D213FF56200A39C71 /* Fonts.swift */,
+				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 		CFA1FF3E213ED597001394DB /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				DA4651962140654D005B3353 /* Logic */,
 				CFA3DFA12140062000A39C71 /* Controllers */,
+				DA4651962140654D005B3353 /* Logic */,
 				DA46518B21405F39005B3353 /* Views */,
 			);
 			path = Explore;
@@ -252,9 +252,9 @@
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3DFA52140099E00A39C71 /* Controllers */,
 				DA25B0EA2141DAC700933167 /* Logic */,
 				DA46518321404D64005B3353 /* Models */,
-				CFA3DFA52140099E00A39C71 /* Controllers */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -272,10 +272,10 @@
 		CFA1FF41213ED605001394DB /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B10E21455F5900933167 /* View */,
-				DA46518821405888005B3353 /* Models */,
-				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
 				DA25B11321456BF000933167 /* RecipeLogicController.swift */,
+				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
+				DA46518821405888005B3353 /* Models */,
+				DA25B10E21455F5900933167 /* View */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -302,13 +302,13 @@
 		CFA3DF96213FF37E00A39C71 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
 				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
-				DA46519021406177005B3353 /* UIView+Extensions.swift */,
-				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
-				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
 				CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */,
+				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
+				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
+				DA46519021406177005B3353 /* UIView+Extensions.swift */,
 				DA25B1232145B40000933167 /* UIViewController+Alert.swift */,
+				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -343,10 +343,10 @@
 		CFA3DFAA214012C700A39C71 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
-				CFA3DFAC214016D200A39C71 /* Endpoint.swift */,
-				DA46519B214066A6005B3353 /* Promise+Networking.swift */,
 				DA46519D2140670F005B3353 /* Data+Decodable.swift */,
+				CFA3DFAC214016D200A39C71 /* Endpoint.swift */,
+				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
+				DA46519B214066A6005B3353 /* Promise+Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -403,13 +403,13 @@
 		CFE06801213D7399000E95FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DA4651A721408AEA005B3353 /* Mocks */,
 				CFE067DF213D6F24000E95FC /* Info.plist */,
 				CFA3DF9F213FF75700A39C71 /* Colors.xcassets */,
 				CFE067DA213D6F24000E95FC /* Images.xcassets */,
 				CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */,
 				CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */,
 				CFA3DF94213FF1D800A39C71 /* Localizable.strings */,
+				DA4651A721408AEA005B3353 /* Mocks */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -417,11 +417,11 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B0F32143F03100933167 /* Library */,
 				CFA1FF4A213ED782001394DB /* App */,
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CFA3DF96213FF37E00A39C71 /* Extensions */,
 				CF0C50A8213E8F0F003989E4 /* Features */,
+				DA25B0F32143F03100933167 /* Library */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -486,9 +486,9 @@
 		DA25B0F32143F03100933167 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B0F42143F04D00933167 /* ViewState.swift */,
-				DA25B1212145B08400933167 /* RoundedLabel.swift */,
 				DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */,
+				DA25B1212145B08400933167 /* RoundedLabel.swift */,
+				DA25B0F42143F04D00933167 /* ViewState.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -590,9 +590,9 @@
 		DA4651A421406EDE005B3353 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B1002145476B00933167 /* ModelController.swift */,
 				DA25B1072145554900933167 /* Conversions */,
 				DA25B102214554D800933167 /* Entities */,
-				DA25B1002145476B00933167 /* ModelController.swift */,
 			);
 			path = PersistenceLayer;
 			sourceTree = "<group>";
