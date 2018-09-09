@@ -15,12 +15,14 @@ final class ExploreLogicController {
     private typealias ExploreNetworkResponse = SearchNetworkResponse
 
     private let networking: Networking<Endpoint>
+    private let modelController: ModelController
     private weak var currentRequestPromise: Promise<ExploreNetworkResponse>?
 
     // MARK: - Init
 
-    init(networking: Networking<Endpoint>) {
+    init(networking: Networking<Endpoint>, modelController: ModelController) {
         self.networking = networking
+        self.modelController = modelController
     }
 
     // MARK: - Logic
@@ -31,11 +33,28 @@ final class ExploreLogicController {
             .request(.explore)
             .validateStatusCodes()
             .decode(ExploreNetworkResponse.self)
-            .done({ response in
-                handler(.presenting(response.recipes))
+            .done({ [weak self] response in
+                let recipes = self?.updateWithFavorites(recipes: response.recipes) ?? []
+                handler(.presenting(recipes))
             })
             .fail({ error in
                 handler(.failed(error))
             })
+    }
+
+    private func updateWithFavorites(recipes: [Recipe]) -> [Recipe] {
+        guard let entities = try? modelController.loadObjects() as [Recipe] else {
+            return []
+        }
+
+        var recipes = recipes
+
+        for entity in entities {
+            if let index = recipes.index(where: { $0.id == entity.id }) {
+                recipes[index].isFavorite = true
+            }
+        }
+
+        return recipes
     }
 }

@@ -10,15 +10,16 @@ import UIKit
 
 final class AppearanceConfigurator: BootstrapConfiguring {
     func configure() {
-        configureNavigationBar()
-    }
-
-    private func configureNavigationBar() {
+        // UINavigationBar
         let navigationBar = UINavigationBar.appearance()
         navigationBar.tintColor = R.color.brand()
         navigationBar.titleTextAttributes = [
             .font: UIFont.title,
             .foregroundColor: R.color.oil()!
         ]
+
+        // UISearchBar
+        let searchBarButtonItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        searchBarButtonItem.tintColor = R.color.brand()
     }
 }
