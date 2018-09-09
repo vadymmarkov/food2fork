@@ -11,6 +11,22 @@ import UIKit
 final class FavoritesLogicController {
     typealias Handler = (ViewState<[Recipe]>) -> Void
 
+    private let modelController: ModelControlling
+
+    // MARK: - Init
+
+    init(modelController: ModelControlling) {
+        self.modelController = modelController
+    }
+
+    // MARK: - Logic
+
     func load(then handler: @escaping Handler) {
+        do {
+            let recipes: [Recipe] = try modelController.loadObjects()
+            handler(.presenting(recipes))
+        } catch {
+            handler(.failed(error))
+        }
     }
 }
