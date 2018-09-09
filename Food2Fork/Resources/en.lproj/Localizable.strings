@@ -9,6 +9,8 @@
 "explore" = "Explore";
 "search" = "Search";
 "favorites" = "Favorites";
+"ingredients" = "Ingredients";
+"ok" = "OK";
 
 "search.info.title" = "Find the recipes you love";
 "search.info.text" = "Search by name or ingredients and save your favorites for later.";

@@ -16,7 +16,7 @@ enum Endpoint: RequestConvertible {
 
     case explore
     case search(text: String, sort: SearchSort, page: Int)
-    case recipe(id: Int)
+    case recipe(id: String)
 }
 
 // MARK: - Requests

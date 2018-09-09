@@ -36,14 +36,20 @@ final class SearchFlowController: UINavigationController {
 private extension SearchFlowController {
     func startSearchInfo() {
         let viewController = controllerFactory.makeSearchViewController()
+        viewController.delegate = self
         setViewControllers([viewController], animated: false)
+    }
+
+    func startRecipeDetail(with recipe: Recipe) {
+        let viewController = controllerFactory.makeRecipeViewController(with: recipe)
+        pushViewController(viewController, animated: true)
     }
 }
 
-// MARK: - SearchViewControllerDelegate
+// MARK: - Delegates
 
 extension SearchFlowController: SearchViewControllerDelegate {
     func searchViewController(_ viewController: SearchViewController, didSelectRecipe recipe: Recipe) {
-
+        startRecipeDetail(with: recipe)
     }
 }

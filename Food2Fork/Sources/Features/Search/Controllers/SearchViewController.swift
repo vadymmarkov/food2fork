@@ -51,6 +51,7 @@ final class SearchViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = R.string.localizable.searchPlaceholder()
 
         navigationItem.title = R.string.localizable.search()
@@ -95,6 +96,8 @@ final class SearchViewController: UIViewController {
             self.recipes = recipes
             tableView.reloadData()
         case .failed(let error):
+            self.recipes = []
+            tableView.reloadData()
             add(childController: makeErrorViewController(with: error))
         }
     }
@@ -160,6 +163,16 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        guard searchController.searchBar.text?.isEmpty == false else {
+            render(.loading)
+            return
+        }
         search()
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        render(.loading)
     }
 }

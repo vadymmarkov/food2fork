@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ExploreViewControllerDelegate: AnyObject {
-    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe: Recipe)
+    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe recipe: Recipe)
 }
 
 final class ExploreViewController: UIViewController {
@@ -19,7 +19,28 @@ final class ExploreViewController: UIViewController {
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
 
-    private lazy var collectionView: UICollectionView = self.makeCollectionView()
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = R.color.seashell()
+        collectionView.register(type: ExploreCollectionViewCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        return collectionView
+    }()
+
+    private lazy var collectionViewLayout: UICollectionViewLayout = {
+        let spacing: CGFloat = 16
+        let screenWidth = UIScreen.main.bounds.width
+        let itemsPerRow: CGFloat = 2
+        let width = (screenWidth - 3 * spacing) / itemsPerRow
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.itemSize = CGSize(width: width, height: width * 1.5)
+        return layout
+    }()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
@@ -74,7 +95,9 @@ final class ExploreViewController: UIViewController {
             self.recipes = recipes
             collectionView.reloadData()
         case .failed(let error):
-            break
+            self.recipes = []
+            collectionView.reloadData()
+            add(childController: makeErrorViewController(with: error))
         }
     }
 
@@ -99,6 +122,7 @@ extension ExploreViewController: UICollectionViewDataSource {
         cell.titleLabel.text = recipe.title
         cell.subtitleLabel.text = recipe.publisher
         cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
+        cell.favoriteView.isHidden = !recipe.isFavorite
         imageLoader.loadImage(at: recipe.imageUrl, to: cell.imageView)
         return cell
     }
@@ -116,29 +140,6 @@ extension ExploreViewController: UICollectionViewDelegate {
 // MARK: - Factory
 
 private extension ExploreViewController {
-    func makeCollectionView() -> UICollectionView {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
-        collectionView.backgroundColor = R.color.seashell()
-        collectionView.register(type: ExploreCollectionViewCell.self)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        return collectionView
-    }
-
-    func makeCollectionViewLayout() -> UICollectionViewLayout {
-        let padding: CGFloat = 16
-        let screenWidth = UIScreen.main.bounds.width
-        let itemsPerRow: CGFloat = 2
-        let width = (screenWidth - 3 * padding) / itemsPerRow
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = padding
-        layout.minimumLineSpacing = padding
-        layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        layout.itemSize = CGSize(width: width, height: width * 1.5)
-        return layout
-    }
-
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
         viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
