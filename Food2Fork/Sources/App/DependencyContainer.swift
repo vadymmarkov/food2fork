@@ -12,6 +12,7 @@ import Malibu
 final class DependencyContainer {
     private let apiConfig = APIConfig()
     private let imageLoader = ImageLoader()
+    private let modelController = ModelController()
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
         Endpoint.configure(with: self.apiConfig)
@@ -86,7 +87,7 @@ extension DependencyContainer: ControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController(
             controllerFactory: self,
-            logicController: FavoritesLogicController()
+            logicController: FavoritesLogicController(modelController: modelController)
         )
     }
 
