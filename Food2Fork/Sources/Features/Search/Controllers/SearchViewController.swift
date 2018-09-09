@@ -95,6 +95,8 @@ final class SearchViewController: UIViewController {
             self.recipes = recipes
             tableView.reloadData()
         case .failed(let error):
+            self.recipes = []
+            tableView.reloadData()
             add(childController: makeErrorViewController(with: error))
         }
     }

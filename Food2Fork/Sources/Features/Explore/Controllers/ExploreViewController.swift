@@ -74,6 +74,8 @@ final class ExploreViewController: UIViewController {
             self.recipes = recipes
             collectionView.reloadData()
         case .failed(let error):
+            self.recipes = []
+            collectionView.reloadData()
             add(childController: makeErrorViewController(with: error))
         }
     }

@@ -123,14 +123,14 @@ final class RecipeViewController: UIViewController {
     }
 
     @objc private func handleFavoriteButtonTap() {
-        if recipe.isFavorite {
-            recipe.isFavorite = false
-            try! logicController.unlike(recipe: recipe)
-            updateFavoriteButton(isFavorite: false)
-        } else {
-            recipe.isFavorite = true
-            try! logicController.like(recipe: recipe)
-            updateFavoriteButton(isFavorite: true)
+        let action = recipe.isFavorite ? logicController.unlike : logicController.like
+
+        do {
+            try action(recipe)
+            recipe.isFavorite = !recipe.isFavorite
+            updateFavoriteButton(isFavorite: recipe.isFavorite)
+        } catch {
+            presentAlert(text: error.localizedDescription)
         }
     }
 

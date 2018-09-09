@@ -14,7 +14,7 @@ final class DependencyContainer {
     private let imageLoader = ImageLoader()
     private let modelController = ModelController()
     private lazy var networking: Networking<Endpoint> = {
-        let networking = Networking<Endpoint>.init(mockProvider: nil)
+        let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
         Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])

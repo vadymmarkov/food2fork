@@ -73,6 +73,8 @@ final class FavoritesViewController: UIViewController {
             self.recipes = recipes
             tableView.reloadData()
         case .failed:
+            self.recipes = []
+            tableView.reloadData()
             add(childController: makeInfoViewController())
         }
     }
