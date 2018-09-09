@@ -36,6 +36,20 @@ final class FavoritesFlowController: UINavigationController {
 private extension FavoritesFlowController {
     func startFavorites() {
         let viewController = controllerFactory.makeFavoritesViewController()
+        viewController.delegate = self
         setViewControllers([viewController], animated: false)
+    }
+
+    func startRecipeDetail(with recipe: Recipe) {
+        let viewController = controllerFactory.makeRecipeViewController(with: recipe)
+        pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Delegates
+
+extension FavoritesFlowController: FavoritesViewControllerDelegate {
+    func favoritesViewController(_ viewController: FavoritesViewController, didSelectRecipe recipe: Recipe) {
+        startRecipeDetail(with: recipe)
     }
 }

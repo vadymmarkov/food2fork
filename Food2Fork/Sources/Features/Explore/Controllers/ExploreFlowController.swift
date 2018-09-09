@@ -36,6 +36,20 @@ final class ExploreFlowController: UINavigationController {
 private extension ExploreFlowController {
     func startExplore() {
         let viewController = controllerFactory.makeExploreViewController()
+        viewController.delegate = self
         setViewControllers([viewController], animated: false)
+    }
+
+    func startRecipeDetail(with recipe: Recipe) {
+        let viewController = controllerFactory.makeRecipeViewController(with: recipe)
+        pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Delegates
+
+extension ExploreFlowController: ExploreViewControllerDelegate {
+    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe recipe: Recipe) {
+        startRecipeDetail(with: recipe)
     }
 }

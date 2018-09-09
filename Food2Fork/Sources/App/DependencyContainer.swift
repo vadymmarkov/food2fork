@@ -56,7 +56,7 @@ extension DependencyContainer: ControllerFactory {
     }
 
     func makeExploreViewController() -> ExploreViewController {
-        let logicController = ExploreLogicController(networking: networking)
+        let logicController = ExploreLogicController(networking: networking, modelController: modelController)
         return ExploreViewController(
             controllerFactory: self,
             logicController: logicController,
@@ -87,7 +87,8 @@ extension DependencyContainer: ControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController(
             controllerFactory: self,
-            logicController: FavoritesLogicController(modelController: modelController)
+            logicController: FavoritesLogicController(modelController: modelController),
+            imageLoader: imageLoader
         )
     }
 
@@ -95,6 +96,18 @@ extension DependencyContainer: ControllerFactory {
         return SearchViewController(
             controllerFactory: self,
             logicController: SearchLogicController(networking: networking)
+        )
+    }
+
+    func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController {
+        return RecipeViewController(
+            recipe: recipe,
+            controllerFactory: self,
+            logicController: RecipeLogicController(
+                networking: networking,
+                modelController: modelController
+            ),
+            imageLoader: imageLoader
         )
     }
 
