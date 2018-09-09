@@ -14,7 +14,7 @@ final class DependencyContainer {
     private let imageLoader = ImageLoader()
     private let modelController = ModelController()
     private lazy var networking: Networking<Endpoint> = {
-        let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
+        let networking = Networking<Endpoint>.init(mockProvider: nil)
         Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
@@ -102,7 +102,10 @@ extension DependencyContainer: ControllerFactory {
         return RecipeViewController(
             recipe: recipe,
             controllerFactory: self,
-            logicController: RecipeLogicController(networking: networking),
+            logicController: RecipeLogicController(
+                networking: networking,
+                modelController: modelController
+            ),
             imageLoader: imageLoader
         )
     }

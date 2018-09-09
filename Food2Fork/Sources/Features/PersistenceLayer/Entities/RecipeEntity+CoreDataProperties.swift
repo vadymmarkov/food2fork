@@ -10,12 +10,16 @@
 import Foundation
 import CoreData
 
-extension RecipeEntity {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<RecipeEntity> {
+protocol FetchRequestCreating: NSFetchRequestResult {
+    static func enityFetchRequest() -> NSFetchRequest<Self>
+}
+
+extension RecipeEntity: FetchRequestCreating {
+    static func enityFetchRequest() -> NSFetchRequest<RecipeEntity> {
         return NSFetchRequest<RecipeEntity>(entityName: "RecipeEntity")
     }
 
-    @NSManaged public var id: String
+    @NSManaged public var uid: String
     @NSManaged public var title: String
     @NSManaged public var imageUrl: String
     @NSManaged public var socialRank: Double

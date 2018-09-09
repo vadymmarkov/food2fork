@@ -13,20 +13,21 @@ extension Recipe: ManagedObjectConvertible {
 
     init(managedObject: RecipeEntity) {
         self.init(
-            id: managedObject.id,
+            id: managedObject.uid,
             title: managedObject.title,
             imageUrl: managedObject.imageUrl,
             socialRank: managedObject.socialRank,
             sourceUrl: managedObject.sourceUrl,
             publisher: managedObject.publisher,
             publisherUrl: managedObject.publisherUrl,
-            ingredients: managedObject.ingredients?.components(separatedBy: Recipe.separator)
+            ingredients: managedObject.ingredients?.components(separatedBy: Recipe.separator),
+            isFavorite: false
         )
     }
 
     func toManagedObject(in context: NSManagedObjectContext) -> RecipeEntity {
         let managedObject = RecipeEntity(context: context)
-        managedObject.id = id
+        managedObject.uid = id
         managedObject.title = title
         managedObject.imageUrl = imageUrl
         managedObject.socialRank = socialRank

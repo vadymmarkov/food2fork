@@ -10,19 +10,37 @@ import CoreData
 
 protocol ModelControlling {
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable
+    func loadObject<T>(predicate: NSPredicate) throws -> T? where T: ManagedObjectInitializable
     func save<T>(_ object: T) throws where T: ManagedObjectConvertible
+    func delete<T>(_ type: T.Type, predicate: NSPredicate) throws where T: ManagedObjectInitializable
 }
 
 final class ModelController: ModelControlling {
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable {
-        let request = T.ManagedObject.fetchRequest()
+        let request = T.ManagedObject.enityFetchRequest()
         let objects = try persistentContainer.viewContext.fetch(request) as? [T.ManagedObject] ?? []
         return objects.map({ T(managedObject: $0) })
+    }
+
+    func loadObject<T>(predicate: NSPredicate) throws -> T? where T: ManagedObjectInitializable {
+        let request = T.ManagedObject.enityFetchRequest()
+        request.predicate = predicate
+        let object = try persistentContainer.viewContext.fetch(request).first
+        return object.map({ T(managedObject: $0) })
     }
 
     func save<T>(_ object: T) throws where T: ManagedObjectRepresentable {
         _ = object.toManagedObject(in: persistentContainer.viewContext)
         try saveContext()
+    }
+
+    func delete<T>(_ type: T.Type, predicate: NSPredicate) throws where T: ManagedObjectInitializable {
+        let request = T.ManagedObject.enityFetchRequest()
+        request.predicate = predicate
+        if let object = try persistentContainer.viewContext.fetch(request).first {
+            persistentContainer.viewContext.delete(object)
+            try saveContext()
+        }
     }
 
     // MARK: - Core Data stack
