@@ -45,6 +45,8 @@
 		DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */; };
 		DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */; };
 		DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */; };
+		DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10F21455F6800933167 /* RecipeHeaderView.swift */; };
+		DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1112145618C00933167 /* RecipeIngredientsView.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -127,6 +129,8 @@
 		DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManagedObjectConvertibleTests.swift; sourceTree = "<group>"; };
+		DA25B10F21455F6800933167 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
+		DA25B1112145618C00933167 /* RecipeIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsView.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		CFA1FF41213ED605001394DB /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B10E21455F5900933167 /* View */,
 				DA46518821405888005B3353 /* Models */,
 				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
 			);
@@ -497,6 +502,15 @@
 				DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */,
 			);
 			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		DA25B10E21455F5900933167 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B10F21455F6800933167 /* RecipeHeaderView.swift */,
+				DA25B1112145618C00933167 /* RecipeIngredientsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DA46518321404D64005B3353 /* Models */ = {
@@ -787,6 +801,8 @@
 				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
 				DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */,
 				CFA1FF45213ED674001394DB /* FavoritesFlowController.swift in Sources */,
+				DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */,
+				DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
 				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,
 				DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */,

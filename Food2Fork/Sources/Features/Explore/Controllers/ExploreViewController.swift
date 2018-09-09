@@ -126,15 +126,15 @@ private extension ExploreViewController {
     }
 
     func makeCollectionViewLayout() -> UICollectionViewLayout {
-        let padding: CGFloat = 16
+        let spacing: CGFloat = 16
         let screenWidth = UIScreen.main.bounds.width
         let itemsPerRow: CGFloat = 2
-        let width = (screenWidth - 3 * padding) / itemsPerRow
+        let width = (screenWidth - 3 * spacing) / itemsPerRow
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = padding
-        layout.minimumLineSpacing = padding
-        layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         return layout
     }
