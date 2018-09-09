@@ -39,14 +39,14 @@ final class RecipeIngredientsView: UIView {
     // MARK: - Layout
 
     private func setupConstraints() {
-        let spacing: CGFloat = 16
+        let spacing = Dimensions.spacingMax
 
         NSLayoutConstraint.constrain(
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: spacing),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -spacing),
 
-            textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Dimensions.spacingMin),
             textLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             textLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
 

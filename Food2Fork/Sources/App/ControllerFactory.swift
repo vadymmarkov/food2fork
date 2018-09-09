@@ -12,6 +12,7 @@ import UIKit
 
 protocol ControllerFactory {
     func makeAppFlowController() -> AppFlowController
+
     func makeLaunchViewController() -> UIViewController
     func makeMainTabBarController() -> MainTabBarController
 
@@ -19,13 +20,12 @@ protocol ControllerFactory {
     func makeExploreViewController() -> ExploreViewController
 
     func makeSearchFlowController() -> SearchFlowController
+    func makeSearchViewController() -> SearchViewController
 
     func makeFavoritesFlowController() -> FavoritesFlowController
     func makeFavoritesViewController() -> FavoritesViewController
 
-    func makeSearchViewController() -> SearchViewController
     func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController
-
     func makeInfoViewController() -> InfoViewController
     func makeErrorViewController(with error: Error) -> InfoViewController
 }

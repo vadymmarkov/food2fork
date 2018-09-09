@@ -31,7 +31,7 @@ final class ExploreViewController: UIViewController {
     }()
 
     private lazy var collectionViewLayout: UICollectionViewLayout = {
-        let spacing: CGFloat = 16
+        let spacing: CGFloat = Dimensions.spacingMax
         let screenWidth = UIScreen.main.bounds.width
         let itemsPerRow: CGFloat = 2
         let width = (screenWidth - 3 * spacing) / itemsPerRow
@@ -43,10 +43,6 @@ final class ExploreViewController: UIViewController {
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         return layout
     }()
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
 
     // MARK: - Init
 
@@ -108,12 +104,6 @@ final class ExploreViewController: UIViewController {
             refreshControl.endRefreshing()
         }
     }
-
-    // MARK: - Actions
-
-    @objc private func handleRetryButtonTap() {
-        loadContent()
-    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -150,7 +140,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
+        viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
         return viewController
     }
 }

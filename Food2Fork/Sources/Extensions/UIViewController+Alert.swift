@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: - Alerts
-
 extension UIViewController {
     /// Present alert controller with a given text
     func presentAlert(text: String, handler: ((UIAlertAction) -> Void)? = nil) {
