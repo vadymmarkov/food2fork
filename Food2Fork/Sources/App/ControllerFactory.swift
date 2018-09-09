@@ -12,6 +12,7 @@ import UIKit
 
 protocol ControllerFactory {
     func makeAppFlowController() -> AppFlowController
+    func makeLaunchViewController() -> UIViewController
     func makeMainTabBarController() -> MainTabBarController
 
     func makeExploreFlowController() -> ExploreFlowController

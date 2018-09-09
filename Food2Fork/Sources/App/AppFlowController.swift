@@ -27,13 +27,24 @@ final class AppFlowController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        startMain()
+        startLoading()
     }
 }
 
 // MARK: - Flow
 
 private extension AppFlowController {
+    func startLoading() {
+        let viewController = controllerFactory.makeLaunchViewController()
+        add(childController: viewController)
+
+        let snapshotView = viewController.view.makeSnapshot()
+        let transitionManager = LaunchTransitionManager()
+
+        startMain()
+        transitionManager.animateAppearance(of: self, snapshotView: snapshotView)
+    }
+
     func startMain() {
         let viewController = controllerFactory.makeMainTabBarController()
         add(childController: viewController)
