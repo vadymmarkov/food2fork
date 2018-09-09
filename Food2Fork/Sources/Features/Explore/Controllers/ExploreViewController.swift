@@ -19,7 +19,28 @@ final class ExploreViewController: UIViewController {
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
 
-    private lazy var collectionView: UICollectionView = self.makeCollectionView()
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = R.color.seashell()
+        collectionView.register(type: ExploreCollectionViewCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        return collectionView
+    }()
+
+    private lazy var collectionViewLayout: UICollectionViewLayout = {
+        let spacing: CGFloat = 16
+        let screenWidth = UIScreen.main.bounds.width
+        let itemsPerRow: CGFloat = 2
+        let width = (screenWidth - 3 * spacing) / itemsPerRow
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.itemSize = CGSize(width: width, height: width * 1.5)
+        return layout
+    }()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
@@ -119,29 +140,6 @@ extension ExploreViewController: UICollectionViewDelegate {
 // MARK: - Factory
 
 private extension ExploreViewController {
-    func makeCollectionView() -> UICollectionView {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
-        collectionView.backgroundColor = R.color.seashell()
-        collectionView.register(type: ExploreCollectionViewCell.self)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        return collectionView
-    }
-
-    func makeCollectionViewLayout() -> UICollectionViewLayout {
-        let spacing: CGFloat = 16
-        let screenWidth = UIScreen.main.bounds.width
-        let itemsPerRow: CGFloat = 2
-        let width = (screenWidth - 3 * spacing) / itemsPerRow
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = spacing
-        layout.minimumLineSpacing = spacing
-        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-        layout.itemSize = CGSize(width: width, height: width * 1.5)
-        return layout
-    }
-
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
         viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)

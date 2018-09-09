@@ -107,7 +107,7 @@ final class RecipeViewController: UIViewController {
         headerView.subtitleLabel.text = recipe.publisher
         headerView.accessoryLabel.text = "\(Int(recipe.socialRank))"
         ingredientsView.titleLabel.text = R.string.localizable.ingredients()
-        ingredientsView.textLabel.text = recipe.ingredients?.joined(separator: "\n\n")
+        ingredientsView.textLabel.text = recipe.ingredients?.map({ "• \($0)" }).joined(separator: "\n\n")
         updateFavoriteButton(isFavorite: recipe.isFavorite)
     }
 

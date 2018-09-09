@@ -87,7 +87,8 @@ extension DependencyContainer: ControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController(
             controllerFactory: self,
-            logicController: FavoritesLogicController(modelController: modelController)
+            logicController: FavoritesLogicController(modelController: modelController),
+            imageLoader: imageLoader
         )
     }
 
