@@ -27,3 +27,18 @@ struct Recipe: Codable {
     let publisherUrl: String
     let ingredients: [String]?
 }
+
+// MARK: - Equatable
+
+extension Recipe: Equatable {
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.title == rhs.title
+            && lhs.imageUrl == rhs.imageUrl
+            && lhs.socialRank == rhs.socialRank
+            && lhs.sourceUrl == rhs.sourceUrl
+            && lhs.publisher == rhs.publisher
+            && lhs.publisherUrl == rhs.publisherUrl
+            && lhs.ingredients == rhs.ingredients
+    }
+}
