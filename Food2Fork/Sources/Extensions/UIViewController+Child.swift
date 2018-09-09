@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: - Child view controllers
-
 extension UIViewController {
     func add(childController: UIViewController) {
         childController.willMove(toParentViewController: self)

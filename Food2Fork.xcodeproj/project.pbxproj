@@ -10,7 +10,7 @@
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
-		CF5FAC2A2142C3EA00654E90 /* UIbutton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */; };
+		CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -55,6 +55,8 @@
 		DA25B1242145B40000933167 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1232145B40000933167 /* UIViewController+Alert.swift */; };
 		DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */; };
 		DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */; };
+		DA25B12B2145D4AC00933167 /* XCUIApplication+Food2Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */; };
+		DA25B12D2145D4FB00933167 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B12C2145D4FB00933167 /* Utilities.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -96,7 +98,7 @@
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
-		CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIbutton+Background.swift"; sourceTree = "<group>"; };
+		CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Background.swift"; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,8 @@
 		DA25B1232145B40000933167 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTransitionManager.swift; sourceTree = "<group>"; };
+		DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Food2Fork.swift"; sourceTree = "<group>"; };
+		DA25B12C2145D4FB00933167 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -303,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
-				CF5FAC292142C3EA00654E90 /* UIbutton+Background.swift */,
+				CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */,
 				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
 				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
 				DA46519021406177005B3353 /* UIView+Extensions.swift */,
@@ -447,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */,
+				DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */,
 				DA25B1212145B08400933167 /* RoundedLabel.swift */,
 				DA25B0F42143F04D00933167 /* ViewState.swift */,
+				DA25B12C2145D4FB00933167 /* Utilities.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -859,11 +865,12 @@
 				CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */,
 				DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */,
 				DA25B0F12143EFB900933167 /* FavoritesLogicController.swift in Sources */,
-				CF5FAC2A2142C3EA00654E90 /* UIbutton+Background.swift in Sources */,
+				CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */,
 				DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchFlowController.swift in Sources */,
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
+				DA25B12D2145D4FB00933167 /* Utilities.swift in Sources */,
 				CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
 				DA25B1162145704C00933167 /* Dimensions.swift in Sources */,
@@ -901,6 +908,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA25B12B2145D4AC00933167 /* XCUIApplication+Food2Fork.swift in Sources */,
 				CFE067F4213D6F25000E95FC /* Food2ForkUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

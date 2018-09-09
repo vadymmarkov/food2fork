@@ -101,8 +101,8 @@ final class RecipeViewController: UIViewController {
         case .presenting(let recipe):
             self.recipe = recipe
             present(recipe: recipe)
-        case .failed(let error):
-            add(childController: makeErrorViewController(with: error))
+        case .failed:
+            break
         }
     }
 
@@ -122,10 +122,6 @@ final class RecipeViewController: UIViewController {
     }
 
     // MARK: - Actions
-
-    @objc private func handleRetryButtonTap() {
-        loadContent()
-    }
 
     @objc private func handleFavoriteButtonTap() {
         let action = recipe.isFavorite ? logicController.unlike : logicController.like
@@ -172,7 +168,7 @@ final class RecipeViewController: UIViewController {
 private extension RecipeViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
+        viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
         return viewController
     }
 }

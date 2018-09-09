@@ -55,7 +55,7 @@ final class InfoViewController: UIViewController {
     // MARK: - Layout
 
     private func setupConstraints() {
-        let spacing: CGFloat = 16
+        let spacing = Dimensions.spacingMax
 
         NSLayoutConstraint.constrain(
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

@@ -74,7 +74,7 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Content
 
-    private func search() {
+    @objc private func search() {
         let text = navigationItem.searchController?.searchBar.text ?? ""
 
         guard text.count > 2 else {
@@ -107,10 +107,6 @@ final class SearchViewController: UIViewController {
     @objc private func handleSearchButtonTap() {
         navigationItem.searchController?.searchBar.becomeFirstResponder()
     }
-
-    @objc private func handleRetryButtonTap() {
-        search()
-    }
 }
 
 // MARK: - Factory
@@ -128,7 +124,7 @@ private extension SearchViewController {
 
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeErrorViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
+        viewController.button.addTarget(self, action: #selector(search), for: .touchUpInside)
         return viewController
     }
 }
@@ -170,6 +166,8 @@ extension SearchViewController: UISearchResultsUpdating {
         search()
     }
 }
+
+// MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

@@ -27,14 +27,14 @@ final class AppFlowController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        startLoading()
+        startLaunch()
     }
 }
 
 // MARK: - Flow
 
 private extension AppFlowController {
-    func startLoading() {
+    func startLaunch() {
         let viewController = controllerFactory.makeLaunchViewController()
         add(childController: viewController)
 

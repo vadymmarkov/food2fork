@@ -75,13 +75,15 @@ private final class ImageDecompressor {
         let bytesPerPixel: Int = 4
         let bytesPerRow: Int = bytesPerPixel * width
         let bitsPerComponent: Int = 8
-        let context = CGContext(data: nil,
-                                width: width,
-                                height: height,
-                                bitsPerComponent: bitsPerComponent,
-                                bytesPerRow: bytesPerRow,
-                                space: colorSpaceRef,
-                                bitmapInfo: CGBitmapInfo().rawValue)
+        let context = CGContext(
+            data: nil,
+            width: width,
+            height: height,
+            bitsPerComponent: bitsPerComponent,
+            bytesPerRow: bytesPerRow,
+            space: colorSpaceRef,
+            bitmapInfo: CGBitmapInfo().rawValue
+        )
 
         context?.draw(imageRef, in: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
 
