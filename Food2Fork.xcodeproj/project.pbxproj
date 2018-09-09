@@ -49,6 +49,8 @@
 		DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1112145618C00933167 /* RecipeIngredientsView.swift */; };
 		DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11321456BF000933167 /* RecipeLogicController.swift */; };
 		DA25B1162145704C00933167 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1152145704C00933167 /* Dimensions.swift */; };
+		DA25B11E21458AE400933167 /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */; };
+		DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -135,6 +137,8 @@
 		DA25B1112145618C00933167 /* RecipeIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsView.swift; sourceTree = "<group>"; };
 		DA25B11321456BF000933167 /* RecipeLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLogicController.swift; sourceTree = "<group>"; };
 		DA25B1152145704C00933167 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
+		DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapConfiguring.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DA25B11C21458AD500933167 /* Bootstrap */,
 				DA25B0E12141C76400933167 /* Info */,
 				DA4651A421406EDE005B3353 /* PersistenceLayer */,
 				CFA3DFAA214012C700A39C71 /* Networking */,
@@ -519,6 +524,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DA25B11C21458AD500933167 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */,
+				DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
 		DA46518321404D64005B3353 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -803,11 +817,13 @@
 				DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */,
 				CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
+				DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */,
 				CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */,
 				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
 				DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */,
 				CFA1FF45213ED674001394DB /* FavoritesFlowController.swift in Sources */,
 				DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */,
+				DA25B11E21458AE400933167 /* AppearanceConfigurator.swift in Sources */,
 				DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
 				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,

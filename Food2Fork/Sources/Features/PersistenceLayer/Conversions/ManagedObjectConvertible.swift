@@ -11,11 +11,11 @@ import CoreData
 typealias ManagedObjectConvertible = ManagedObjectInitializable & ManagedObjectRepresentable
 
 protocol ManagedObjectInitializable {
-    associatedtype ManagedObject: NSManagedObject
+    associatedtype ManagedObject: NSManagedObject & FetchRequestCreating
     init(managedObject: ManagedObject)
 }
 
 protocol ManagedObjectRepresentable {
-    associatedtype ManagedObject: NSManagedObject
+    associatedtype ManagedObject: NSManagedObject & FetchRequestCreating
     func toManagedObject(in context: NSManagedObjectContext) -> ManagedObject
 }

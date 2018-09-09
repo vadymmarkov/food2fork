@@ -82,7 +82,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
 
             subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -spacing),
             subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
-            subtitleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6),
+            subtitleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.5),
 
             accessoryLabel.bottomAnchor.constraint(equalTo: subtitleLabel.bottomAnchor),
             accessoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),

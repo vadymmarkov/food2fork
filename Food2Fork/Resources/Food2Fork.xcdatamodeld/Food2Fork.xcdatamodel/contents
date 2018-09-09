@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="RecipeEntity" representedClassName="RecipeEntity" syncable="YES">
-        <attribute name="id" attributeType="String" syncable="YES"/>
         <attribute name="imageUrl" attributeType="String" syncable="YES"/>
         <attribute name="ingredients" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="publisher" attributeType="String" syncable="YES"/>
@@ -9,6 +8,7 @@
         <attribute name="socialRank" attributeType="Double" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sourceUrl" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="uid" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="RecipeEntity" positionX="-63" positionY="-18" width="128" height="165"/>

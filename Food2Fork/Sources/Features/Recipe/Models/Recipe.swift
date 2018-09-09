@@ -26,6 +26,7 @@ struct Recipe: Codable {
     let publisher: String
     let publisherUrl: String
     let ingredients: [String]?
+    var isFavorite = false
 }
 
 // MARK: - Equatable
@@ -40,5 +41,6 @@ extension Recipe: Equatable {
             && lhs.publisher == rhs.publisher
             && lhs.publisherUrl == rhs.publisherUrl
             && lhs.ingredients == rhs.ingredients
+            && lhs.isFavorite == rhs.isFavorite
     }
 }

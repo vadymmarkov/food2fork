@@ -16,14 +16,16 @@ final class RecipeViewController: UIViewController {
 
     private lazy var headerView = RecipeHeaderView()
     private lazy var ingredientsView = RecipeIngredientsView()
+
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [headerView, ingredientsView])
-        stackView.spacing = 8
+        stackView.spacing = Dimensions.spacingMax
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         return stackView
     }()
+
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = R.color.milk()
@@ -33,6 +35,13 @@ final class RecipeViewController: UIViewController {
         }
         return scrollView
     }()
+
+    private lazy var favoriteButton = UIBarButtonItem(
+        image: R.image.iconFavorite(),
+        style: .plain,
+        target: self,
+        action: #selector(handleFavoriteButtonTap)
+    )
 
     // MARK: - Init
 
@@ -56,6 +65,8 @@ final class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
+        favoriteButton.tintColor = R.color.carnation()
+        navigationItem.rightBarButtonItem = favoriteButton
         scrollView.addSubview(stackView)
         view.addSubview(scrollView)
         setupConstraints()
@@ -77,6 +88,7 @@ final class RecipeViewController: UIViewController {
 
     private func render(_ state: ViewState<Recipe>) {
         removeAllChildControllers()
+        favoriteButton.isEnabled = false
 
         switch state {
         case .loading:
@@ -96,6 +108,12 @@ final class RecipeViewController: UIViewController {
         headerView.accessoryLabel.text = "\(Int(recipe.socialRank))"
         ingredientsView.titleLabel.text = R.string.localizable.ingredients()
         ingredientsView.textLabel.text = recipe.ingredients?.joined(separator: "\n\n")
+        updateFavoriteButton(isFavorite: recipe.isFavorite)
+    }
+
+    private func updateFavoriteButton(isFavorite: Bool) {
+        favoriteButton.image = isFavorite ? R.image.iconFavoriteSelected() : R.image.iconFavorite()
+        favoriteButton.isEnabled = true
     }
 
     // MARK: - Actions
@@ -105,7 +123,15 @@ final class RecipeViewController: UIViewController {
     }
 
     @objc private func handleFavoriteButtonTap() {
-
+        if recipe.isFavorite {
+            recipe.isFavorite = false
+            try! logicController.unlike(recipe: recipe)
+            updateFavoriteButton(isFavorite: false)
+        } else {
+            recipe.isFavorite = true
+            try! logicController.like(recipe: recipe)
+            updateFavoriteButton(isFavorite: true)
+        }
     }
 
     // MARK: - Layout

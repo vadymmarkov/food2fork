@@ -54,6 +54,13 @@ final class FavoritesViewController: UIViewController {
         NSLayoutConstraint.pin(tableView, toView: view)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        logicController.load(then: { [weak self] state in
+            self?.render(state)
+        })
+    }
+
     // MARK: - Content
 
     private func render(_ state: ViewState<[Recipe]>) {
