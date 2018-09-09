@@ -32,6 +32,8 @@ final class FavoritesViewController: UIViewController {
         return tableView
     }()
 
+    private lazy var refreshControl = UIRefreshControl()
+
     // MARK: - Init
 
     init(controllerFactory: ControllerFactory,
@@ -54,17 +56,23 @@ final class FavoritesViewController: UIViewController {
         view.backgroundColor = R.color.seashell()
         navigationItem.title = R.string.localizable.favorites()
         view.addSubview(tableView)
+        tableView.insertSubview(refreshControl, at: 0)
+        refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
         NSLayoutConstraint.pin(tableView, toView: view)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadContent()
+    }
+
+    // MARK: - Content
+
+    @objc private func loadContent() {
         logicController.load(then: { [weak self] state in
             self?.render(state)
         })
     }
-
-    // MARK: - Content
 
     private func render(_ state: ViewState<[Recipe]>) {
         removeAllChildControllers()
@@ -79,6 +87,10 @@ final class FavoritesViewController: UIViewController {
             self.recipes = []
             tableView.reloadData()
             add(childController: makeInfoViewController())
+        }
+
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
         }
     }
 

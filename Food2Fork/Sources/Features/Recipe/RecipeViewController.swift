@@ -43,6 +43,8 @@ final class RecipeViewController: UIViewController {
         action: #selector(handleFavoriteButtonTap)
     )
 
+    private lazy var refreshControl = UIRefreshControl()
+
     // MARK: - Init
 
     init(recipe: Recipe,
@@ -69,6 +71,9 @@ final class RecipeViewController: UIViewController {
         navigationItem.rightBarButtonItem = favoriteButton
         scrollView.addSubview(stackView)
         view.addSubview(scrollView)
+        scrollView.insertSubview(refreshControl, at: 0)
+        refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+
         setupConstraints()
     }
 
@@ -80,7 +85,7 @@ final class RecipeViewController: UIViewController {
 
     // MARK: - Content
 
-    private func loadContent() {
+    @objc private func loadContent() {
         logicController.load(id: recipe.id, then: { [weak self] state in
             self?.render(state)
         })

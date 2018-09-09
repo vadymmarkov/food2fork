@@ -19,6 +19,8 @@ final class ExploreViewController: UIViewController {
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
 
+    private lazy var refreshControl = UIRefreshControl()
+
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = R.color.seashell()
@@ -68,6 +70,8 @@ final class ExploreViewController: UIViewController {
         navigationItem.title = R.string.localizable.explore()
         view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
+        collectionView.insertSubview(refreshControl, at: 0)
+        refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
 
@@ -78,7 +82,7 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Content
 
-    private func loadContent() {
+    @objc private func loadContent() {
         render(.loading)
         logicController.load(then: { [weak self] state in
             self?.render(state)
@@ -98,6 +102,10 @@ final class ExploreViewController: UIViewController {
             self.recipes = []
             collectionView.reloadData()
             add(childController: makeErrorViewController(with: error))
+        }
+
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
         }
     }
 
