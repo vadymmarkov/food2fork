@@ -39,10 +39,6 @@ final class RecipeHeaderView: UIView {
         return label
     }()
 
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: frame.width, height: subtitleLabel.frame.maxY)
-    }
-
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -58,7 +54,7 @@ final class RecipeHeaderView: UIView {
     // MARK: - Layout
 
     private func setupConstraints() {
-        let spacing: CGFloat = 16
+        let spacing = Dimensions.spacingMax
 
         NSLayoutConstraint.constrain(
             imageView.topAnchor.constraint(equalTo: topAnchor),

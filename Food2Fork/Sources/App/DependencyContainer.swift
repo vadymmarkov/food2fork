@@ -13,8 +13,11 @@ final class DependencyContainer {
     private let apiConfig = APIConfig()
     private let imageLoader = ImageLoader()
     private let modelController = ModelController()
+
     private lazy var networking: Networking<Endpoint> = {
-        let networking = Networking<Endpoint>.init(mockProvider: self.mockProvider)
+        let networking = Networking<Endpoint>(
+            mockProvider: Utilities.isUITesting ? self.mockProvider: nil
+        )
         Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
@@ -39,6 +42,10 @@ final class DependencyContainer {
 extension DependencyContainer: ControllerFactory {
     func makeAppFlowController() -> AppFlowController {
         return AppFlowController(controllerFactory: self)
+    }
+
+    func makeLaunchViewController() -> UIViewController {
+        return R.storyboard.launchScreen().instantiateInitialViewController()!
     }
 
     func makeMainTabBarController() -> MainTabBarController {
@@ -74,6 +81,13 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
+    func makeSearchViewController() -> SearchViewController {
+        return SearchViewController(
+            controllerFactory: self,
+            logicController: SearchLogicController(networking: networking)
+        )
+    }
+
     func makeFavoritesFlowController() -> FavoritesFlowController {
         let controller = FavoritesFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
@@ -89,13 +103,6 @@ extension DependencyContainer: ControllerFactory {
             controllerFactory: self,
             logicController: FavoritesLogicController(modelController: modelController),
             imageLoader: imageLoader
-        )
-    }
-
-    func makeSearchViewController() -> SearchViewController {
-        return SearchViewController(
-            controllerFactory: self,
-            logicController: SearchLogicController(networking: networking)
         )
     }
 
