@@ -67,7 +67,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupConstraints() {
-        let padding: CGFloat = 16
+        let spacing: CGFloat = 16
 
         NSLayoutConstraint.constrain(
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -75,17 +75,17 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5),
 
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: padding),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: spacing),
             titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9),
 
-            subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
-            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -spacing),
+            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
             subtitleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6),
 
             accessoryLabel.bottomAnchor.constraint(equalTo: subtitleLabel.bottomAnchor),
-            accessoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            accessoryLabel.leadingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor, constant: padding)
+            accessoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
+            accessoryLabel.leadingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor, constant: spacing)
         )
     }
 }
