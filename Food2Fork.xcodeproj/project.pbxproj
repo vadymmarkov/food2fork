@@ -54,6 +54,7 @@
 		DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1212145B08400933167 /* RoundedLabel.swift */; };
 		DA25B1242145B40000933167 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1232145B40000933167 /* UIViewController+Alert.swift */; };
 		DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */; };
+		DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -145,6 +146,7 @@
 		DA25B1212145B08400933167 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		DA25B1232145B40000933167 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTransitionManager.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 			children = (
 				DA25B0F42143F04D00933167 /* ViewState.swift */,
 				DA25B1212145B08400933167 /* RoundedLabel.swift */,
+				DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 			files = (
 				DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */,
 				CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */,
+				DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */,
 				CFA1FF4F213ED7E1001394DB /* MainTabBarController.swift in Sources */,
