@@ -73,7 +73,19 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Content
 
-    private func render(_ state: SearchState) {
+    private func search() {
+        let text = navigationItem.searchController?.searchBar.text ?? ""
+
+        guard text.count > 2 else {
+            return
+        }
+
+        logicController.search(text: text, sort: .trendingness, then: { [weak self] state in
+            self?.render(state)
+        })
+    }
+
+    private func render(_ state: ViewState<[Recipe]>) {
         removeAllChildControllers()
 
         switch state {
@@ -92,6 +104,10 @@ final class SearchViewController: UIViewController {
     @objc private func handleSearchButtonTap() {
         navigationItem.searchController?.searchBar.becomeFirstResponder()
     }
+
+    @objc private func handleRetryButtonTap() {
+        search()
+    }
 }
 
 // MARK: - Factory
@@ -108,9 +124,8 @@ private extension SearchViewController {
     }
 
     func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeErrorViewController()
-        viewController.textLabel.text = error.localizedDescription
-        viewController.button.addTarget(self, action: #selector(handleSearchButtonTap), for: .touchUpInside)
+        let viewController = controllerFactory.makeErrorViewController(with: error)
+        viewController.button.addTarget(self, action: #selector(handleRetryButtonTap), for: .touchUpInside)
         return viewController
     }
 }
@@ -145,14 +160,6 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        let text = searchController.searchBar.text ?? ""
-
-        guard text.count > 2 else {
-            return
-        }
-
-        logicController.search(text: text, sort: .trendingness, then: { [weak self] state in
-            self?.render(state)
-        })
+        search()
     }
 }
