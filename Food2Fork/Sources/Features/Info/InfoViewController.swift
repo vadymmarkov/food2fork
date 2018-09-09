@@ -38,7 +38,7 @@ final class InfoViewController: UIViewController {
         button.setBackgroundColor(R.color.brand()?.withAlphaComponent(0.7), forState: .highlighted)
         button.setBackgroundColor(R.color.brand()?.withAlphaComponent(0.7), forState: .selected)
         button.setTitleColor(R.color.milk(), for: .normal)
-        button.layer.cornerRadius = 15
+        button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         return button
     }()

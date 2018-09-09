@@ -101,6 +101,7 @@ extension ExploreViewController: UICollectionViewDataSource {
         cell.titleLabel.text = recipe.title
         cell.subtitleLabel.text = recipe.publisher
         cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
+        cell.favoriteView.isHidden = !recipe.isFavorite
         imageLoader.loadImage(at: recipe.imageUrl, to: cell.imageView)
         return cell
     }

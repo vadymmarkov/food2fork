@@ -56,7 +56,7 @@ extension DependencyContainer: ControllerFactory {
     }
 
     func makeExploreViewController() -> ExploreViewController {
-        let logicController = ExploreLogicController(networking: networking)
+        let logicController = ExploreLogicController(networking: networking, modelController: modelController)
         return ExploreViewController(
             controllerFactory: self,
             logicController: logicController,
