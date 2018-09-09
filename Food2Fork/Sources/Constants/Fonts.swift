@@ -13,11 +13,15 @@ extension UIFont {
         return UIFont.systemFont(ofSize: 18, weight: .semibold)
     }
 
+    static var subtitle: UIFont {
+        return UIFont.systemFont(ofSize: 16, weight: .regular)
+    }
+
     static var body: UIFont {
         return UIFont.systemFont(ofSize: 14, weight: .regular)
     }
 
-    static var subtitle: UIFont {
+    static var accessoryLight: UIFont {
         return UIFont.systemFont(ofSize: 12, weight: .light)
     }
 

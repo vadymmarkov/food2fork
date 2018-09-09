@@ -18,7 +18,7 @@ protocol ModelControlling {
 final class ModelController: ModelControlling {
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable {
         let request = T.ManagedObject.enityFetchRequest()
-        let objects = try persistentContainer.viewContext.fetch(request) as? [T.ManagedObject] ?? []
+        let objects = try persistentContainer.viewContext.fetch(request)
         return objects.map({ T(managedObject: $0) })
     }
 

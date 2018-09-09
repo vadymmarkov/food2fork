@@ -33,11 +33,9 @@ final class RecipeHeaderView: UIView {
     }()
 
     private(set) lazy var accessoryLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = R.color.brand()
-        label.font = .accessory
-        label.numberOfLines = 2
-        label.textAlignment = .right
+        let label = RoundedLabel()
+        label.font = .title
+        label.layer.borderWidth = 3
         return label
     }()
 
@@ -70,15 +68,14 @@ final class RecipeHeaderView: UIView {
 
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: spacing),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: spacing),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -spacing),
+            titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
+
+            accessoryLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor),
+            accessoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -spacing),
 
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: spacing),
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: spacing),
             subtitleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
-
-            accessoryLabel.topAnchor.constraint(equalTo: subtitleLabel.topAnchor),
-            accessoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -spacing),
-            accessoryLabel.leadingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor, constant: spacing),
 
             bottomAnchor.constraint(equalTo: subtitleLabel.bottomAnchor)
         )
