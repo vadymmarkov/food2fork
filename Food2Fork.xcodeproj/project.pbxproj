@@ -28,6 +28,12 @@
 		CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */; };
 		CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAC214016D200A39C71 /* Endpoint.swift */; };
 		CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAE214017A900A39C71 /* APIConfig.swift */; };
+		CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */; };
+		CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */; };
+		CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */; };
+		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
+		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
+		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
 		CFE067DB213D6F24000E95FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DA213D6F24000E95FC /* Images.xcassets */; };
@@ -63,7 +69,7 @@
 		DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */; };
 		DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519021406177005B3353 /* UIView+Extensions.swift */; };
 		DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651922140619A005B3353 /* UITableView+Extensions.swift */; };
-		DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */; };
+		DA465195214061C7005B3353 /* UICollectionView+ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA465194214061C7005B3353 /* UICollectionView+ReusableCells.swift */; };
 		DA4651982140655D005B3353 /* ExploreLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4651972140655D005B3353 /* ExploreLogicController.swift */; };
 		DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519B214066A6005B3353 /* Promise+Networking.swift */; };
 		DA46519E2140670F005B3353 /* Data+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46519D2140670F005B3353 /* Data+Decodable.swift */; };
@@ -115,6 +121,12 @@
 		CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFA3DFAC214016D200A39C71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CFA3DFAE214017A900A39C71 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowControllerTests.swift; sourceTree = "<group>"; };
+		CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
+		CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtensionsTests.swift; sourceTree = "<group>"; };
+		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
+		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
+		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D8213D6F23000E95FC /* Food2Fork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food2Fork.xcdatamodel; sourceTree = "<group>"; };
@@ -156,7 +168,7 @@
 		DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraints+Extensions.swift"; sourceTree = "<group>"; };
 		DA46519021406177005B3353 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DA4651922140619A005B3353 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		DA465194214061C7005B3353 /* UICollectionView+ReusableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableCells.swift"; sourceTree = "<group>"; };
 		DA4651972140655D005B3353 /* ExploreLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicController.swift; sourceTree = "<group>"; };
 		DA46519B214066A6005B3353 /* Promise+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Networking.swift"; sourceTree = "<group>"; };
 		DA46519D2140670F005B3353 /* Data+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decodable.swift"; sourceTree = "<group>"; };
@@ -306,7 +318,7 @@
 			children = (
 				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
 				CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */,
-				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
+				DA465194214061C7005B3353 /* UICollectionView+ReusableCells.swift */,
 				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
 				DA46519021406177005B3353 /* UIView+Extensions.swift */,
 				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
@@ -350,6 +362,26 @@
 				DA46519B214066A6005B3353 /* Promise+Networking.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CFBBB4D821468488008F3943 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */,
+				CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CFBBB4DD21468AC5008F3943 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */,
+				CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */,
+				CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */,
+				CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CFE067C4213D6F23000E95FC = {
@@ -430,6 +462,8 @@
 		CFE06803213D75FC000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CFBBB4DD21468AC5008F3943 /* Extensions */,
+				CFBBB4D821468488008F3943 /* App */,
 				DA25B1082145574B00933167 /* Features */,
 				CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */,
 			);
@@ -862,7 +896,7 @@
 				DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */,
 				DA25B0F12143EFB900933167 /* FavoritesLogicController.swift in Sources */,
 				CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */,
-				DA465195214061C7005B3353 /* UICollectionView+Extensions.swift in Sources */,
+				DA465195214061C7005B3353 /* UICollectionView+ReusableCells.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFA1FF47213ED689001394DB /* SearchFlowController.swift in Sources */,
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
@@ -895,8 +929,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
 				CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */,
+				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
+				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
+				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
+				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
+				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
