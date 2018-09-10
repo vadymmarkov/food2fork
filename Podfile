@@ -12,5 +12,6 @@ pod 'SwiftLint', '0.27.0', configurations: 'Debug'
 target 'Food2Fork'
 
 target 'Food2ForkTests' do
+  pod 'Malibu', '~> 7.0'
   inherit! :search_paths
 end
