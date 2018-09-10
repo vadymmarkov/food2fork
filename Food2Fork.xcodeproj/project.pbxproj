@@ -39,6 +39,7 @@
 		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
 		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
 		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
+		CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
 		CFE067DB213D6F24000E95FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DA213D6F24000E95FC /* Images.xcassets */; };
@@ -137,6 +138,7 @@
 		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
 		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
+		CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlowControllerTests.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D8213D6F23000E95FC /* Food2Fork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food2Fork.xcdatamodel; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		CF01FCCD2146A7E500AD40AF /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -917,16 +920,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Malibu/Malibu.framework",
 				"${BUILT_PRODUCTS_DIR}/When/When.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Malibu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/When.framework",
@@ -1008,6 +1007,7 @@
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
+				CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
 				CF01FCD62146AB1E00AD40AF /* ModelController+UnitTests.swift in Sources */,
