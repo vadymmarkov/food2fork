@@ -17,6 +17,9 @@ final class SearchViewController: UIViewController {
     private let controllerFactory: InfoControllerFactory
     private let logicController: SearchLogicController
     private var recipes = [Recipe]()
+    private var isLoading = false
+    private var isLastPage = false
+    private var page = 1
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -75,14 +78,27 @@ final class SearchViewController: UIViewController {
     // MARK: - Content
 
     @objc private func search() {
+        page = 0
+        loadContent()
+    }
+
+    private func loadNextPage() {
+        page += 1
+        loadContent()
+    }
+
+    private func loadContent() {
         let text = navigationItem.searchController?.searchBar.text ?? ""
 
         guard text.count > 2 else {
             return
         }
 
-        logicController.search(text: text, sort: .trendingness, then: { [weak self] state in
+        isLoading = true
+
+        logicController.search(text: text, sort: .trendingness, page: page, then: { [weak self] state in
             self?.render(state)
+            self?.isLoading = false
         })
     }
 
@@ -93,7 +109,12 @@ final class SearchViewController: UIViewController {
         case .loading:
             add(childController: makeInfoViewController())
         case .presenting(let recipes):
-            self.recipes = recipes
+            if page == 0 {
+                self.recipes = recipes
+            } else {
+                self.recipes.append(contentsOf: recipes)
+            }
+            isLastPage = recipes.isEmpty
             tableView.reloadData()
         case .failed(let error):
             self.recipes = []
@@ -152,6 +173,18 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.row]
         delegate?.searchViewController(self, didSelectRecipe: recipe)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard !isLoading && !isLastPage else {
+            return
+        }
+
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            loadNextPage()
+        }
     }
 }
 
