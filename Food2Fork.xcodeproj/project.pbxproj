@@ -1219,7 +1219,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2CE337691B93C009DA08834 /* Pods-Food2ForkTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Food2ForkTests/Resources/Info.plist;
@@ -1240,7 +1240,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30BB8E2C545CA448E4A5A388 /* Pods-Food2ForkTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Food2ForkTests/Resources/Info.plist;
@@ -1260,7 +1260,7 @@
 		CFE067FF213D6F25000E95FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Food2ForkUITests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1279,7 +1279,7 @@
 		CFE06800213D6F25000E95FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Food2ForkUITests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
