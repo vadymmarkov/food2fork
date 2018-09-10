@@ -16,7 +16,7 @@ final class DependencyContainer {
 
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>(
-            mockProvider: Utilities.isUITesting ? self.mockProvider: nil
+            mockProvider: Utilities.isUITesting ? self.mockProvider: self.mockProvider
         )
         Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
@@ -37,13 +37,17 @@ final class DependencyContainer {
     }
 }
 
-// MARK: - Controller Factory
+// MARK: - AppControllerFactory
 
-extension DependencyContainer: ControllerFactory {
+extension DependencyContainer: AppControllerFactory {
     func makeAppFlowController() -> AppFlowController {
         return AppFlowController(controllerFactory: self)
     }
+}
 
+// MARK: - MainControllerFactory
+
+extension DependencyContainer: MainControllerFactory {
     func makeLaunchViewController() -> UIViewController {
         return R.storyboard.launchScreen().instantiateInitialViewController()!
     }
@@ -51,7 +55,11 @@ extension DependencyContainer: ControllerFactory {
     func makeMainTabBarController() -> MainTabBarController {
         return MainTabBarController(controllerFactory: self)
     }
+}
 
+// MARK: - FlowControllerFactory
+
+extension DependencyContainer: FlowControllerFactory {
     func makeExploreFlowController() -> ExploreFlowController {
         let controller = ExploreFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
@@ -60,15 +68,6 @@ extension DependencyContainer: ControllerFactory {
             selectedImage: nil
         )
         return controller
-    }
-
-    func makeExploreViewController() -> ExploreViewController {
-        let logicController = ExploreLogicController(networking: networking, modelController: modelController)
-        return ExploreViewController(
-            controllerFactory: self,
-            logicController: logicController,
-            imageLoader: imageLoader
-        )
     }
 
     func makeSearchFlowController() -> SearchFlowController {
@@ -81,13 +80,6 @@ extension DependencyContainer: ControllerFactory {
         return controller
     }
 
-    func makeSearchViewController() -> SearchViewController {
-        return SearchViewController(
-            controllerFactory: self,
-            logicController: SearchLogicController(networking: networking)
-        )
-    }
-
     func makeFavoritesFlowController() -> FavoritesFlowController {
         let controller = FavoritesFlowController(controllerFactory: self)
         controller.tabBarItem = UITabBarItem(
@@ -97,7 +89,35 @@ extension DependencyContainer: ControllerFactory {
         )
         return controller
     }
+}
 
+// MARK: - ExploreControllerFactory
+
+extension DependencyContainer: ExploreControllerFactory {
+    func makeExploreViewController() -> ExploreViewController {
+        let logicController = ExploreLogicController(networking: networking, modelController: modelController)
+        return ExploreViewController(
+            controllerFactory: self,
+            logicController: logicController,
+            imageLoader: imageLoader
+        )
+    }
+}
+
+// MARK: - SearchControllerFactory
+
+extension DependencyContainer: SearchControllerFactory {
+    func makeSearchViewController() -> SearchViewController {
+        return SearchViewController(
+            controllerFactory: self,
+            logicController: SearchLogicController(networking: networking)
+        )
+    }
+}
+
+// MARK: - SearchControllerFactory
+
+extension DependencyContainer: FavoritesControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController(
             controllerFactory: self,
@@ -105,7 +125,11 @@ extension DependencyContainer: ControllerFactory {
             imageLoader: imageLoader
         )
     }
+}
 
+// MARK: - SearchControllerFactory
+
+extension DependencyContainer: RecipeControllerFactory {
     func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController {
         return RecipeViewController(
             recipe: recipe,
@@ -117,12 +141,16 @@ extension DependencyContainer: ControllerFactory {
             imageLoader: imageLoader
         )
     }
+}
 
+// MARK: - SearchControllerFactory
+
+extension DependencyContainer: InfoControllerFactory {
     func makeInfoViewController() -> InfoViewController {
         return InfoViewController()
     }
 
-    func makeErrorViewController(with error: Error) -> InfoViewController {
+    func makeInfoViewController(with error: Error) -> InfoViewController {
         let viewController = InfoViewController()
         viewController.titleLabel.text = R.string.localizable.errorTitle()
         viewController.textLabel.text = error.localizedDescription

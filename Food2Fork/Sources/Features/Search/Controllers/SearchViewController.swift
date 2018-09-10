@@ -14,7 +14,7 @@ protocol SearchViewControllerDelegate: AnyObject {
 
 final class SearchViewController: UIViewController {
     weak var delegate: SearchViewControllerDelegate?
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: InfoControllerFactory
     private let logicController: SearchLogicController
     private var recipes = [Recipe]()
 
@@ -32,7 +32,7 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory, logicController: SearchLogicController) {
+    init(controllerFactory: InfoControllerFactory, logicController: SearchLogicController) {
         self.controllerFactory = controllerFactory
         self.logicController = logicController
         super.init(nibName: nil, bundle: nil)
@@ -123,7 +123,7 @@ private extension SearchViewController {
     }
 
     func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeErrorViewController(with: error)
+        let viewController = controllerFactory.makeInfoViewController(with: error)
         viewController.button.addTarget(self, action: #selector(search), for: .touchUpInside)
         return viewController
     }

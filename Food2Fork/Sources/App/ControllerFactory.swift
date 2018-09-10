@@ -10,22 +10,38 @@ import UIKit
 
 // MARK: - ControllerFactory
 
-protocol ControllerFactory {
+protocol AppControllerFactory {
     func makeAppFlowController() -> AppFlowController
+}
 
+protocol MainControllerFactory {
     func makeLaunchViewController() -> UIViewController
     func makeMainTabBarController() -> MainTabBarController
+}
 
+protocol FlowControllerFactory {
     func makeExploreFlowController() -> ExploreFlowController
-    func makeExploreViewController() -> ExploreViewController
-
     func makeSearchFlowController() -> SearchFlowController
-    func makeSearchViewController() -> SearchViewController
-
     func makeFavoritesFlowController() -> FavoritesFlowController
-    func makeFavoritesViewController() -> FavoritesViewController
+}
 
+protocol ExploreControllerFactory {
+    func makeExploreViewController() -> ExploreViewController
+}
+
+protocol SearchControllerFactory {
+    func makeSearchViewController() -> SearchViewController
+}
+
+protocol FavoritesControllerFactory: RecipeControllerFactory {
+    func makeFavoritesViewController() -> FavoritesViewController
+}
+
+protocol RecipeControllerFactory {
     func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController
+}
+
+protocol InfoControllerFactory {
     func makeInfoViewController() -> InfoViewController
-    func makeErrorViewController(with error: Error) -> InfoViewController
+    func makeInfoViewController(with error: Error) -> InfoViewController
 }

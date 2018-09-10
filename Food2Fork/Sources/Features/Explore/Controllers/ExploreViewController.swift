@@ -14,7 +14,7 @@ protocol ExploreViewControllerDelegate: AnyObject {
 
 final class ExploreViewController: UIViewController {
     weak var delegate: ExploreViewControllerDelegate?
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: InfoControllerFactory
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
@@ -46,7 +46,7 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory,
+    init(controllerFactory: InfoControllerFactory,
          logicController: ExploreLogicController,
          imageLoader: ImageLoader) {
         self.controllerFactory = controllerFactory
@@ -139,7 +139,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 
 private extension ExploreViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeErrorViewController(with: error)
+        let viewController = controllerFactory.makeInfoViewController(with: error)
         viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
         return viewController
     }
