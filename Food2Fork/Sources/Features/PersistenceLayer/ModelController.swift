@@ -16,55 +16,52 @@ protocol ModelControlling {
 }
 
 final class ModelController: ModelControlling {
+    private let managedObjectContext: NSManagedObjectContext
+
+    // MARK: - Init
+
+    init(managedObjectContext: NSManagedObjectContext) {
+        self.managedObjectContext = managedObjectContext
+    }
+
+    // MARK: - Logic
+
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable {
         let request = T.ManagedObject.enityFetchRequest()
-        let objects = try persistentContainer.viewContext.fetch(request)
+        let objects = try managedObjectContext.fetch(request)
         return objects.map({ T(managedObject: $0) })
     }
 
     func loadObject<T>(predicate: NSPredicate) throws -> T? where T: ManagedObjectInitializable {
         let request = T.ManagedObject.enityFetchRequest()
         request.predicate = predicate
-        let object = try persistentContainer.viewContext.fetch(request).first
+        let object = try managedObjectContext.fetch(request).first
         return object.map({ T(managedObject: $0) })
     }
 
     func save<T>(_ object: T) throws where T: ManagedObjectRepresentable {
-        _ = object.toManagedObject(in: persistentContainer.viewContext)
+        _ = object.toManagedObject(in: managedObjectContext)
         try saveContext()
     }
 
     func delete<T>(_ type: T.Type, predicate: NSPredicate) throws where T: ManagedObjectInitializable {
         let request = T.ManagedObject.enityFetchRequest()
         request.predicate = predicate
-        if let object = try persistentContainer.viewContext.fetch(request).first {
-            persistentContainer.viewContext.delete(object)
+        if let object = try managedObjectContext.fetch(request).first {
+            managedObjectContext.delete(object)
             try saveContext()
         }
     }
 
-    // MARK: - Core Data stack
-
-    private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Food2Fork")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                print("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-
     // MARK: - Core Data Saving support
 
     private func saveContext() throws {
-        let context = persistentContainer.viewContext
-        guard context.hasChanges else {
+        guard managedObjectContext.hasChanges else {
             return
         }
 
         do {
-            try context.save()
+            try managedObjectContext.save()
         } catch {
             let nserror = error as NSError
             print("Unresolved error \(nserror), \(nserror.userInfo)")

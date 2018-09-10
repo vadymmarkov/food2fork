@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
+		CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */; };
+		CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */; };
+		CF01FCD22146A90D00AD40AF /* RecipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD12146A90D00AD40AF /* RecipeFactory.swift */; };
+		CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */; };
+		CF01FCD62146AB1E00AD40AF /* ModelController+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD52146AB1E00AD40AF /* ModelController+UnitTests.swift */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
 		CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
@@ -102,6 +107,11 @@
 		B2CE337691B93C009DA08834 /* Pods-Food2ForkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2ForkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfiguratorTests.swift; sourceTree = "<group>"; };
+		CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFlowControllerTests.swift; sourceTree = "<group>"; };
+		CF01FCD12146A90D00AD40AF /* RecipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFactory.swift; sourceTree = "<group>"; };
+		CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicControllerTests.swift; sourceTree = "<group>"; };
+		CF01FCD52146AB1E00AD40AF /* ModelController+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelController+UnitTests.swift"; sourceTree = "<group>"; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
 		CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Background.swift"; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -224,6 +234,39 @@
 				CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF01FCC92146A6A500AD40AF /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		CF01FCCC2146A7DC00AD40AF /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */,
+				CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		CF01FCCD2146A7E500AD40AF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CF01FCD02146A8F600AD40AF /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF01FCD12146A90D00AD40AF /* RecipeFactory.swift */,
+				CF01FCD52146AB1E00AD40AF /* ModelController+UnitTests.swift */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
@@ -462,6 +505,7 @@
 		CFE06803213D75FC000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CF01FCD02146A8F600AD40AF /* TestHelpers */,
 				CFBBB4DD21468AC5008F3943 /* Extensions */,
 				CFBBB4D821468488008F3943 /* App */,
 				DA25B1082145574B00933167 /* Features */,
@@ -551,6 +595,9 @@
 		DA25B1082145574B00933167 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CF01FCCD2146A7E500AD40AF /* Favorites */,
+				CF01FCCC2146A7DC00AD40AF /* Explore */,
+				CF01FCC92146A6A500AD40AF /* Bootstrap */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
 			);
 			path = Features;
@@ -675,6 +722,7 @@
 				CFE067E0213D6F25000E95FC /* Sources */,
 				CFE067E1213D6F25000E95FC /* Frameworks */,
 				CFE067E2213D6F25000E95FC /* Resources */,
+				E46C2B823C49868D0B50DB45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -864,6 +912,30 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
+		E46C2B823C49868D0B50DB45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Malibu/Malibu.framework",
+				"${BUILT_PRODUCTS_DIR}/When/When.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Malibu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/When.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food2ForkTests/Pods-Food2ForkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -930,12 +1002,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
+				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
 				CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
+				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
+				CF01FCD62146AB1E00AD40AF /* ModelController+UnitTests.swift in Sources */,
+				CF01FCD22146A90D00AD40AF /* RecipeFactory.swift in Sources */,
+				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
 				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

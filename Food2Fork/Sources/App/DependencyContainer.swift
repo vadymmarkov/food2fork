@@ -8,11 +8,14 @@
 
 import UIKit
 import Malibu
+import CoreData
 
 final class DependencyContainer {
     private let apiConfig = APIConfig()
     private let imageLoader = ImageLoader()
-    private let modelController = ModelController()
+    private lazy var modelController = ModelController(
+        managedObjectContext: self.persistentContainer.viewContext
+    )
 
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>(
@@ -34,6 +37,16 @@ final class DependencyContainer {
             return Mock(fileName: "recipe.json")
         }
     }
+
+    private lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Food2Fork")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                print("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
 
     init() {
         Endpoint.configure(with: self.apiConfig)
