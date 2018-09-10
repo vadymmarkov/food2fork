@@ -158,4 +158,13 @@ extension DependencyContainer: InfoControllerFactory {
         viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
         return viewController
     }
+
+    func makeAlertController(text: String, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
+        let alertController = UIAlertController(title: nil, message: text, preferredStyle: .alert)
+        let action = UIAlertAction(title: R.string.localizable.ok(), style: .default, handler: handler)
+
+        alertController.view.tintColor = R.color.brand()
+        alertController.addAction(action)
+        return alertController
+    }
 }

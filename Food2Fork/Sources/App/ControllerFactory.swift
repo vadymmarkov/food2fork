@@ -44,4 +44,5 @@ protocol RecipeControllerFactory {
 protocol InfoControllerFactory {
     func makeInfoViewController() -> InfoViewController
     func makeInfoViewController(with error: Error) -> InfoViewController
+    func makeAlertController(text: String, handler: ((UIAlertAction) -> Void)?) -> UIAlertController
 }
