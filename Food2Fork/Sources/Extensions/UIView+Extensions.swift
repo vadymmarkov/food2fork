@@ -9,6 +9,10 @@
 import UIKit
 
 extension UIView {
+    static var identifier: String {
+        return String(reflecting: self)
+    }
+
     func addSubviews(_ subviews: UIView...) {
         subviews.forEach(addSubview)
     }
@@ -20,9 +24,5 @@ extension UIView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return UIImageView(image: image)
-    }
-
-    static var identifier: String {
-        return String(reflecting: self)
     }
 }
