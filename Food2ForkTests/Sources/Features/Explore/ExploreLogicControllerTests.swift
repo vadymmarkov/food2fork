@@ -8,16 +8,15 @@
 
 import XCTest
 import Malibu
+import CoreData
 @testable import Food2Fork
 
 final class ExploreLogicControllerTests: XCTestCase {
-    private var persistentStoreContainer: MockPersistentStoreContainer!
-    private var modelController: ModelController!
+    private var store: Store!
 
     override func setUp() {
         super.setUp()
-        persistentStoreContainer = MockPersistentStoreContainer()
-        modelController = ModelController(managedObjectContext: persistentStoreContainer.managedObjectContext)
+        store = Store(managedObjectContext: NSManagedObjectContext.makeStub())
     }
 
     // MARK: - Tests
@@ -51,7 +50,7 @@ final class ExploreLogicControllerTests: XCTestCase {
         })
 
         for recipe in favoriteRecipes {
-            try modelController.save(recipe)
+            try store.save(recipe)
         }
 
         let loadExpectation = expectation(description: "load")
@@ -102,6 +101,6 @@ final class ExploreLogicControllerTests: XCTestCase {
             }
         }))
 
-        return ExploreLogicController(networking: networking, modelController: modelController)
+        return ExploreLogicController(networking: networking, store: store)
     }
 }
