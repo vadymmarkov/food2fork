@@ -11,10 +11,6 @@ import UIKit
 final class RoundedLabel: UILabel {
     private let inset = Dimensions.spacingMin
 
-    override func drawText(in rect: CGRect) {
-        super.drawText(in: rect.insetBy(dx: inset, dy: inset))
-    }
-
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
         return CGSize(
@@ -35,6 +31,10 @@ final class RoundedLabel: UILabel {
     }
 
     // MARK: - Setup
+
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.insetBy(dx: inset, dy: inset))
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()

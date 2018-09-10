@@ -52,7 +52,6 @@
 		DA25B11E21458AE400933167 /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */; };
 		DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */; };
 		DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1212145B08400933167 /* RoundedLabel.swift */; };
-		DA25B1242145B40000933167 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1232145B40000933167 /* UIViewController+Alert.swift */; };
 		DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */; };
 		DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */; };
 		DA25B12B2145D4AC00933167 /* XCUIApplication+Food2Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */; };
@@ -146,7 +145,6 @@
 		DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
 		DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapConfiguring.swift; sourceTree = "<group>"; };
 		DA25B1212145B08400933167 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
-		DA25B1232145B40000933167 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTransitionManager.swift; sourceTree = "<group>"; };
 		DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Food2Fork.swift"; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 				DA465194214061C7005B3353 /* UICollectionView+Extensions.swift */,
 				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
 				DA46519021406177005B3353 /* UIView+Extensions.swift */,
-				DA25B1232145B40000933167 /* UIViewController+Alert.swift */,
 				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
 			);
 			path = Extensions;
@@ -854,7 +851,6 @@
 				DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
 				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,
-				DA25B1242145B40000933167 /* UIViewController+Alert.swift in Sources */,
 				DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */,
 				DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */,
 				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,

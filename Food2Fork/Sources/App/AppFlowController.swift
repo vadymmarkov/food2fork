@@ -9,11 +9,11 @@
 import UIKit
 
 final class AppFlowController: UIViewController {
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: MainControllerFactory
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory) {
+    init(controllerFactory: MainControllerFactory) {
         self.controllerFactory = controllerFactory
         super.init(nibName: nil, bundle: nil)
     }

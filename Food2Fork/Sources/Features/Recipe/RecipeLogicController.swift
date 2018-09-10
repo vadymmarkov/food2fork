@@ -14,12 +14,12 @@ final class RecipeLogicController {
     typealias Handler = (ViewState<Recipe>) -> Void
 
     private let networking: Networking<Endpoint>
-    private let modelController: ModelController
+    private let modelController: ModelControlling
     private weak var currentRequestPromise: Promise<RecipeNetworkResponse>?
 
     // MARK: - Init
 
-    init(networking: Networking<Endpoint>, modelController: ModelController) {
+    init(networking: Networking<Endpoint>, modelController: ModelControlling) {
         self.networking = networking
         self.modelController = modelController
     }
