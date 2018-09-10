@@ -18,7 +18,6 @@ final class DependencyContainer {
         let networking = Networking<Endpoint>(
             mockProvider: Utilities.isUITesting ? self.mockProvider: self.mockProvider
         )
-        Endpoint.configure(with: self.apiConfig)
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
         }
@@ -34,6 +33,10 @@ final class DependencyContainer {
         case .recipe:
             return Mock(fileName: "recipe.json")
         }
+    }
+
+    init() {
+        Endpoint.configure(with: self.apiConfig)
     }
 }
 

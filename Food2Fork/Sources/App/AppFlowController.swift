@@ -35,10 +35,8 @@ final class AppFlowController: UIViewController {
 
 private extension AppFlowController {
     func startLaunch() {
-        let viewController = controllerFactory.makeLaunchViewController()
-        add(childController: viewController)
-
-        let snapshotView = viewController.view.makeSnapshot()
+        let launchViewController = controllerFactory.makeLaunchViewController()
+        let snapshotView = launchViewController.view.makeSnapshot()
         let transitionManager = LaunchTransitionManager()
 
         startMain()

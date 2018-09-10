@@ -1,5 +1,5 @@
 //
-//  UICollectionView+Extensions.swift
+//  UICollectionView+ReusableCells.swift
 //  Food2Fork
 //
 //  Created by Vadym Markov on 05/09/2018.
