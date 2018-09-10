@@ -32,11 +32,11 @@ final class RecipeManagedObjectConvertibleTests: XCTestCase {
         managedObject.publisherUrl = "publisherUrl"
         managedObject.ingredients = "test1;test2"
         let recipe = Recipe(managedObject: managedObject)
-        XCTAssertEqual(recipe, makeRecipe())
+        XCTAssertEqual(recipe, Recipe.makeStub())
     }
 
     func testToManagedObject() {
-        let managedObject = makeRecipe().toManagedObject(in: persistentContainer.viewContext)
+        let managedObject = Recipe.makeStub().toManagedObject(in: persistentContainer.viewContext)
         XCTAssertEqual(managedObject.uid, "123")
         XCTAssertEqual(managedObject.title, "Test")
         XCTAssertEqual(managedObject.imageUrl, "imageUrl")
@@ -45,21 +45,5 @@ final class RecipeManagedObjectConvertibleTests: XCTestCase {
         XCTAssertEqual(managedObject.publisher, "publisher")
         XCTAssertEqual(managedObject.publisherUrl, "publisherUrl")
         XCTAssertEqual(managedObject.ingredients, "test1;test2")
-    }
-
-    // MARK: - Helpers
-
-    private func makeRecipe() -> Recipe {
-        return Recipe(
-            id: "123",
-            title: "Test",
-            imageUrl: "imageUrl",
-            socialRank: 100,
-            sourceUrl: "sourceUrl",
-            publisher: "publisher",
-            publisherUrl: "publisherUrl",
-            ingredients: ["test1", "test2"],
-            isFavorite: true
-        )
     }
 }
