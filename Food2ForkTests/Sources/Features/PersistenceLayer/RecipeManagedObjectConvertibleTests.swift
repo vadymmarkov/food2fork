@@ -10,7 +10,7 @@ import XCTest
 import CoreData
 @testable import Food2Fork
 
-class RecipeManagedObjectConvertibleTests: XCTestCase {
+final class RecipeManagedObjectConvertibleTests: XCTestCase {
     private var persistentContainer: NSPersistentContainer!
 
     override func setUp() {
@@ -23,7 +23,7 @@ class RecipeManagedObjectConvertibleTests: XCTestCase {
 
     func testInitWithManagedObject() {
         let managedObject = RecipeEntity(context: persistentContainer.viewContext)
-        managedObject.id = "123"
+        managedObject.uid = "123"
         managedObject.title = "Test"
         managedObject.imageUrl = "imageUrl"
         managedObject.socialRank = 100
@@ -37,7 +37,7 @@ class RecipeManagedObjectConvertibleTests: XCTestCase {
 
     func testToManagedObject() {
         let managedObject = makeRecipe().toManagedObject(in: persistentContainer.viewContext)
-        XCTAssertEqual(managedObject.id, "123")
+        XCTAssertEqual(managedObject.uid, "123")
         XCTAssertEqual(managedObject.title, "Test")
         XCTAssertEqual(managedObject.imageUrl, "imageUrl")
         XCTAssertEqual(managedObject.socialRank, 100)
@@ -58,7 +58,8 @@ class RecipeManagedObjectConvertibleTests: XCTestCase {
             sourceUrl: "sourceUrl",
             publisher: "publisher",
             publisherUrl: "publisherUrl",
-            ingredients: ["test1", "test2"]
+            ingredients: ["test1", "test2"],
+            isFavorite: true
         )
     }
 }
