@@ -12,16 +12,17 @@ import When
 
 final class RecipeLogicController {
     typealias Handler = (ViewState<Recipe>) -> Void
+    typealias Store = ReadableStore & WritableStore
 
     private let networking: Networking<Endpoint>
-    private let modelController: ModelControlling
+    private let store: Store
     private weak var currentRequestPromise: Promise<RecipeNetworkResponse>?
 
     // MARK: - Init
 
-    init(networking: Networking<Endpoint>, modelController: ModelControlling) {
+    init(networking: Networking<Endpoint>, store: Store) {
         self.networking = networking
-        self.modelController = modelController
+        self.store = store
     }
 
     // MARK: - Logic
@@ -31,7 +32,7 @@ final class RecipeLogicController {
         var isFavorite = false
 
         do {
-            let object = try modelController.loadObject(predicate: predicate) as Recipe?
+            let object = try store.loadObject(predicate: predicate) as Recipe?
             isFavorite = object != nil
         } catch {}
 
@@ -51,11 +52,11 @@ final class RecipeLogicController {
     }
 
     func like(recipe: Recipe) throws {
-        try modelController.save(recipe)
+        try store.save(recipe)
     }
 
     func unlike(recipe: Recipe) throws {
-        try modelController.delete(Recipe.self, predicate: makePredicate(with: recipe.id))
+        try store.delete(Recipe.self, predicate: makePredicate(with: recipe.id))
     }
 
     private func makePredicate(with id: String) -> NSPredicate {

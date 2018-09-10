@@ -13,7 +13,7 @@ import CoreData
 final class DependencyContainer {
     private let apiConfig = APIConfig()
     private let imageLoader = ImageLoader()
-    private lazy var modelController = ModelController(
+    private lazy var store = Store(
         managedObjectContext: self.persistentContainer.viewContext
     )
 
@@ -111,7 +111,7 @@ extension DependencyContainer: FlowControllerFactory {
 
 extension DependencyContainer: ExploreControllerFactory {
     func makeExploreViewController() -> ExploreViewController {
-        let logicController = ExploreLogicController(networking: networking, modelController: modelController)
+        let logicController = ExploreLogicController(networking: networking, store: store)
         return ExploreViewController(
             controllerFactory: self,
             logicController: logicController,
@@ -137,7 +137,7 @@ extension DependencyContainer: FavoritesControllerFactory {
     func makeFavoritesViewController() -> FavoritesViewController {
         return FavoritesViewController(
             controllerFactory: self,
-            logicController: FavoritesLogicController(modelController: modelController),
+            logicController: FavoritesLogicController(store: store),
             imageLoader: imageLoader
         )
     }
@@ -150,10 +150,7 @@ extension DependencyContainer: RecipeControllerFactory {
         return RecipeViewController(
             recipe: recipe,
             controllerFactory: self,
-            logicController: RecipeLogicController(
-                networking: networking,
-                modelController: modelController
-            ),
+            logicController: RecipeLogicController(networking: networking, store: store),
             imageLoader: imageLoader
         )
     }

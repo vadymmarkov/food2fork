@@ -8,8 +8,8 @@
 
 @testable import Food2Fork
 
-final class RecipeFactory {
-    static func makeRecipe() -> Recipe {
+extension Recipe {
+    static func makeStub() -> Recipe {
         return Recipe(
             id: "123",
             title: "Test",

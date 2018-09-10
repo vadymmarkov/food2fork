@@ -15,14 +15,14 @@ final class ExploreLogicController {
     private typealias ExploreNetworkResponse = SearchNetworkResponse
 
     private let networking: Networking<Endpoint>
-    private let modelController: ModelControlling
+    private let store: ReadableStore
     private weak var currentRequestPromise: Promise<ExploreNetworkResponse>?
 
     // MARK: - Init
 
-    init(networking: Networking<Endpoint>, modelController: ModelControlling) {
+    init(networking: Networking<Endpoint>, store: ReadableStore) {
         self.networking = networking
-        self.modelController = modelController
+        self.store = store
     }
 
     // MARK: - Logic
@@ -43,7 +43,7 @@ final class ExploreLogicController {
     }
 
     private func updateWithFavorites(recipes: [Recipe]) -> [Recipe] {
-        guard let entities = try? modelController.loadObjects() as [Recipe] else {
+        guard let entities = try? store.loadObjects() as [Recipe] else {
             return []
         }
 

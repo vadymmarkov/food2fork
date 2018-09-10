@@ -8,14 +8,17 @@
 
 import CoreData
 
-protocol ModelControlling {
+protocol ReadableStore {
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable
     func loadObject<T>(predicate: NSPredicate) throws -> T? where T: ManagedObjectInitializable
+}
+
+protocol WritableStore {
     func save<T>(_ object: T) throws where T: ManagedObjectConvertible
     func delete<T>(_ type: T.Type, predicate: NSPredicate) throws where T: ManagedObjectInitializable
 }
 
-final class ModelController: ModelControlling {
+final class Store: ReadableStore, WritableStore {
     private let managedObjectContext: NSManagedObjectContext
 
     // MARK: - Init
