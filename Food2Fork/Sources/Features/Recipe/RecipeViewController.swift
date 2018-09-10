@@ -10,7 +10,7 @@ import UIKit
 
 final class RecipeViewController: UIViewController {
     private var recipe: Recipe
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: InfoControllerFactory
     private let logicController: RecipeLogicController
     private let imageLoader: ImageLoader
 
@@ -48,7 +48,7 @@ final class RecipeViewController: UIViewController {
     // MARK: - Init
 
     init(recipe: Recipe,
-         controllerFactory: ControllerFactory,
+         controllerFactory: InfoControllerFactory,
          logicController: RecipeLogicController,
          imageLoader: ImageLoader) {
         self.recipe = recipe
@@ -160,15 +160,5 @@ final class RecipeViewController: UIViewController {
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         )
-    }
-}
-
-// MARK: - Factory
-
-private extension RecipeViewController {
-    func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeErrorViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
-        return viewController
     }
 }

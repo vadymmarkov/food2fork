@@ -16,7 +16,7 @@ protocol FavoritesViewControllerDelegate: AnyObject {
 
 final class FavoritesViewController: UIViewController {
     weak var delegate: FavoritesViewControllerDelegate?
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: InfoControllerFactory
     private let logicController: FavoritesLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
@@ -36,7 +36,7 @@ final class FavoritesViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory,
+    init(controllerFactory: InfoControllerFactory,
          logicController: FavoritesLogicController,
          imageLoader: ImageLoader) {
         self.controllerFactory = controllerFactory

@@ -9,11 +9,11 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
-    private let controllerFactory: ControllerFactory
+    private let controllerFactory: FlowControllerFactory
 
     // MARK: - Init
 
-    init(controllerFactory: ControllerFactory) {
+    init(controllerFactory: FlowControllerFactory) {
         self.controllerFactory = controllerFactory
         super.init(nibName: nil, bundle: nil)
     }

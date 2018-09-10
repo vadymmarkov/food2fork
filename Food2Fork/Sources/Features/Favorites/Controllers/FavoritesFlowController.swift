@@ -9,6 +9,7 @@
 import UIKit
 
 final class FavoritesFlowController: UINavigationController {
+    typealias ControllerFactory = FavoritesControllerFactory & RecipeControllerFactory
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init

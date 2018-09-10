@@ -9,6 +9,7 @@
 import UIKit
 
 final class ExploreFlowController: UINavigationController {
+    typealias ControllerFactory = ExploreControllerFactory & RecipeControllerFactory
     private let controllerFactory: ControllerFactory
 
     // MARK: - Init
