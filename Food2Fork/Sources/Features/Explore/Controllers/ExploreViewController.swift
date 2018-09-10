@@ -18,6 +18,8 @@ final class ExploreViewController: UIViewController {
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
+    private var isLoading = false
+    private var page = 1
 
     private lazy var refreshControl = UIRefreshControl()
 
@@ -67,21 +69,33 @@ final class ExploreViewController: UIViewController {
         view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
         collectionView.insertSubview(refreshControl, at: 0)
-        refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(reload), for: .valueChanged)
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadContent()
+        reload()
     }
 
     // MARK: - Content
 
-    @objc private func loadContent() {
+    @objc private func reload() {
+        page = 0
         render(.loading)
-        logicController.load(then: { [weak self] state in
+        loadContent()
+    }
+
+    private func loadNextPage() {
+        page += 1
+        loadContent()
+    }
+
+    private func loadContent() {
+        isLoading = true
+        logicController.load(page: page, then: { [weak self] state in
             self?.render(state)
+            self?.isLoading = false
         })
     }
 
@@ -90,9 +104,14 @@ final class ExploreViewController: UIViewController {
 
         switch state {
         case .loading:
+            // TODO: - loading controller
             break
         case .presenting(let recipes):
-            self.recipes = recipes
+            if page == 0 {
+                self.recipes = recipes
+            } else {
+                self.recipes.append(contentsOf: recipes)
+            }
             collectionView.reloadData()
         case .failed(let error):
             self.recipes = []
@@ -133,6 +152,18 @@ extension ExploreViewController: UICollectionViewDelegate {
         let recipe = recipes[indexPath.item]
         delegate?.exploreViewController(self, didSelectRecipe: recipe)
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard !isLoading else {
+            return
+        }
+
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            loadNextPage()
+        }
+    }
 }
 
 // MARK: - Factory
@@ -140,7 +171,7 @@ extension ExploreViewController: UICollectionViewDelegate {
 private extension ExploreViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
         let viewController = controllerFactory.makeInfoViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(loadContent), for: .touchUpInside)
+        viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
         return viewController
     }
 }
