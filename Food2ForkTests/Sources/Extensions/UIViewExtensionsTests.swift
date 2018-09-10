@@ -9,22 +9,22 @@
 import XCTest
 @testable import Food2Fork
 
-final class UICollectionViewReusableCellsTests: XCTestCase {
-    private var collectionView: UICollectionView!
+final class UIViewExtensionsTests: XCTestCase {
+    private var view: UIView!
 
     override func setUp() {
         super.setUp()
-        collectionView = UICollectionView()
+        view = UIView()
     }
 
-    func testRegisterAndDequeue() {
-        collectionView.register(type: Cell.self)
+    // MARK: - Tests
+
+    func testIdentifier() {
+        XCTAssertEqual(UIView.identifier, String(reflecting: UIView.self))
     }
 
-    func testDequeue() {
+    func testAddSubviews() {
+        view.addSubviews(UIView(), UIView())
+        XCTAssertEqual(view.subviews.count, 2)
     }
 }
-
-// MARK: - Private
-
-private final class Cell: UICollectionViewCell {}
