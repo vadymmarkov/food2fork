@@ -100,13 +100,13 @@ final class RecipeViewController: UIViewController {
             break
         case .presenting(let recipe):
             self.recipe = recipe
-            present(recipe: recipe)
+            configureSubviews(with: recipe)
         case .failed:
             break
         }
     }
 
-    private func present(recipe: Recipe) {
+    private func configureSubviews(with recipe: Recipe) {
         imageLoader.loadImage(at: recipe.imageUrl, to: headerView.imageView)
         headerView.titleLabel.text = recipe.title
         headerView.subtitleLabel.text = recipe.publisher
@@ -131,7 +131,11 @@ final class RecipeViewController: UIViewController {
             recipe.isFavorite = !recipe.isFavorite
             updateFavoriteButton(isFavorite: recipe.isFavorite)
         } catch {
-            presentAlert(text: error.localizedDescription)
+            let alertController = controllerFactory.makeAlertController(
+                text: error.localizedDescription,
+                handler: nil
+            )
+            present(alertController, animated: true, completion: nil)
         }
     }
 
