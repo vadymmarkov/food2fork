@@ -15,12 +15,12 @@ final class ExploreLogicController {
     private typealias ExploreNetworkResponse = SearchNetworkResponse
 
     private let networking: Networking<Endpoint>
-    private let modelController: ModelController
+    private let modelController: ModelControlling
     private weak var currentRequestPromise: Promise<ExploreNetworkResponse>?
 
     // MARK: - Init
 
-    init(networking: Networking<Endpoint>, modelController: ModelController) {
+    init(networking: Networking<Endpoint>, modelController: ModelControlling) {
         self.networking = networking
         self.modelController = modelController
     }

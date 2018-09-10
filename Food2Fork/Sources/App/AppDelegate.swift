@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    private lazy var dependencyContainer = DependencyContainer()
+    private lazy var dependencyContainer: AppControllerFactory = DependencyContainer()
     private lazy var appFlowController = self.dependencyContainer.makeAppFlowController()
     private let configurators: [BootstrapConfiguring] = [
         AppearanceConfigurator()

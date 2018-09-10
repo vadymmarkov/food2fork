@@ -11,6 +11,4 @@ import Foundation
 import CoreData
 
 @objc(RecipeEntity)
-final class RecipeEntity: NSManagedObject {
-
-}
+final class RecipeEntity: NSManagedObject {}
