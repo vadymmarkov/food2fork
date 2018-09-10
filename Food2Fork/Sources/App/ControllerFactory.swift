@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: - ControllerFactory
-
 protocol AppControllerFactory {
     func makeAppFlowController() -> AppFlowController
 }
