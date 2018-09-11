@@ -16,10 +16,8 @@ final class SearchViewController: UIViewController {
     weak var delegate: SearchViewControllerDelegate?
     private let controllerFactory: InfoControllerFactory
     private let logicController: SearchLogicController
+    private let paginator = Paginator()
     private var recipes = [Recipe]()
-    private var isLoading = false
-    private var isLastPage = false
-    private var page = 1
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -78,12 +76,7 @@ final class SearchViewController: UIViewController {
     // MARK: - Content
 
     @objc private func search() {
-        page = 0
-        loadContent()
-    }
-
-    private func loadNextPage() {
-        page += 1
+        paginator.reset()
         loadContent()
     }
 
@@ -94,11 +87,10 @@ final class SearchViewController: UIViewController {
             return
         }
 
-        isLoading = true
-
-        logicController.search(text: text, sort: .trendingness, page: page, then: { [weak self] state in
+        paginator.isLocked = true
+        logicController.search(text: text, page: paginator.page, then: { [weak self] state in
             self?.render(state)
-            self?.isLoading = false
+            self?.paginator.isLocked = false
         })
     }
 
@@ -109,12 +101,12 @@ final class SearchViewController: UIViewController {
         case .loading:
             add(childController: makeInfoViewController())
         case .presenting(let recipes):
-            if page == 0 {
+            if paginator.page == 0 {
                 self.recipes = recipes
             } else {
                 self.recipes.append(contentsOf: recipes)
             }
-            isLastPage = recipes.isEmpty
+            paginator.isLastPage = recipes.isEmpty
             tableView.reloadData()
         case .failed(let error):
             self.recipes = []
@@ -176,15 +168,11 @@ extension SearchViewController: UITableViewDelegate {
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard !isLoading && !isLastPage else {
+        guard paginator.shouldPaginate(scrollView: scrollView) else {
             return
         }
-
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        if offsetY > contentHeight - scrollView.frame.size.height {
-            loadNextPage()
-        }
+        paginator.next()
+        loadContent()
     }
 }
 
