@@ -158,17 +158,22 @@ extension DependencyContainer: RecipeControllerFactory {
 
 // MARK: - SearchControllerFactory
 
-extension DependencyContainer: InfoControllerFactory {
+extension DependencyContainer: UtilityControllerFactory {
+    func makeLoadingViewController() -> LoadingViewController {
+        return LoadingViewController()
+    }
+
     func makeInfoViewController() -> InfoViewController {
-        return InfoViewController()
+        let viewController = InfoViewController()
+        viewController.button.setTitle(R.string.localizable.retry(), for: .normal)
+        viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
+        return viewController
     }
 
     func makeInfoViewController(with error: Error) -> InfoViewController {
-        let viewController = InfoViewController()
+        let viewController = makeInfoViewController()
         viewController.titleLabel.text = R.string.localizable.errorTitle()
         viewController.textLabel.text = error.localizedDescription
-        viewController.button.setTitle(R.string.localizable.errorButton(), for: .normal)
-        viewController.imageView.image = R.image.logo()?.withRenderingMode(.alwaysTemplate)
         return viewController
     }
 
