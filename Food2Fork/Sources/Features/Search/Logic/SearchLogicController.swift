@@ -23,10 +23,10 @@ final class SearchLogicController {
 
     // MARK: - Logic
 
-    func search(text: String, sort: SearchSort, then handler: @escaping Handler) {
+    func search(text: String, sort: SearchSort = .trendingness, page: Int, then handler: @escaping Handler) {
         currentRequestPromise?.cancel()
         currentRequestPromise = networking
-            .request(.search(text: text, sort: sort, page: 1))
+            .request(.search(text: text, sort: sort, page: page))
             .validateStatusCodes()
             .decode(SearchNetworkResponse.self)
             .done({ response in

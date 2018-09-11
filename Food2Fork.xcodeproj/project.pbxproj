@@ -15,6 +15,8 @@
 		CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
 		CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */; };
+		CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7C72147A6EC0036EB5E /* Paginator.swift */; };
+		CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -43,7 +45,6 @@
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
 		CFE067DB213D6F24000E95FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DA213D6F24000E95FC /* Images.xcassets */; };
 		CFE067DE213D6F24000E95FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DC213D6F24000E95FC /* LaunchScreen.storyboard */; };
-		CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */; };
 		CFE067F4213D6F25000E95FC /* Food2ForkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */; };
 		DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E22141C77200933167 /* InfoViewController.swift */; };
 		DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0E82141DAC000933167 /* SearchLogicController.swift */; };
@@ -115,6 +116,8 @@
 		CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
 		CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Background.swift"; sourceTree = "<group>"; };
+		CF91F7C72147A6EC0036EB5E /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +149,6 @@
 		CFE067DD213D6F24000E95FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFE067DF213D6F24000E95FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE067E4213D6F25000E95FC /* Food2ForkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Food2ForkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food2ForkTests.swift; sourceTree = "<group>"; };
 		CFE067EA213D6F25000E95FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE067EF213D6F25000E95FC /* Food2ForkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Food2ForkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067F3213D6F25000E95FC /* Food2ForkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food2ForkUITests.swift; sourceTree = "<group>"; };
@@ -300,6 +302,14 @@
 				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		CF91F7C92147AD630036EB5E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		CFA1FF3E213ED597001394DB /* Explore */ = {
@@ -511,11 +521,11 @@
 		CFE06803213D75FC000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CF01FCD02146A8F600AD40AF /* TestHelpers */,
-				CFBBB4DD21468AC5008F3943 /* Extensions */,
 				CFBBB4D821468488008F3943 /* App */,
+				CFBBB4DD21468AC5008F3943 /* Extensions */,
 				DA25B1082145574B00933167 /* Features */,
-				CFE067E8213D6F25000E95FC /* Food2ForkTests.swift */,
+				CF91F7C92147AD630036EB5E /* Library */,
+				CF01FCD02146A8F600AD40AF /* TestHelpers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -576,6 +586,7 @@
 				DA25B1212145B08400933167 /* RoundedLabel.swift */,
 				DA25B0F42143F04D00933167 /* ViewState.swift */,
 				DA25B12C2145D4FB00933167 /* Utilities.swift */,
+				CF91F7C72147A6EC0036EB5E /* Paginator.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -956,6 +967,7 @@
 				CFA1FF45213ED674001394DB /* FavoritesFlowController.swift in Sources */,
 				DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */,
 				DA25B11E21458AE400933167 /* AppearanceConfigurator.swift in Sources */,
+				CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */,
 				DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */,
 				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
 				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,
@@ -1005,7 +1017,6 @@
 			files = (
 				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
 				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
-				CFE067E9213D6F25000E95FC /* Food2ForkTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
@@ -1016,6 +1027,7 @@
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
 				CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */,
+				CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */,
 				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
 				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,
 			);
