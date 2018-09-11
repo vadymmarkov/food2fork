@@ -1,5 +1,5 @@
 //
-//  AppFlowController.swift
+//  RootViewController.swift
 //  Food2Fork
 //
 //  Created by Markov, Vadym on 04/09/2018.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-final class AppFlowController: UIViewController {
-    private let controllerFactory: MainControllerFactory
+final class RootViewController: UIViewController {
+    private let viewControllerFactory: MainViewControllerFactory
 
     // MARK: - Init
 
-    init(controllerFactory: MainControllerFactory) {
-        self.controllerFactory = controllerFactory
+    init(viewControllerFactory: MainViewControllerFactory) {
+        self.viewControllerFactory = viewControllerFactory
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -33,9 +33,9 @@ final class AppFlowController: UIViewController {
 
 // MARK: - Flow
 
-private extension AppFlowController {
+private extension RootViewController {
     func startLaunch() {
-        let launchViewController = controllerFactory.makeLaunchViewController()
+        let launchViewController = viewControllerFactory.makeLaunchViewController()
         let snapshotView = launchViewController.view.makeSnapshot()
         let transitionManager = LaunchTransitionManager()
 
@@ -44,7 +44,7 @@ private extension AppFlowController {
     }
 
     func startMain() {
-        let viewController = controllerFactory.makeMainFlowController()
+        let viewController = viewControllerFactory.makeMainViewController()
         add(childController: viewController)
     }
 }
