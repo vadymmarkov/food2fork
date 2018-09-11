@@ -16,6 +16,7 @@ final class SearchViewController: UIViewController {
     weak var delegate: SearchViewControllerDelegate?
     private let controllerFactory: InfoControllerFactory
     private let logicController: SearchLogicController
+    private let paginator = Paginator()
     private var recipes = [Recipe]()
 
     private lazy var tableView: UITableView = {
@@ -75,14 +76,21 @@ final class SearchViewController: UIViewController {
     // MARK: - Content
 
     @objc private func search() {
+        paginator.reset()
+        loadContent()
+    }
+
+    private func loadContent() {
         let text = navigationItem.searchController?.searchBar.text ?? ""
 
         guard text.count > 2 else {
             return
         }
 
-        logicController.search(text: text, sort: .trendingness, then: { [weak self] state in
+        paginator.isLocked = true
+        logicController.search(text: text, page: paginator.page, then: { [weak self] state in
             self?.render(state)
+            self?.paginator.isLocked = false
         })
     }
 
@@ -93,7 +101,12 @@ final class SearchViewController: UIViewController {
         case .loading:
             add(childController: makeInfoViewController())
         case .presenting(let recipes):
-            self.recipes = recipes
+            if paginator.page == 0 {
+                self.recipes = recipes
+            } else {
+                self.recipes.append(contentsOf: recipes)
+            }
+            paginator.isLastPage = recipes.isEmpty
             tableView.reloadData()
         case .failed(let error):
             self.recipes = []
@@ -152,6 +165,14 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.row]
         delegate?.searchViewController(self, didSelectRecipe: recipe)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard paginator.shouldPaginate(scrollView: scrollView) else {
+            return
+        }
+        paginator.next()
+        loadContent()
     }
 }
 

@@ -25,7 +25,7 @@ final class ExploreLogicControllerTests: XCTestCase {
         let controller = makeController(withMock: Mock(fileName: "recipes.json"))
         let loadExpectation = expectation(description: "load")
 
-        controller.load(then: { state in
+        controller.load(page: 1, then: { state in
             switch state {
             case .presenting(let recipes):
                 XCTAssertEqual(recipes.count, 30)
@@ -55,7 +55,7 @@ final class ExploreLogicControllerTests: XCTestCase {
 
         let loadExpectation = expectation(description: "load")
 
-        controller.load(then: { state in
+        controller.load(page: 1, then: { state in
             switch state {
             case .presenting(let recipes):
                 XCTAssertEqual(recipes.count, 30)
@@ -76,7 +76,7 @@ final class ExploreLogicControllerTests: XCTestCase {
         let controller = makeController(withMock: mock)
         let loadExpectation = expectation(description: "load")
 
-        controller.load(then: { state in
+        controller.load(page: 1, then: { state in
             switch state {
             case .failed(let error):
                 XCTAssertEqual(error as? NetworkError, NetworkError.noDataInResponse)
