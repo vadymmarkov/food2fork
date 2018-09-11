@@ -11,18 +11,17 @@ import CoreData
 @testable import Food2Fork
 
 final class RecipeManagedObjectConvertibleTests: XCTestCase {
-    private var persistentContainer: NSPersistentContainer!
+    private var managedObjectContext: NSManagedObjectContext!
 
     override func setUp() {
         super.setUp()
-        persistentContainer = NSPersistentContainer(name: "Food2Fork")
-        persistentContainer.loadPersistentStores(completionHandler: { _, _ in })
+        managedObjectContext = NSManagedObjectContext.makeStub()
     }
 
     // MARK: - Tests
 
     func testInitWithManagedObject() {
-        let managedObject = RecipeEntity(context: persistentContainer.viewContext)
+        let managedObject = RecipeEntity(context: managedObjectContext)
         managedObject.uid = "123"
         managedObject.title = "Test"
         managedObject.imageUrl = "imageUrl"
@@ -36,7 +35,7 @@ final class RecipeManagedObjectConvertibleTests: XCTestCase {
     }
 
     func testToManagedObject() {
-        let managedObject = Recipe.makeStub().toManagedObject(in: persistentContainer.viewContext)
+        let managedObject = Recipe.makeStub().toManagedObject(in: managedObjectContext)
         XCTAssertEqual(managedObject.uid, "123")
         XCTAssertEqual(managedObject.title, "Test")
         XCTAssertEqual(managedObject.imageUrl, "imageUrl")

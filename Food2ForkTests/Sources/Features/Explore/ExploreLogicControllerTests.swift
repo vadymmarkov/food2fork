@@ -12,11 +12,11 @@ import CoreData
 @testable import Food2Fork
 
 final class ExploreLogicControllerTests: XCTestCase {
-    private var store: Store!
+    private var store: NSManagedObjectContext!
 
     override func setUp() {
         super.setUp()
-        store = Store(managedObjectContext: NSManagedObjectContext.makeStub())
+        store = NSManagedObjectContext.makeStub()
     }
 
     // MARK: - Tests
