@@ -98,8 +98,8 @@ final class ExploreViewController: UIViewController {
 
         switch state {
         case .loading:
-            // TODO: - loading controller
-            break
+            let loadingViewController = LoadingViewController()
+            add(childController: loadingViewController)
         case .presenting(let recipes):
             if paginator.page == 0 {
                 self.recipes = recipes

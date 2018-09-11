@@ -17,6 +17,7 @@
 		CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */; };
 		CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7C72147A6EC0036EB5E /* Paginator.swift */; };
 		CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */; };
+		CF91F7CE2147B2990036EB5E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -118,6 +119,7 @@
 		CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Background.swift"; sourceTree = "<group>"; };
 		CF91F7C72147A6EC0036EB5E /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorTests.swift; sourceTree = "<group>"; };
+		CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CF91F7CC2147B28D0036EB5E /* Loading */,
 				DA25B11C21458AD500933167 /* Bootstrap */,
 				CFA1FF3E213ED597001394DB /* Explore */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
@@ -310,6 +313,14 @@
 				CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		CF91F7CC2147B28D0036EB5E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		CFA1FF3E213ED597001394DB /* Explore */ = {
@@ -1002,6 +1013,7 @@
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
+				CF91F7CE2147B2990036EB5E /* LoadingViewController.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,
 				DA25B0F52143F04D00933167 /* ViewState.swift in Sources */,
