@@ -10,7 +10,7 @@ import UIKit
 
 final class RecipeViewController: UIViewController {
     private var recipe: Recipe
-    private let controllerFactory: UtilityControllerFactory
+    private let presenter: SystemPresenter
     private let logicController: RecipeLogicController
     private let imageLoader: ImageLoader
 
@@ -48,11 +48,11 @@ final class RecipeViewController: UIViewController {
     // MARK: - Init
 
     init(recipe: Recipe,
-         controllerFactory: UtilityControllerFactory,
+         presenter: SystemPresenter,
          logicController: RecipeLogicController,
          imageLoader: ImageLoader) {
         self.recipe = recipe
-        self.controllerFactory = controllerFactory
+        self.presenter = presenter
         self.logicController = logicController
         self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
@@ -72,7 +72,9 @@ final class RecipeViewController: UIViewController {
         scrollView.addSubview(stackView)
         view.addSubview(scrollView)
         scrollView.insertSubview(refreshControl, at: 0)
+
         refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+        headerView.button.addTarget(self, action: #selector(handlePublisherButtonTap), for: .touchUpInside)
 
         setupConstraints()
     }
@@ -92,7 +94,7 @@ final class RecipeViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<Recipe>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
         favoriteButton.isEnabled = false
 
         switch state {
@@ -109,7 +111,7 @@ final class RecipeViewController: UIViewController {
     private func configureSubviews(with recipe: Recipe) {
         imageLoader.loadImage(at: recipe.imageUrl, to: headerView.imageView)
         headerView.titleLabel.text = recipe.title
-        headerView.subtitleLabel.text = recipe.publisher
+        headerView.button.setAttributedTitle(recipe.attributedPublisherText, for: .normal)
         headerView.accessoryLabel.text = "\(Int(recipe.socialRank))"
         ingredientsView.titleLabel.text = R.string.localizable.ingredients()
         ingredientsView.textLabel.text = recipe.ingredients?.map({ "• \($0)" }).joined(separator: "\n\n")
@@ -131,12 +133,16 @@ final class RecipeViewController: UIViewController {
             recipe.isFavorite = !recipe.isFavorite
             updateFavoriteButton(isFavorite: recipe.isFavorite)
         } catch {
-            let alertController = controllerFactory.makeAlertController(
-                text: error.localizedDescription,
-                handler: nil
-            )
-            present(alertController, animated: true, completion: nil)
+            presenter.present(.alert(error.localizedDescription), in: self)
         }
+    }
+
+    @objc private func handlePublisherButtonTap() {
+        guard let url = URL(string: recipe.publisherUrl) else {
+            return
+        }
+
+        presenter.present(.url(url), in: self)
     }
 
     // MARK: - Layout
@@ -163,6 +169,20 @@ final class RecipeViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        )
+    }
+}
+
+// MARK: - Helpers
+
+private extension Recipe {
+    var attributedPublisherText: NSAttributedString {
+        return NSAttributedString(
+            string: publisher,
+            attributes: [
+                .underlineColor: R.color.steel()!,
+                .underlineStyle: NSUnderlineStyle.styleThick.rawValue
+            ]
         )
     }
 }

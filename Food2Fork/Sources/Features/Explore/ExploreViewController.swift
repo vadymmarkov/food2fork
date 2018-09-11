@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol ExploreViewControllerDelegate: AnyObject {
-    func exploreViewController(_ viewController: ExploreViewController, didSelectRecipe recipe: Recipe)
-}
-
 final class ExploreViewController: UIViewController {
-    weak var delegate: ExploreViewControllerDelegate?
-    private let controllerFactory: UtilityControllerFactory
+    private let viewControllerFactory: UtilityViewControllerFactory
+    private let navigator: RecipeNavigator
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
     private let paginator = Paginator()
@@ -47,10 +43,12 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: UtilityControllerFactory,
+    init(viewControllerFactory: UtilityViewControllerFactory,
+         navigator: RecipeNavigator,
          logicController: ExploreLogicController,
          imageLoader: ImageLoader) {
-        self.controllerFactory = controllerFactory
+        self.navigator = navigator
+        self.viewControllerFactory = viewControllerFactory
         self.logicController = logicController
         self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
@@ -94,12 +92,12 @@ final class ExploreViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
             if recipes.isEmpty {
-                add(childController: controllerFactory.makeLoadingViewController())
+                add(childViewController: viewControllerFactory.makeLoadingViewController())
             }
         case .presenting(let recipes):
             if paginator.page == 0 {
@@ -111,12 +109,12 @@ final class ExploreViewController: UIViewController {
             collectionView.reloadData()
 
             if self.recipes.isEmpty {
-                add(childController: makeInfoViewController())
+                add(childViewController: makeInfoViewController())
             }
         case .failed(let error):
             self.recipes = []
             collectionView.reloadData()
-            add(childController: makeErrorViewController(with: error))
+            add(childViewController: makeErrorViewController(with: error))
         }
 
         if refreshControl.isRefreshing {
@@ -129,13 +127,13 @@ final class ExploreViewController: UIViewController {
 
 private extension ExploreViewController {
     func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController(with: error)
+        let viewController = viewControllerFactory.makeInfoViewController(with: error)
         viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
         return viewController
     }
 
     func makeInfoViewController() -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController()
+        let viewController = viewControllerFactory.makeInfoViewController()
         viewController.titleLabel.text = R.string.localizable.exploreInfoTitle()
         viewController.textLabel.text = R.string.localizable.exploreInfoText()
         viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
@@ -173,7 +171,7 @@ extension ExploreViewController: UICollectionViewDataSource {
 extension ExploreViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.item]
-        delegate?.exploreViewController(self, didSelectRecipe: recipe)
+        navigator.navigate(to: recipe)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

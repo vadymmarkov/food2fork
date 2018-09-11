@@ -16,7 +16,7 @@ protocol FavoritesViewControllerDelegate: AnyObject {
 
 final class FavoritesViewController: UIViewController {
     weak var delegate: FavoritesViewControllerDelegate?
-    private let controllerFactory: UtilityControllerFactory
+    private let viewControllerFactory: UtilityViewControllerFactory
     private let logicController: FavoritesLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
@@ -36,10 +36,10 @@ final class FavoritesViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: UtilityControllerFactory,
+    init(viewControllerFactory: UtilityViewControllerFactory,
          logicController: FavoritesLogicController,
          imageLoader: ImageLoader) {
-        self.controllerFactory = controllerFactory
+        self.viewControllerFactory = viewControllerFactory
         self.logicController = logicController
         self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
@@ -75,24 +75,24 @@ final class FavoritesViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
             if recipes.isEmpty {
-                add(childController: controllerFactory.makeLoadingViewController())
+                add(childViewController: viewControllerFactory.makeLoadingViewController())
             }
         case .presenting(let recipes):
             self.recipes = recipes
             tableView.reloadData()
 
             if self.recipes.isEmpty {
-                add(childController: makeInfoViewController())
+                add(childViewController: makeInfoViewController())
             }
         case .failed:
             self.recipes = []
             tableView.reloadData()
-            add(childController: makeInfoViewController())
+            add(childViewController: makeInfoViewController())
         }
 
         if refreshControl.isRefreshing {
@@ -111,7 +111,7 @@ final class FavoritesViewController: UIViewController {
 
 private extension FavoritesViewController {
     func makeInfoViewController() -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController()
+        let viewController = viewControllerFactory.makeInfoViewController()
         viewController.titleLabel.text = R.string.localizable.favoritesInfoTitle()
         viewController.textLabel.text = R.string.localizable.favoritesInfoText()
         viewController.button.isHidden = true
