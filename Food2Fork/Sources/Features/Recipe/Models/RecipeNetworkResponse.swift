@@ -9,3 +9,11 @@
 struct RecipeNetworkResponse: Codable {
     let recipe: Recipe
 }
+
+// MARK: - Equatable
+
+extension RecipeNetworkResponse: Equatable {
+    static func == (lhs: RecipeNetworkResponse, rhs: RecipeNetworkResponse) -> Bool {
+        return lhs.recipe == rhs.recipe
+    }
+}
