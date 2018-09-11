@@ -30,6 +30,9 @@
 		CF91F7EB2147E2D90036EB5E /* RecipeLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */; };
 		CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */; };
 		CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */; };
+		CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */; };
+		CF91F7F52147EB180036EB5E /* SearchLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */; };
+		CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -144,6 +147,9 @@
 		CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
 		CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponseTests.swift; sourceTree = "<group>"; };
+		CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowControllerTests.swift; sourceTree = "<group>"; };
+		CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicControllerTests.swift; sourceTree = "<group>"; };
+		CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponseTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -413,8 +419,8 @@
 		CF91F7E92147E2C70036EB5E /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				CF91F7F02147E5EF0036EB5E /* Models */,
 				CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */,
+				CF91F7F02147E5EF0036EB5E /* Models */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -424,6 +430,24 @@
 			children = (
 				CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */,
 				CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF91F7F12147EA460036EB5E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CF91F7F62147EBB30036EB5E /* Models */,
+				CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */,
+				CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CF91F7F62147EBB30036EB5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -734,6 +758,7 @@
 				CF91F7D02147B8380036EB5E /* Pagination */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
 				CF91F7E92147E2C70036EB5E /* Recipe */,
+				CF91F7F12147EA460036EB5E /* Search */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -1144,6 +1169,7 @@
 				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
 				CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */,
+				CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */,
 				CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
@@ -1160,7 +1186,9 @@
 				CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */,
 				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
 				CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */,
+				CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */,
 				CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */,
+				CF91F7F52147EB180036EB5E /* SearchLogicControllerTests.swift in Sources */,
 				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

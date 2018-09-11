@@ -24,5 +24,6 @@ final class ExploreFlowControllerTests: XCTestCase {
     func testViewDidLoad() {
         XCTAssertEqual(controller.view.backgroundColor, R.color.seashell())
         XCTAssertTrue(controller.topViewController is ExploreViewController)
+        XCTAssertTrue((controller.topViewController as? ExploreViewController)?.delegate === controller)
     }
 }

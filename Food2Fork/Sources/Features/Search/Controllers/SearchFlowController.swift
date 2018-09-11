@@ -28,14 +28,14 @@ final class SearchFlowController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        startSearchInfo()
+        startSearch()
     }
 }
 
 // MARK: - Flow
 
 private extension SearchFlowController {
-    func startSearchInfo() {
+    func startSearch() {
         let viewController = controllerFactory.makeSearchViewController()
         viewController.delegate = self
         setViewControllers([viewController], animated: false)
