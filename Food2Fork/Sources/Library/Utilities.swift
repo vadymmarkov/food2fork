@@ -9,7 +9,15 @@
 import Foundation
 
 struct Utilities {
+    static var isTesting: Bool {
+        return isUITesting || isUnitTesting
+    }
+
     static var isUITesting: Bool {
         return CommandLine.arguments.contains("--UITests")
+    }
+
+    static var isUnitTesting: Bool {
+        return NSClassFromString("XCTest") != nil
     }
 }

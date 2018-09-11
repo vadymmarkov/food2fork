@@ -7,10 +7,9 @@
 //
 
 import CoreData
-@testable import Food2Fork
 
 extension NSManagedObjectContext {
-    static func makeStub() -> NSManagedObjectContext {
+    static func makeInMemoryContext() -> NSManagedObjectContext {
         let coordinator = makePersistentStoreCoordinator()
         let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator

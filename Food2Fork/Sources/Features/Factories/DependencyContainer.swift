@@ -17,7 +17,7 @@ final class DependencyContainer {
 
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>(
-            mockProvider: Utilities.isUITesting ? self.mockProvider: self.mockProvider
+            mockProvider: Utilities.isTesting ? self.mockProvider: nil
         )
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
@@ -25,7 +25,7 @@ final class DependencyContainer {
         return networking
     }()
 
-    private let mockProvider = MockProvider<Endpoint>(delay: 1.0) { endpoint in
+    private let mockProvider = MockProvider<Endpoint>(resolver: { endpoint in
         switch endpoint {
         case .explore:
             return Mock(fileName: "recipes.json")
@@ -34,7 +34,7 @@ final class DependencyContainer {
         case .recipe:
             return Mock(fileName: "recipe.json")
         }
-    }
+    })
 
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Food2Fork")
@@ -46,8 +46,11 @@ final class DependencyContainer {
         return container
     }()
 
+    /// For unit and UI testing only
+    private lazy var inMemoryManagedContext: NSManagedObjectContext = .makeInMemoryContext()
+
     private var store: NSManagedObjectContext {
-        return persistentContainer.viewContext
+        return Utilities.isTesting ? inMemoryManagedContext : persistentContainer.viewContext
     }
 
     init() {
@@ -154,6 +157,7 @@ extension DependencyContainer: SearchViewControllerFactory {
     func makeSearchViewController(navigator: RecipeNavigator) -> SearchViewController {
         return SearchViewController(
             viewControllerFactory: self,
+            navigator: navigator,
             logicController: SearchLogicController(networking: networking)
         )
     }
@@ -165,6 +169,7 @@ extension DependencyContainer: FavoritesViewControllerFactory {
     func makeFavoritesViewController(navigator: RecipeNavigator) -> FavoritesViewController {
         return FavoritesViewController(
             viewControllerFactory: self,
+            navigator: navigator,
             logicController: FavoritesLogicController(store: store),
             imageLoader: imageLoader
         )
