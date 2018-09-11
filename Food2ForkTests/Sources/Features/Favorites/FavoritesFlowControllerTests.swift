@@ -24,5 +24,6 @@ final class FavoritesFlowControllerTests: XCTestCase {
     func testViewDidLoad() {
         XCTAssertEqual(controller.view.backgroundColor, R.color.seashell())
         XCTAssertTrue(controller.topViewController is FavoritesViewController)
+        XCTAssertTrue((controller.topViewController as? FavoritesViewController)?.delegate === controller)
     }
 }
