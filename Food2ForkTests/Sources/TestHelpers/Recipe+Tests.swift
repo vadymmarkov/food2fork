@@ -29,7 +29,7 @@ extension Recipe {
             "f2f_url": "https://test.com/recipe/123",
             "ingredients": [
                 "ingredient 1",
-                "ingredients 2",
+                "ingredients 2"
             ],
             "source_url": "https://test.com/recipe/123",
             "recipe_id": "123",

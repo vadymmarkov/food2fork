@@ -10,40 +10,40 @@ import XCTest
 @testable import Food2Fork
 
 final class UIViewControllerChildTests: XCTestCase {
-    private var parentController: UIViewController!
+    private var parentViewController: UIViewController!
 
     override func setUp() {
         super.setUp()
-        parentController = UIViewController()
+        parentViewController = UIViewController()
     }
 
     // MARK: - Tests
 
-    func testAddChildController() {
-        let childController = TestViewController()
-        parentController.add(childController: childController)
-        XCTAssertEqual(childController.actions, [.willMove, .didMove])
-        XCTAssertEqual(childController.view.superview, parentController.view)
-        XCTAssertEqual(childController.parent, parentController)
+    func testAddChildViewController() {
+        let childViewController = TestViewController()
+        parentViewController.add(childViewController: childViewController)
+        XCTAssertEqual(childViewController.actions, [.willMove, .didMove])
+        XCTAssertEqual(childViewController.view.superview, parentViewController.view)
+        XCTAssertEqual(childViewController.parent, parentViewController)
     }
 
     func testRemoveFromParent() {
-        let childController = TestViewController()
-        parentController.add(childController: childController)
-        childController.removeFromParent()
+        let childViewController = TestViewController()
+        parentViewController.add(childViewController: childViewController)
+        childViewController.removeFromParent()
 
-        XCTAssertEqual(childController.actions, [.willMove, .didMove, .willMove, .didMove])
-        XCTAssertNil(childController.view.superview)
-        XCTAssertNil(childController.parent)
+        XCTAssertEqual(childViewController.actions, [.willMove, .didMove, .willMove, .didMove])
+        XCTAssertNil(childViewController.view.superview)
+        XCTAssertNil(childViewController.parent)
     }
 
-    func testRemoveAllChildControllers() {
-        parentController.add(childController: UIViewController())
-        parentController.add(childController: UIViewController())
-        XCTAssertEqual(parentController.childViewControllers.count, 2)
+    func testRemoveAllChildViewControllers() {
+        parentViewController.add(childViewController: UIViewController())
+        parentViewController.add(childViewController: UIViewController())
+        XCTAssertEqual(parentViewController.childViewControllers.count, 2)
 
-        parentController.removeAllChildControllers()
-        XCTAssertTrue(parentController.childViewControllers.isEmpty)
+        parentViewController.removeAllChildViewControllers()
+        XCTAssertTrue(parentViewController.childViewControllers.isEmpty)
     }
 }
 

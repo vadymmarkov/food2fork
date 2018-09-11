@@ -14,7 +14,7 @@ protocol SearchViewControllerDelegate: AnyObject {
 
 final class SearchViewController: UIViewController {
     weak var delegate: SearchViewControllerDelegate?
-    private let controllerFactory: UtilityControllerFactory
+    private let viewControllerFactory: UtilityViewControllerFactory
     private let logicController: SearchLogicController
     private let paginator = Paginator()
     private var recipes = [Recipe]()
@@ -33,8 +33,8 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: UtilityControllerFactory, logicController: SearchLogicController) {
-        self.controllerFactory = controllerFactory
+    init(viewControllerFactory: UtilityViewControllerFactory, logicController: SearchLogicController) {
+        self.viewControllerFactory = viewControllerFactory
         self.logicController = logicController
         super.init(nibName: nil, bundle: nil)
     }
@@ -95,11 +95,11 @@ final class SearchViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
-            add(childController: makeInfoViewController())
+            add(childViewController: makeInfoViewController())
         case .presenting(let recipes):
             if paginator.page == 0 {
                 self.recipes = recipes
@@ -111,7 +111,7 @@ final class SearchViewController: UIViewController {
         case .failed(let error):
             self.recipes = []
             tableView.reloadData()
-            add(childController: makeErrorViewController(with: error))
+            add(childViewController: makeErrorViewController(with: error))
         }
     }
 
@@ -126,7 +126,7 @@ final class SearchViewController: UIViewController {
 
 private extension SearchViewController {
     func makeInfoViewController() -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController()
+        let viewController = viewControllerFactory.makeInfoViewController()
         viewController.imageView.image = R.image.iconInfoSearch()?.withRenderingMode(.alwaysTemplate)
         viewController.titleLabel.text = R.string.localizable.searchInfoTitle()
         viewController.textLabel.text = R.string.localizable.searchInfoText()
@@ -136,7 +136,7 @@ private extension SearchViewController {
     }
 
     func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController(with: error)
+        let viewController = viewControllerFactory.makeInfoViewController(with: error)
         viewController.button.addTarget(self, action: #selector(search), for: .touchUpInside)
         return viewController
     }

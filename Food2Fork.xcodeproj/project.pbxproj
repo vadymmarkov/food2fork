@@ -10,7 +10,6 @@
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
 		CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */; };
-		CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */; };
 		CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD12146A90D00AD40AF /* Recipe+Tests.swift */; };
 		CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
@@ -18,7 +17,6 @@
 		CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7C72147A6EC0036EB5E /* Paginator.swift */; };
 		CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */; };
 		CF91F7CE2147B2990036EB5E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */; };
-		CF91F7D32147B9310036EB5E /* MainFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */; };
 		CF91F7D52147BAC90036EB5E /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D42147BAC90036EB5E /* NetworkSession.swift */; };
 		CF91F7D72147BC820036EB5E /* NetworkResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */; };
 		CF91F7DE2147BD280036EB5E /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */; };
@@ -30,17 +28,11 @@
 		CF91F7EB2147E2D90036EB5E /* RecipeLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */; };
 		CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */; };
 		CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */; };
-		CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */; };
 		CF91F7F52147EB180036EB5E /* SearchLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */; };
 		CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
-		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
+		CFA1FF3D213ED4E7001394DB /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ViewControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
-		CFA1FF45213ED674001394DB /* FavoritesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF44213ED674001394DB /* FavoritesFlowController.swift */; };
-		CFA1FF47213ED689001394DB /* SearchFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF46213ED689001394DB /* SearchFlowController.swift */; };
-		CFA1FF49213ED699001394DB /* ExploreFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF48213ED699001394DB /* ExploreFlowController.swift */; };
-		CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */; };
-		CFA1FF4F213ED7E1001394DB /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF4E213ED7E1001394DB /* MainFlowController.swift */; };
 		CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */; };
 		CFA3DF92213FF1D800A39C71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFA3DF94213FF1D800A39C71 /* Localizable.strings */; };
 		CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */; };
@@ -50,13 +42,17 @@
 		CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */; };
 		CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAC214016D200A39C71 /* Endpoint.swift */; };
 		CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAE214017A900A39C71 /* APIConfig.swift */; };
-		CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */; };
+		CFBBB4DA21468495008F3943 /* RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */; };
 		CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */; };
 		CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */; };
 		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
 		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
 		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
-		CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */; };
+		CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */; };
+		CFDD33E82147F3610088C465 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E72147F3610088C465 /* Navigator.swift */; };
+		CFDD33EA2147FB1A0088C465 /* SystemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */; };
+		CFDD33F2214802250088C465 /* DependencyContainer+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33F1214802250088C465 /* DependencyContainer+Factory.swift */; };
+		CFDD33F421480D0B0088C465 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33F321480D0B0088C465 /* RootViewController.swift */; };
 		CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D0213D6F23000E95FC /* AppDelegate.swift */; };
 		CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFE067D7213D6F23000E95FC /* Food2Fork.xcdatamodeld */; };
 		CFE067DB213D6F24000E95FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE067DA213D6F24000E95FC /* Images.xcassets */; };
@@ -127,7 +123,6 @@
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfiguratorTests.swift; sourceTree = "<group>"; };
-		CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF01FCD12146A90D00AD40AF /* Recipe+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Tests.swift"; sourceTree = "<group>"; };
 		CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 		CF91F7C72147A6EC0036EB5E /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorTests.swift; sourceTree = "<group>"; };
 		CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7D42147BAC90036EB5E /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseCache.swift; sourceTree = "<group>"; };
 		CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
@@ -147,17 +141,11 @@
 		CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
 		CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponseTests.swift; sourceTree = "<group>"; };
-		CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponseTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
-		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		CFA1FF3C213ED4E7001394DB /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
-		CFA1FF44213ED674001394DB /* FavoritesFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlowController.swift; sourceTree = "<group>"; };
-		CFA1FF46213ED689001394DB /* SearchFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowController.swift; sourceTree = "<group>"; };
-		CFA1FF48213ED699001394DB /* ExploreFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFlowController.swift; sourceTree = "<group>"; };
-		CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		CFA1FF4E213ED7E1001394DB /* MainFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
 		CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CFA3DF93213FF1D800A39C71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
@@ -167,13 +155,17 @@
 		CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFA3DFAC214016D200A39C71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CFA3DFAE214017A900A39C71 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
-		CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowControllerTests.swift; sourceTree = "<group>"; };
+		CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTests.swift; sourceTree = "<group>"; };
 		CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
 		CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
 		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
-		CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlowControllerTests.swift; sourceTree = "<group>"; };
+		CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigator.swift; sourceTree = "<group>"; };
+		CFDD33E72147F3610088C465 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPresenter.swift; sourceTree = "<group>"; };
+		CFDD33F1214802250088C465 /* DependencyContainer+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+Factory.swift"; sourceTree = "<group>"; };
+		CFDD33F321480D0B0088C465 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CFE067CD213D6F23000E95FC /* Food2Fork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food2Fork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE067D0213D6F23000E95FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE067D8213D6F23000E95FC /* Food2Fork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food2Fork.xcdatamodel; sourceTree = "<group>"; };
@@ -285,7 +277,6 @@
 		CF01FCCC2146A7DC00AD40AF /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */,
 				CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */,
 			);
 			path = Explore;
@@ -294,7 +285,6 @@
 		CF01FCCD2146A7E500AD40AF /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */,
 				DA91F6E82146FF31005EC2E1 /* FavoritesLogicControllerTests.swift */,
 			);
 			path = Favorites;
@@ -312,12 +302,13 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CFA1FF4A213ED782001394DB /* App */,
 				DA25B11C21458AD500933167 /* Bootstrap */,
 				CFA1FF3E213ED597001394DB /* Explore */,
+				CFDD33EC2147FCAC0088C465 /* Factories */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
 				DA25B0E12141C76400933167 /* Info */,
 				CF91F7CC2147B28D0036EB5E /* Loading */,
-				CFA1FF4D213ED7CA001394DB /* Main */,
 				CFA3DFAA214012C700A39C71 /* Networking */,
 				CF91F7CF2147B81D0036EB5E /* Pagination */,
 				DA4651A421406EDE005B3353 /* PersistenceLayer */,
@@ -360,14 +351,6 @@
 				CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */,
 			);
 			path = Pagination;
-			sourceTree = "<group>";
-		};
-		CF91F7D12147B9290036EB5E /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		CF91F7D82147BCCB0036EB5E /* Extensions */ = {
@@ -438,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				CF91F7F62147EBB30036EB5E /* Models */,
-				CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */,
 				CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */,
 			);
 			path = Search;
@@ -455,8 +437,8 @@
 		CFA1FF3E213ED597001394DB /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DFA12140062000A39C71 /* Controllers */,
-				DA4651962140654D005B3353 /* Logic */,
+				DA4651972140655D005B3353 /* ExploreLogicController.swift */,
+				CFA3DFA22140063600A39C71 /* ExploreViewController.swift */,
 				DA46518B21405F39005B3353 /* Views */,
 			);
 			path = Explore;
@@ -465,8 +447,8 @@
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DFA52140099E00A39C71 /* Controllers */,
-				DA25B0EA2141DAC700933167 /* Logic */,
+				DA25B0ED2141DF3300933167 /* SearchViewController.swift */,
+				DA25B0E82141DAC000933167 /* SearchLogicController.swift */,
 				DA46518321404D64005B3353 /* Models */,
 			);
 			path = Search;
@@ -475,8 +457,8 @@
 		CFA1FF40213ED5CF001394DB /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DFA42140098E00A39C71 /* Controllers */,
-				DA25B0EF2143EFAB00933167 /* Logic */,
+				DA25B0F02143EFB900933167 /* FavoritesLogicController.swift */,
+				CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */,
 				DA25B1252145C17E00933167 /* Views */,
 			);
 			path = Favorites;
@@ -486,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				DA25B11321456BF000933167 /* RecipeLogicController.swift */,
+				CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */,
 				CFA1FF42213ED638001394DB /* RecipeViewController.swift */,
 				DA46518821405888005B3353 /* Models */,
 				DA25B10E21455F5900933167 /* View */,
@@ -497,19 +480,10 @@
 			isa = PBXGroup;
 			children = (
 				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
-				CFA1FF4B213ED7A4001394DB /* AppFlowController.swift */,
-				CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */,
-				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
+				CFDD33F321480D0B0088C465 /* RootViewController.swift */,
+				CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		CFA1FF4D213ED7CA001394DB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				CFA1FF4E213ED7E1001394DB /* MainFlowController.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		CFA3DF96213FF37E00A39C71 /* Extensions */ = {
@@ -525,33 +499,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CFA3DFA12140062000A39C71 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CFA1FF48213ED699001394DB /* ExploreFlowController.swift */,
-				CFA3DFA22140063600A39C71 /* ExploreViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CFA3DFA42140098E00A39C71 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CFA1FF44213ED674001394DB /* FavoritesFlowController.swift */,
-				CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CFA3DFA52140099E00A39C71 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CFA1FF46213ED689001394DB /* SearchFlowController.swift */,
-				DA25B0ED2141DF3300933167 /* SearchViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		CFA3DFAA214012C700A39C71 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,7 +512,7 @@
 		CFBBB4D821468488008F3943 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */,
+				CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */,
 				CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */,
 			);
 			path = App;
@@ -580,6 +527,16 @@
 				CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFDD33EC2147FCAC0088C465 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
+				CFA1FF3C213ED4E7001394DB /* ViewControllerFactory.swift */,
+				CFDD33F1214802250088C465 /* DependencyContainer+Factory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		CFE067C4213D6F23000E95FC = {
@@ -648,7 +605,6 @@
 		CFE06802213D73A4000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CFA1FF4A213ED782001394DB /* App */,
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CFA3DF96213FF37E00A39C71 /* Extensions */,
 				CF0C50A8213E8F0F003989E4 /* Features */,
@@ -660,7 +616,6 @@
 		CFE06803213D75FC000E95FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBB4D821468488008F3943 /* App */,
 				CFBBB4DD21468AC5008F3943 /* Extensions */,
 				DA25B1082145574B00933167 /* Features */,
 				CF01FCD02146A8F600AD40AF /* TestHelpers */,
@@ -701,22 +656,6 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
-		DA25B0EA2141DAC700933167 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				DA25B0E82141DAC000933167 /* SearchLogicController.swift */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		DA25B0EF2143EFAB00933167 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				DA25B0F02143EFB900933167 /* FavoritesLogicController.swift */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
 		DA25B0F32143F03100933167 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,6 +664,7 @@
 				DA25B1212145B08400933167 /* RoundedLabel.swift */,
 				DA25B12C2145D4FB00933167 /* Utilities.swift */,
 				DA25B0F42143F04D00933167 /* ViewState.swift */,
+				CFDD33E72147F3610088C465 /* Navigator.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -750,10 +690,10 @@
 		DA25B1082145574B00933167 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CFBBB4D821468488008F3943 /* App */,
 				CF01FCC92146A6A500AD40AF /* Bootstrap */,
 				CF01FCCC2146A7DC00AD40AF /* Explore */,
 				CF01FCCD2146A7E500AD40AF /* Favorites */,
-				CF91F7D12147B9290036EB5E /* Main */,
 				CF91F7DA2147BCFD0036EB5E /* Networking */,
 				CF91F7D02147B8380036EB5E /* Pagination */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
@@ -822,14 +762,6 @@
 				DA46518C21405F4A005B3353 /* ExploreCollectionViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		DA4651962140654D005B3353 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				DA4651972140655D005B3353 /* ExploreLogicController.swift */,
-			);
-			path = Logic;
 			sourceTree = "<group>";
 		};
 		DA4651A421406EDE005B3353 /* PersistenceLayer */ = {
@@ -1107,20 +1039,18 @@
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				CF91F7D72147BC820036EB5E /* NetworkResponseCache.swift in Sources */,
 				DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */,
-				CFA1FF4F213ED7E1001394DB /* MainFlowController.swift in Sources */,
 				CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */,
 				DA4651A621406EEF005B3353 /* ImageLoader.swift in Sources */,
-				CFA1FF45213ED674001394DB /* FavoritesFlowController.swift in Sources */,
 				DA25B1122145618C00933167 /* RecipeIngredientsView.swift in Sources */,
 				DA25B11E21458AE400933167 /* AppearanceConfigurator.swift in Sources */,
 				CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */,
 				DA25B11021455F6800933167 /* RecipeHeaderView.swift in Sources */,
-				CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */,
+				CFA1FF3D213ED4E7001394DB /* ViewControllerFactory.swift in Sources */,
 				DA46519C214066A6005B3353 /* Promise+Networking.swift in Sources */,
+				CFDD33F2214802250088C465 /* DependencyContainer+Factory.swift in Sources */,
 				DA46519121406177005B3353 /* UIView+Extensions.swift in Sources */,
+				CFDD33EA2147FB1A0088C465 /* SystemPresenter.swift in Sources */,
 				DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */,
-				CFA1FF4C213ED7A4001394DB /* AppFlowController.swift in Sources */,
-				CFA1FF49213ED699001394DB /* ExploreFlowController.swift in Sources */,
 				DA25B0FB214537F900933167 /* Recipe+ManagedObjectConvertible.swift in Sources */,
 				DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */,
 				CF91F7D52147BAC90036EB5E /* NetworkSession.swift in Sources */,
@@ -1131,7 +1061,7 @@
 				CF5FAC2A2142C3EA00654E90 /* UIButton+Background.swift in Sources */,
 				DA465195214061C7005B3353 /* UICollectionView+ReusableCells.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
-				CFA1FF47213ED689001394DB /* SearchFlowController.swift in Sources */,
+				CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */,
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
 				DA25B12D2145D4FB00933167 /* Utilities.swift in Sources */,
 				CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */,
@@ -1149,9 +1079,11 @@
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
+				CFDD33F421480D0B0088C465 /* RootViewController.swift in Sources */,
 				CF91F7CE2147B2990036EB5E /* LoadingViewController.swift in Sources */,
 				CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */,
 				DA46518F21406068005B3353 /* NSLayoutConstraints+Extensions.swift in Sources */,
+				CFDD33E82147F3610088C465 /* Navigator.swift in Sources */,
 				DA25B0F52143F04D00933167 /* ViewState.swift in Sources */,
 				CFA3DF9E213FF56200A39C71 /* Fonts.swift in Sources */,
 				DA25B0E32141C77200933167 /* InfoViewController.swift in Sources */,
@@ -1165,26 +1097,22 @@
 			files = (
 				CF91F7EB2147E2D90036EB5E /* RecipeLogicControllerTests.swift in Sources */,
 				CF91F7DE2147BD280036EB5E /* ImageLoaderTests.swift in Sources */,
-				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
+				CFBBB4DA21468495008F3943 /* RootViewControllerTests.swift in Sources */,
 				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
 				CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */,
-				CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */,
 				CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
 				DA91F6E92146FF31005EC2E1 /* FavoritesLogicControllerTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
-				CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */,
 				CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */,
 				DA91F6EB214704F7005EC2E1 /* NSManagedObjectContext+Tests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
 				CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */,
-				CF91F7D32147B9310036EB5E /* MainFlowControllerTests.swift in Sources */,
 				CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */,
 				CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */,
-				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
 				CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */,
 				CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */,
 				CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */,
