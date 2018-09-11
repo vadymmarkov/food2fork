@@ -15,3 +15,7 @@ target 'Food2ForkTests' do
   pod 'Malibu', '~> 7.0'
   inherit! :search_paths
 end
+
+target 'Food2ForkUITests' do
+  pod 'R.swift', '~> 4.0'
+end

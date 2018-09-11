@@ -15,7 +15,7 @@ final class RecipeManagedObjectConvertibleTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        managedObjectContext = NSManagedObjectContext.makeStub()
+        managedObjectContext = NSManagedObjectContext.makeInMemoryContext()
     }
 
     // MARK: - Tests

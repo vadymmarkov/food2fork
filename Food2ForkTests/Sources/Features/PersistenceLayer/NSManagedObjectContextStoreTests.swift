@@ -17,7 +17,7 @@ final class NSManagedObjectContextStoreTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        store = NSManagedObjectContext.makeStub()
+        store = NSManagedObjectContext.makeInMemoryContext()
     }
 
     func testLoadObjects() throws {
