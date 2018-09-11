@@ -10,13 +10,9 @@ import UIKit
 
 import UIKit
 
-protocol FavoritesViewControllerDelegate: AnyObject {
-    func favoritesViewController(_ viewController: FavoritesViewController, didSelectRecipe recipe: Recipe)
-}
-
 final class FavoritesViewController: UIViewController {
-    weak var delegate: FavoritesViewControllerDelegate?
     private let viewControllerFactory: UtilityViewControllerFactory
+    private let navigator: RecipeNavigator
     private let logicController: FavoritesLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
@@ -37,9 +33,11 @@ final class FavoritesViewController: UIViewController {
     // MARK: - Init
 
     init(viewControllerFactory: UtilityViewControllerFactory,
+         navigator: RecipeNavigator,
          logicController: FavoritesLogicController,
          imageLoader: ImageLoader) {
         self.viewControllerFactory = viewControllerFactory
+        self.navigator = navigator
         self.logicController = logicController
         self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
@@ -146,6 +144,6 @@ extension FavoritesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.row]
-        delegate?.favoritesViewController(self, didSelectRecipe: recipe)
+        navigator.navigate(to: recipe)
     }
 }

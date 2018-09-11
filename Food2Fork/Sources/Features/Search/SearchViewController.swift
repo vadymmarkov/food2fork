@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol SearchViewControllerDelegate: AnyObject {
-    func searchViewController(_ viewController: SearchViewController, didSelectRecipe recipe: Recipe)
-}
-
 final class SearchViewController: UIViewController {
-    weak var delegate: SearchViewControllerDelegate?
     private let viewControllerFactory: UtilityViewControllerFactory
+    private let navigator: RecipeNavigator
     private let logicController: SearchLogicController
     private let paginator = Paginator()
     private var recipes = [Recipe]()
@@ -33,8 +29,11 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Init
 
-    init(viewControllerFactory: UtilityViewControllerFactory, logicController: SearchLogicController) {
+    init(viewControllerFactory: UtilityViewControllerFactory,
+         navigator: RecipeNavigator,
+         logicController: SearchLogicController) {
         self.viewControllerFactory = viewControllerFactory
+        self.navigator = navigator
         self.logicController = logicController
         super.init(nibName: nil, bundle: nil)
     }
@@ -61,6 +60,7 @@ final class SearchViewController: UIViewController {
 
         view.addSubview(tableView)
         NSLayoutConstraint.pin(tableView, toView: view)
+        render(.loading)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -69,8 +69,6 @@ final class SearchViewController: UIViewController {
         if #available(iOS 11.0, *) {
             navigationItem.hidesSearchBarWhenScrolling = false
         }
-
-        render(.loading)
     }
 
     // MARK: - Content
@@ -164,7 +162,8 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.row]
-        delegate?.searchViewController(self, didSelectRecipe: recipe)
+        tableView.deselectRow(at: indexPath, animated: false)
+        navigator.navigate(to: recipe)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

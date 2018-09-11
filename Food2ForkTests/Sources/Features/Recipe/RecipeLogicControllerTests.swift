@@ -17,7 +17,7 @@ final class RecipeLogicControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        store = NSManagedObjectContext.makeStub()
+        store = NSManagedObjectContext.makeInMemoryContext()
     }
 
     // MARK: - Tests
