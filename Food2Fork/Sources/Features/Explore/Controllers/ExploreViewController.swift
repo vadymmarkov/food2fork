@@ -17,9 +17,8 @@ final class ExploreViewController: UIViewController {
     private let controllerFactory: InfoControllerFactory
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
+    private let paginator = Paginator()
     private var recipes = [Recipe]()
-    private var isLoading = false
-    private var page = 1
 
     private lazy var refreshControl = UIRefreshControl()
 
@@ -81,21 +80,16 @@ final class ExploreViewController: UIViewController {
     // MARK: - Content
 
     @objc private func reload() {
-        page = 0
+        paginator.reset()
         render(.loading)
         loadContent()
     }
 
-    private func loadNextPage() {
-        page += 1
-        loadContent()
-    }
-
     private func loadContent() {
-        isLoading = true
-        logicController.load(page: page, then: { [weak self] state in
+        paginator.isLocked = true
+        logicController.load(page: paginator.page, then: { [weak self] state in
             self?.render(state)
-            self?.isLoading = false
+            self?.paginator.isLocked = false
         })
     }
 
@@ -107,11 +101,12 @@ final class ExploreViewController: UIViewController {
             // TODO: - loading controller
             break
         case .presenting(let recipes):
-            if page == 0 {
+            if paginator.page == 0 {
                 self.recipes = recipes
             } else {
                 self.recipes.append(contentsOf: recipes)
             }
+            paginator.isLastPage = recipes.isEmpty
             collectionView.reloadData()
         case .failed(let error):
             self.recipes = []
@@ -154,15 +149,11 @@ extension ExploreViewController: UICollectionViewDelegate {
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard !isLoading else {
+        guard paginator.shouldPaginate(scrollView: scrollView) else {
             return
         }
-
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        if offsetY > contentHeight - scrollView.frame.size.height {
-            loadNextPage()
-        }
+        paginator.next()
+        loadContent()
     }
 }
 
