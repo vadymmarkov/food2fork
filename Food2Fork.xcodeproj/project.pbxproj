@@ -23,6 +23,10 @@
 		CF91F7D72147BC820036EB5E /* NetworkResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */; };
 		CF91F7DE2147BD280036EB5E /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */; };
 		CF91F7E02147CAF60036EB5E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7DF2147CAF60036EB5E /* Functions.swift */; };
+		CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E12147D6450036EB5E /* DataDecodableTests.swift */; };
+		CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E32147D64E0036EB5E /* PromiseNetworkingTests.swift */; };
+		CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E52147DB710036EB5E /* EndpointTests.swift */; };
+		CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -59,7 +63,7 @@
 		DA25B0F52143F04D00933167 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F42143F04D00933167 /* ViewState.swift */; };
 		DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F82145375D00933167 /* ManagedObjectConvertible.swift */; };
 		DA25B0FB214537F900933167 /* Recipe+ManagedObjectConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0FA214537F900933167 /* Recipe+ManagedObjectConvertible.swift */; };
-		DA25B1012145476B00933167 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1002145476B00933167 /* Store.swift */; };
+		DA25B1012145476B00933167 /* NSManagedObjectContext+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */; };
 		DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */; };
 		DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */; };
 		DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */; };
@@ -130,6 +134,10 @@
 		CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseCache.swift; sourceTree = "<group>"; };
 		CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		CF91F7DF2147CAF60036EB5E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CF91F7E12147D6450036EB5E /* DataDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodableTests.swift; sourceTree = "<group>"; };
+		CF91F7E32147D64E0036EB5E /* PromiseNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseNetworkingTests.swift; sourceTree = "<group>"; };
+		CF91F7E52147DB710036EB5E /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextStoreTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -172,7 +180,7 @@
 		DA25B0F42143F04D00933167 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		DA25B0F82145375D00933167 /* ManagedObjectConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectConvertible.swift; sourceTree = "<group>"; };
 		DA25B0FA214537F900933167 /* Recipe+ManagedObjectConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+ManagedObjectConvertible.swift"; sourceTree = "<group>"; };
-		DA25B1002145476B00933167 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Store.swift"; sourceTree = "<group>"; };
 		DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManagedObjectConvertibleTests.swift; sourceTree = "<group>"; };
@@ -372,6 +380,7 @@
 		CF91F7DA2147BCFD0036EB5E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CF91F7E52147DB710036EB5E /* EndpointTests.swift */,
 				CF91F7DC2147BD0F0036EB5E /* Extensions */,
 				CF91F7DB2147BD090036EB5E /* Images */,
 			);
@@ -389,6 +398,8 @@
 		CF91F7DC2147BD0F0036EB5E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CF91F7E12147D6450036EB5E /* DataDecodableTests.swift */,
+				CF91F7E32147D64E0036EB5E /* PromiseNetworkingTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,7 +615,6 @@
 				CFBBB4D821468488008F3943 /* App */,
 				CFBBB4DD21468AC5008F3943 /* Extensions */,
 				DA25B1082145574B00933167 /* Features */,
-				CF91F7D02147B8380036EB5E /* Pagination */,
 				CF01FCD02146A8F600AD40AF /* TestHelpers */,
 			);
 			path = Sources;
@@ -697,6 +707,7 @@
 				CF01FCCD2146A7E500AD40AF /* Favorites */,
 				CF91F7D12147B9290036EB5E /* Main */,
 				CF91F7DA2147BCFD0036EB5E /* Networking */,
+				CF91F7D02147B8380036EB5E /* Pagination */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
 			);
 			path = Features;
@@ -706,6 +717,7 @@
 			isa = PBXGroup;
 			children = (
 				DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */,
+				CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */,
 			);
 			path = PersistenceLayer;
 			sourceTree = "<group>";
@@ -773,7 +785,7 @@
 		DA4651A421406EDE005B3353 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B1002145476B00933167 /* Store.swift */,
+				DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */,
 				DA25B1072145554900933167 /* Conversions */,
 				DA25B102214554D800933167 /* Entities */,
 			);
@@ -1083,7 +1095,7 @@
 				DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
 				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
-				DA25B1012145476B00933167 /* Store.swift in Sources */,
+				DA25B1012145476B00933167 /* NSManagedObjectContext+Store.swift in Sources */,
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
@@ -1105,18 +1117,22 @@
 				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
 				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
+				CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
 				DA91F6E92146FF31005EC2E1 /* FavoritesLogicControllerTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
 				CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */,
+				CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */,
 				DA91F6EB214704F7005EC2E1 /* NSManagedObjectContext+Tests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
 				CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */,
 				CF91F7D32147B9310036EB5E /* MainFlowControllerTests.swift in Sources */,
 				CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */,
+				CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */,
 				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
+				CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */,
 				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
