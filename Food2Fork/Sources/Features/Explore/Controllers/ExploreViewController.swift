@@ -14,7 +14,7 @@ protocol ExploreViewControllerDelegate: AnyObject {
 
 final class ExploreViewController: UIViewController {
     weak var delegate: ExploreViewControllerDelegate?
-    private let controllerFactory: InfoControllerFactory
+    private let controllerFactory: UtilityControllerFactory
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
     private let paginator = Paginator()
@@ -47,7 +47,7 @@ final class ExploreViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: InfoControllerFactory,
+    init(controllerFactory: UtilityControllerFactory,
          logicController: ExploreLogicController,
          imageLoader: ImageLoader) {
         self.controllerFactory = controllerFactory
@@ -98,8 +98,7 @@ final class ExploreViewController: UIViewController {
 
         switch state {
         case .loading:
-            let loadingViewController = LoadingViewController()
-            add(childController: loadingViewController)
+            add(childController: controllerFactory.makeLoadingViewController())
         case .presenting(let recipes):
             if paginator.page == 0 {
                 self.recipes = recipes
@@ -108,6 +107,10 @@ final class ExploreViewController: UIViewController {
             }
             paginator.isLastPage = recipes.isEmpty
             collectionView.reloadData()
+
+            if self.recipes.isEmpty {
+                add(childController: makeInfoViewController())
+            }
         case .failed(let error):
             self.recipes = []
             collectionView.reloadData()
@@ -117,6 +120,24 @@ final class ExploreViewController: UIViewController {
         if refreshControl.isRefreshing {
             refreshControl.endRefreshing()
         }
+    }
+}
+
+// MARK: - Factory
+
+private extension ExploreViewController {
+    func makeErrorViewController(with error: Error) -> UIViewController {
+        let viewController = controllerFactory.makeInfoViewController(with: error)
+        viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
+        return viewController
+    }
+
+    func makeInfoViewController() -> UIViewController {
+        let viewController = controllerFactory.makeInfoViewController()
+        viewController.titleLabel.text = R.string.localizable.exploreInfoTitle()
+        viewController.textLabel.text = R.string.localizable.exploreInfoText()
+        viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
+        return viewController
     }
 }
 
@@ -154,15 +175,5 @@ extension ExploreViewController: UICollectionViewDelegate {
         }
         paginator.next()
         loadContent()
-    }
-}
-
-// MARK: - Factory
-
-private extension ExploreViewController {
-    func makeErrorViewController(with error: Error) -> UIViewController {
-        let viewController = controllerFactory.makeInfoViewController(with: error)
-        viewController.button.addTarget(self, action: #selector(reload), for: .touchUpInside)
-        return viewController
     }
 }
