@@ -52,12 +52,18 @@ final class DependencyContainerTests: XCTestCase {
         XCTAssertEqual(controller.tabBarItem.selectedImage, R.image.tabFavorites())
     }
 
+    func testMakeInfoViewController() {
+        let viewController = container.makeInfoViewController()
+        XCTAssertEqual(viewController.button.currentTitle, R.string.localizable.retry())
+        XCTAssertEqual(viewController.imageView.image, R.image.logo()?.withRenderingMode(.alwaysTemplate))
+    }
+
     func testMakeInfoViewControllerWithError() {
         let error = TestError(errorDescription: "Test")
         let viewController = container.makeInfoViewController(with: error)
         XCTAssertEqual(viewController.titleLabel.text, R.string.localizable.errorTitle())
         XCTAssertEqual(viewController.textLabel.text, "Test")
-        XCTAssertEqual(viewController.button.currentTitle, R.string.localizable.errorButton())
+        XCTAssertEqual(viewController.button.currentTitle, R.string.localizable.retry())
         XCTAssertEqual(viewController.imageView.image, R.image.logo()?.withRenderingMode(.alwaysTemplate))
     }
 

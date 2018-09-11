@@ -44,7 +44,7 @@ private extension AppFlowController {
     }
 
     func startMain() {
-        let viewController = controllerFactory.makeMainTabBarController()
+        let viewController = controllerFactory.makeMainFlowController()
         add(childController: viewController)
     }
 }

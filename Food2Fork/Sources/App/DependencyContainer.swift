@@ -68,8 +68,8 @@ extension DependencyContainer: MainControllerFactory {
         return R.storyboard.launchScreen().instantiateInitialViewController()!
     }
 
-    func makeMainTabBarController() -> MainTabBarController {
-        return MainTabBarController(controllerFactory: self)
+    func makeMainFlowController() -> MainFlowController {
+        return MainFlowController(controllerFactory: self)
     }
 }
 
