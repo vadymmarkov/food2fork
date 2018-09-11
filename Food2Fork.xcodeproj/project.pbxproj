@@ -10,7 +10,6 @@
 		63152338BC61978FEB31D08A /* Pods_Food2ForkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */; };
 		65A67D4194C7ABF9228C9F67 /* Pods_Food2Fork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0BDC6DD1A27E88542B4DEF /* Pods_Food2Fork.framework */; };
 		CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */; };
-		CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */; };
 		CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD12146A90D00AD40AF /* Recipe+Tests.swift */; };
 		CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */; };
 		CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FAC27214291C800654E90 /* SearchSort.swift */; };
@@ -18,7 +17,6 @@
 		CF91F7C82147A6EC0036EB5E /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7C72147A6EC0036EB5E /* Paginator.swift */; };
 		CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */; };
 		CF91F7CE2147B2990036EB5E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */; };
-		CF91F7D32147B9310036EB5E /* MainFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */; };
 		CF91F7D52147BAC90036EB5E /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D42147BAC90036EB5E /* NetworkSession.swift */; };
 		CF91F7D72147BC820036EB5E /* NetworkResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */; };
 		CF91F7DE2147BD280036EB5E /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */; };
@@ -30,7 +28,6 @@
 		CF91F7EB2147E2D90036EB5E /* RecipeLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */; };
 		CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */; };
 		CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */; };
-		CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */; };
 		CF91F7F52147EB180036EB5E /* SearchLogicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */; };
 		CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
@@ -45,13 +42,12 @@
 		CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */; };
 		CFA3DFAD214016D200A39C71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAC214016D200A39C71 /* Endpoint.swift */; };
 		CFA3DFAF214017A900A39C71 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3DFAE214017A900A39C71 /* APIConfig.swift */; };
-		CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */; };
+		CFBBB4DA21468495008F3943 /* RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */; };
 		CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */; };
 		CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */; };
 		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
 		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
 		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
-		CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */; };
 		CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */; };
 		CFDD33E82147F3610088C465 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E72147F3610088C465 /* Navigator.swift */; };
 		CFDD33EA2147FB1A0088C465 /* SystemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */; };
@@ -127,7 +123,6 @@
 		C25C99705CA2B46E38A48E4B /* Pods-Food2Fork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food2Fork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food2Fork/Pods-Food2Fork.debug.xcconfig"; sourceTree = "<group>"; };
 		CE66871008A9F8B1E439B4A2 /* Pods_Food2ForkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food2ForkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfiguratorTests.swift; sourceTree = "<group>"; };
-		CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF01FCD12146A90D00AD40AF /* Recipe+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Tests.swift"; sourceTree = "<group>"; };
 		CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF5FAC27214291C800654E90 /* SearchSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSort.swift; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 		CF91F7C72147A6EC0036EB5E /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorTests.swift; sourceTree = "<group>"; };
 		CF91F7CD2147B2990036EB5E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7D42147BAC90036EB5E /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseCache.swift; sourceTree = "<group>"; };
 		CF91F7DD2147BD280036EB5E /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
@@ -147,7 +141,6 @@
 		CF91F7EA2147E2D90036EB5E /* RecipeLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
 		CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponseTests.swift; sourceTree = "<group>"; };
-		CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlowControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLogicControllerTests.swift; sourceTree = "<group>"; };
 		CF91F7F72147EBBA0036EB5E /* SearchNetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponseTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -162,13 +155,12 @@
 		CFA3DFA621400A6500A39C71 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFA3DFAC214016D200A39C71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CFA3DFAE214017A900A39C71 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
-		CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowControllerTests.swift; sourceTree = "<group>"; };
+		CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTests.swift; sourceTree = "<group>"; };
 		CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
 		CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
 		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
-		CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlowControllerTests.swift; sourceTree = "<group>"; };
 		CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigator.swift; sourceTree = "<group>"; };
 		CFDD33E72147F3610088C465 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPresenter.swift; sourceTree = "<group>"; };
@@ -285,7 +277,6 @@
 		CF01FCCC2146A7DC00AD40AF /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				CF01FCCE2146A7F100AD40AF /* ExploreFlowControllerTests.swift */,
 				CF01FCD32146AAE200AD40AF /* ExploreLogicControllerTests.swift */,
 			);
 			path = Explore;
@@ -294,7 +285,6 @@
 		CF01FCCD2146A7E500AD40AF /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBC0E12146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift */,
 				DA91F6E82146FF31005EC2E1 /* FavoritesLogicControllerTests.swift */,
 			);
 			path = Favorites;
@@ -361,14 +351,6 @@
 				CF91F7CA2147AD790036EB5E /* PaginatorTests.swift */,
 			);
 			path = Pagination;
-			sourceTree = "<group>";
-		};
-		CF91F7D12147B9290036EB5E /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				CF91F7D22147B9310036EB5E /* MainFlowControllerTests.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		CF91F7D82147BCCB0036EB5E /* Extensions */ = {
@@ -439,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				CF91F7F62147EBB30036EB5E /* Models */,
-				CF91F7F22147EA5F0036EB5E /* SearchFlowControllerTests.swift */,
 				CF91F7F42147EB180036EB5E /* SearchLogicControllerTests.swift */,
 			);
 			path = Search;
@@ -531,7 +512,7 @@
 		CFBBB4D821468488008F3943 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBB4D921468495008F3943 /* AppFlowControllerTests.swift */,
+				CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */,
 				CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */,
 			);
 			path = App;
@@ -713,7 +694,6 @@
 				CF01FCC92146A6A500AD40AF /* Bootstrap */,
 				CF01FCCC2146A7DC00AD40AF /* Explore */,
 				CF01FCCD2146A7E500AD40AF /* Favorites */,
-				CF91F7D12147B9290036EB5E /* Main */,
 				CF91F7DA2147BCFD0036EB5E /* Networking */,
 				CF91F7D02147B8380036EB5E /* Pagination */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
@@ -1117,26 +1097,22 @@
 			files = (
 				CF91F7EB2147E2D90036EB5E /* RecipeLogicControllerTests.swift in Sources */,
 				CF91F7DE2147BD280036EB5E /* ImageLoaderTests.swift in Sources */,
-				CFBBB4DA21468495008F3943 /* AppFlowControllerTests.swift in Sources */,
+				CFBBB4DA21468495008F3943 /* RootViewControllerTests.swift in Sources */,
 				CF01FCCB2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift in Sources */,
 				CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */,
 				CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */,
-				CF91F7F32147EA5F0036EB5E /* SearchFlowControllerTests.swift in Sources */,
 				CF91F7EF2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift in Sources */,
 				CFBBB4DC2146865F008F3943 /* DependencyContainerTests.swift in Sources */,
 				DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */,
 				DA91F6E92146FF31005EC2E1 /* FavoritesLogicControllerTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
-				CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */,
 				CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */,
 				DA91F6EB214704F7005EC2E1 /* NSManagedObjectContext+Tests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,
 				CF01FCD22146A90D00AD40AF /* Recipe+Tests.swift in Sources */,
-				CF91F7D32147B9310036EB5E /* MainFlowControllerTests.swift in Sources */,
 				CF91F7CB2147AD790036EB5E /* PaginatorTests.swift in Sources */,
 				CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */,
-				CF01FCCF2146A7F100AD40AF /* ExploreFlowControllerTests.swift in Sources */,
 				CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */,
 				CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */,
 				CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */,

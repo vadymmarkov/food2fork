@@ -92,12 +92,12 @@ final class ExploreViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
             if recipes.isEmpty {
-                add(childController: viewControllerFactory.makeLoadingViewController())
+                add(childViewController: viewControllerFactory.makeLoadingViewController())
             }
         case .presenting(let recipes):
             if paginator.page == 0 {
@@ -109,12 +109,12 @@ final class ExploreViewController: UIViewController {
             collectionView.reloadData()
 
             if self.recipes.isEmpty {
-                add(childController: makeInfoViewController())
+                add(childViewController: makeInfoViewController())
             }
         case .failed(let error):
             self.recipes = []
             collectionView.reloadData()
-            add(childController: makeErrorViewController(with: error))
+            add(childViewController: makeErrorViewController(with: error))
         }
 
         if refreshControl.isRefreshing {

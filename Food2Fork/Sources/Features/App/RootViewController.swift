@@ -45,6 +45,6 @@ private extension RootViewController {
 
     func startMain() {
         let viewController = viewControllerFactory.makeMainViewController()
-        add(childController: viewController)
+        add(childViewController: viewController)
     }
 }
