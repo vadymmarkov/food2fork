@@ -98,7 +98,9 @@ final class ExploreViewController: UIViewController {
 
         switch state {
         case .loading:
-            add(childController: controllerFactory.makeLoadingViewController())
+            if recipes.isEmpty {
+                add(childController: controllerFactory.makeLoadingViewController())
+            }
         case .presenting(let recipes):
             if paginator.page == 0 {
                 self.recipes = recipes
@@ -156,7 +158,12 @@ extension ExploreViewController: UICollectionViewDataSource {
         cell.subtitleLabel.text = recipe.publisher
         cell.accessoryLabel.text = "\(Int(recipe.socialRank))"
         cell.favoriteView.isHidden = !recipe.isFavorite
-        imageLoader.loadImage(at: recipe.imageUrl, to: cell.imageView)
+
+        cell.gradientLayer.isHidden = true
+        imageLoader.loadImage(at: recipe.imageUrl, to: cell.imageView, completion: { [weak cell] image in
+            cell?.gradientLayer.isHidden = image == nil
+        })
+
         return cell
     }
 }

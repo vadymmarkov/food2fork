@@ -14,7 +14,7 @@ protocol AppControllerFactory {
 
 protocol MainControllerFactory {
     func makeLaunchViewController() -> UIViewController
-    func makeMainTabBarController() -> MainTabBarController
+    func makeMainFlowController() -> MainFlowController
 }
 
 protocol FlowControllerFactory {
