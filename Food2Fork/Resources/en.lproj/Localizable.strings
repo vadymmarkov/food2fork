@@ -11,6 +11,10 @@
 "favorites" = "Favorites";
 "ingredients" = "Ingredients";
 "ok" = "OK";
+"retry" = "Retry";
+
+"explore.info.title" = "No result";
+"explore.info.text" = "There are no recipes available at the moment";
 
 "search.info.title" = "Find the recipes you love";
 "search.info.text" = "Search by name or ingredients and save your favorites for later.";
@@ -20,4 +24,3 @@
 "favorites.info.text" = "You haven't added any recipes to your favorites yet.";
 
 "error.title" = "Oops!";
-"error.button" = "Retry";

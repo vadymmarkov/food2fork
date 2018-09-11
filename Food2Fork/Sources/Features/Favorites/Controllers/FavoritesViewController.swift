@@ -16,7 +16,7 @@ protocol FavoritesViewControllerDelegate: AnyObject {
 
 final class FavoritesViewController: UIViewController {
     weak var delegate: FavoritesViewControllerDelegate?
-    private let controllerFactory: InfoControllerFactory
+    private let controllerFactory: UtilityControllerFactory
     private let logicController: FavoritesLogicController
     private let imageLoader: ImageLoader
     private var recipes = [Recipe]()
@@ -36,7 +36,7 @@ final class FavoritesViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: InfoControllerFactory,
+    init(controllerFactory: UtilityControllerFactory,
          logicController: FavoritesLogicController,
          imageLoader: ImageLoader) {
         self.controllerFactory = controllerFactory
@@ -79,10 +79,14 @@ final class FavoritesViewController: UIViewController {
 
         switch state {
         case .loading:
-            add(childController: makeInfoViewController())
+            add(childController: controllerFactory.makeLoadingViewController())
         case .presenting(let recipes):
             self.recipes = recipes
             tableView.reloadData()
+
+            if self.recipes.isEmpty {
+                add(childController: makeInfoViewController())
+            }
         case .failed:
             self.recipes = []
             tableView.reloadData()
@@ -106,7 +110,6 @@ final class FavoritesViewController: UIViewController {
 private extension FavoritesViewController {
     func makeInfoViewController() -> UIViewController {
         let viewController = controllerFactory.makeInfoViewController()
-        viewController.imageView.image = R.image.iconInfoSearch()?.withRenderingMode(.alwaysTemplate)
         viewController.titleLabel.text = R.string.localizable.favoritesInfoTitle()
         viewController.textLabel.text = R.string.localizable.favoritesInfoText()
         viewController.button.isHidden = true

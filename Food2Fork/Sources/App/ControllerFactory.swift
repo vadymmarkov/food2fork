@@ -39,7 +39,8 @@ protocol RecipeControllerFactory {
     func makeRecipeViewController(with recipe: Recipe) -> RecipeViewController
 }
 
-protocol InfoControllerFactory {
+protocol UtilityControllerFactory {
+    func makeLoadingViewController() -> LoadingViewController
     func makeInfoViewController() -> InfoViewController
     func makeInfoViewController(with error: Error) -> InfoViewController
     func makeAlertController(text: String, handler: ((UIAlertAction) -> Void)?) -> UIAlertController

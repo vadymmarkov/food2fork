@@ -10,7 +10,7 @@ import UIKit
 
 final class RecipeViewController: UIViewController {
     private var recipe: Recipe
-    private let controllerFactory: InfoControllerFactory
+    private let controllerFactory: UtilityControllerFactory
     private let logicController: RecipeLogicController
     private let imageLoader: ImageLoader
 
@@ -48,7 +48,7 @@ final class RecipeViewController: UIViewController {
     // MARK: - Init
 
     init(recipe: Recipe,
-         controllerFactory: InfoControllerFactory,
+         controllerFactory: UtilityControllerFactory,
          logicController: RecipeLogicController,
          imageLoader: ImageLoader) {
         self.recipe = recipe
