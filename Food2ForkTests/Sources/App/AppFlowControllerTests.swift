@@ -22,6 +22,6 @@ final class AppFlowControllerTests: XCTestCase {
 
     func testViewDidLoad() {
         controller.viewDidLoad()
-        XCTAssertTrue(controller.childViewControllers.first is MainTabBarController)
+        XCTAssertTrue(controller.childViewControllers.first is MainFlowController)
     }
 }

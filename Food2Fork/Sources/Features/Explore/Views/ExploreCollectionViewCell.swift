@@ -42,7 +42,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    private lazy var gradientLayer: CAGradientLayer = {
+    private(set) lazy var gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.black.withAlphaComponent(0.5).cgColor, UIColor.clear.cgColor]
         return gradientLayer

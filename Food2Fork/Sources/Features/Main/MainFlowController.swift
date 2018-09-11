@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainTabBarController: UITabBarController {
+final class MainFlowController: UITabBarController {
     private let controllerFactory: FlowControllerFactory
 
     // MARK: - Init
@@ -29,7 +29,14 @@ final class MainTabBarController: UITabBarController {
 
         view.backgroundColor = R.color.seashell()
         tabBar.tintColor = R.color.brand()
+        startTabBar()
+    }
+}
 
+// MARK: - Flow
+
+private extension MainFlowController {
+    func startTabBar() {
         let controllers = [
             controllerFactory.makeExploreFlowController(),
             controllerFactory.makeSearchFlowController(),
