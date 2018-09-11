@@ -26,6 +26,7 @@
 		CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E12147D6450036EB5E /* DataDecodableTests.swift */; };
 		CF91F7E42147D64E0036EB5E /* PromiseNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E32147D64E0036EB5E /* PromiseNetworkingTests.swift */; };
 		CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E52147DB710036EB5E /* EndpointTests.swift */; };
+		CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */; };
 		CFA1FF3B213ED49A001394DB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */; };
 		CFA1FF3D213ED4E7001394DB /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */; };
 		CFA1FF43213ED638001394DB /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1FF42213ED638001394DB /* RecipeViewController.swift */; };
@@ -62,7 +63,7 @@
 		DA25B0F52143F04D00933167 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F42143F04D00933167 /* ViewState.swift */; };
 		DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0F82145375D00933167 /* ManagedObjectConvertible.swift */; };
 		DA25B0FB214537F900933167 /* Recipe+ManagedObjectConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B0FA214537F900933167 /* Recipe+ManagedObjectConvertible.swift */; };
-		DA25B1012145476B00933167 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1002145476B00933167 /* Store.swift */; };
+		DA25B1012145476B00933167 /* NSManagedObjectContext+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */; };
 		DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */; };
 		DA25B106214554EF00933167 /* RecipeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */; };
 		DA25B10D214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */; };
@@ -136,6 +137,7 @@
 		CF91F7E12147D6450036EB5E /* DataDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodableTests.swift; sourceTree = "<group>"; };
 		CF91F7E32147D64E0036EB5E /* PromiseNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseNetworkingTests.swift; sourceTree = "<group>"; };
 		CF91F7E52147DB710036EB5E /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextStoreTests.swift; sourceTree = "<group>"; };
 		CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CFA1FF3C213ED4E7001394DB /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		CFA1FF42213ED638001394DB /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 		DA25B0F42143F04D00933167 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		DA25B0F82145375D00933167 /* ManagedObjectConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectConvertible.swift; sourceTree = "<group>"; };
 		DA25B0FA214537F900933167 /* Recipe+ManagedObjectConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+ManagedObjectConvertible.swift"; sourceTree = "<group>"; };
-		DA25B1002145476B00933167 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Store.swift"; sourceTree = "<group>"; };
 		DA25B103214554EF00933167 /* RecipeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA25B104214554EF00933167 /* RecipeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManagedObjectConvertibleTests.swift; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 			isa = PBXGroup;
 			children = (
 				DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */,
+				CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */,
 			);
 			path = PersistenceLayer;
 			sourceTree = "<group>";
@@ -782,7 +785,7 @@
 		DA4651A421406EDE005B3353 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B1002145476B00933167 /* Store.swift */,
+				DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */,
 				DA25B1072145554900933167 /* Conversions */,
 				DA25B102214554D800933167 /* Entities */,
 			);
@@ -1092,7 +1095,7 @@
 				DA25B0EE2141DF3300933167 /* SearchViewController.swift in Sources */,
 				CFA3DFA721400A6500A39C71 /* FavoritesViewController.swift in Sources */,
 				DA25B0E92141DAC000933167 /* SearchLogicController.swift in Sources */,
-				DA25B1012145476B00933167 /* Store.swift in Sources */,
+				DA25B1012145476B00933167 /* NSManagedObjectContext+Store.swift in Sources */,
 				DA46518D21405F4A005B3353 /* ExploreCollectionViewCell.swift in Sources */,
 				DA25B11421456BF000933167 /* RecipeLogicController.swift in Sources */,
 				DA4651932140619A005B3353 /* UITableView+Extensions.swift in Sources */,
@@ -1120,6 +1123,7 @@
 				DA91F6E92146FF31005EC2E1 /* FavoritesLogicControllerTests.swift in Sources */,
 				CFBBB4DF21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift in Sources */,
 				CFBBC0E22146B9DF0067E9F7 /* FavoritesFlowControllerTests.swift in Sources */,
+				CF91F7E82147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift in Sources */,
 				DA91F6EB214704F7005EC2E1 /* NSManagedObjectContext+Tests.swift in Sources */,
 				CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */,
 				CF01FCD42146AAE200AD40AF /* ExploreLogicControllerTests.swift in Sources */,

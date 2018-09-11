@@ -13,9 +13,6 @@ import CoreData
 final class DependencyContainer {
     private let apiConfig = APIConfig()
     private let imageLoader = ImageLoader()
-    private lazy var store = Store(
-        managedObjectContext: self.persistentContainer.viewContext
-    )
 
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>(
@@ -47,6 +44,10 @@ final class DependencyContainer {
         })
         return container
     }()
+
+    private var store: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
 
     init() {
         Endpoint.configure(with: self.apiConfig)
