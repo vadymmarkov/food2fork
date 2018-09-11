@@ -34,7 +34,13 @@ final class ImageLoaderTests: XCTestCase {
 
         XCTAssertNil(cache.cachedResponse(for: urlRequest))
 
-        imageLoader.loadImage(at: url.absoluteString, to: imageView)
+        var loadedImage: UIImage?
+        imageLoader.loadImage(at: url.absoluteString, to: imageView, placeholder: nil, completion: { image in
+            loadedImage = image
+        })
+
+        XCTAssertNotNil(loadedImage)
+        XCTAssertEqual(loadedImage, imageView.image)
         XCTAssertNotNil(imageView.image)
         XCTAssertNotNil(cache.cachedResponse(for: urlRequest))
     }
@@ -43,7 +49,12 @@ final class ImageLoaderTests: XCTestCase {
         session.data = imageData
         session.response = HTTPURLResponse.makeStub(url: url, statusCode: 404)
 
-        imageLoader.loadImage(at: url.absoluteString, to: imageView)
+        var loadedImage: UIImage?
+        imageLoader.loadImage(at: url.absoluteString, to: imageView, placeholder: nil, completion: { image in
+            loadedImage = image
+        })
+
+        XCTAssertNil(loadedImage)
         XCTAssertNil(imageView.image)
         XCTAssertNil(cache.cachedResponse(for: urlRequest))
     }
@@ -53,7 +64,12 @@ final class ImageLoaderTests: XCTestCase {
         session.response = HTTPURLResponse.makeStub(url: url, statusCode: 200)
         session.error = TestError.invalidData
 
-        imageLoader.loadImage(at: url.absoluteString, to: imageView)
+        var loadedImage: UIImage?
+        imageLoader.loadImage(at: url.absoluteString, to: imageView, placeholder: nil, completion: { image in
+            loadedImage = image
+        })
+
+        XCTAssertNil(loadedImage)
         XCTAssertNil(imageView.image)
         XCTAssertNil(cache.cachedResponse(for: urlRequest))
     }
@@ -61,7 +77,14 @@ final class ImageLoaderTests: XCTestCase {
     func testLoadImageWhenCached() {
         let response = HTTPURLResponse.makeStub(url: url, statusCode: 200)
         cache.storeCachedResponse(CachedURLResponse(response: response, data: imageData!), for: urlRequest)
-        imageLoader.loadImage(at: url.absoluteString, to: imageView)
+
+        var loadedImage: UIImage?
+        imageLoader.loadImage(at: url.absoluteString, to: imageView, placeholder: nil, completion: { image in
+            loadedImage = image
+        })
+
+        XCTAssertNotNil(loadedImage)
+        XCTAssertEqual(loadedImage, imageView.image)
 
         XCTAssertNotNil(imageView.image)
     }

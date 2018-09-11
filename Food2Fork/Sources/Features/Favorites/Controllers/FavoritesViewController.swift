@@ -79,7 +79,9 @@ final class FavoritesViewController: UIViewController {
 
         switch state {
         case .loading:
-            add(childController: controllerFactory.makeLoadingViewController())
+            if recipes.isEmpty {
+                add(childController: controllerFactory.makeLoadingViewController())
+            }
         case .presenting(let recipes):
             self.recipes = recipes
             tableView.reloadData()
