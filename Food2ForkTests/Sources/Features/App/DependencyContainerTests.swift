@@ -31,25 +31,37 @@ final class DependencyContainerTests: XCTestCase {
         XCTAssertEqual(Endpoint.headers, ["Accept": apiConfig.acceptHeader])
     }
 
-    func testMakeExploreFlowController() {
-        let controller = container.makeExploreFlowController()
+    func testMakeMainViewController() {
+        let controller = container.makeMainViewController() as? UITabBarController
+        XCTAssertEqual(controller?.tabBar.tintColor, R.color.brand())
+
+        XCTAssertTrue(controller?.viewControllers?[0] is UINavigationController)
+        XCTAssertTrue(controller?.viewControllers?[1] is UINavigationController)
+        XCTAssertTrue(controller?.viewControllers?[2] is UINavigationController)
+    }
+
+    func testMakeExploreNavigationController() {
+        let controller = container.makeExploreNavigationController()
         XCTAssertEqual(controller.tabBarItem.title, R.string.localizable.explore())
         XCTAssertEqual(controller.tabBarItem.image, R.image.tabExplore())
         XCTAssertEqual(controller.tabBarItem.selectedImage, R.image.tabExplore())
+        XCTAssertTrue(controller.topViewController is ExploreViewController)
     }
 
     func testMakeSearchFlowController() {
-        let controller = container.makeSearchFlowController()
+        let controller = container.makeSearchNavigationController()
         XCTAssertEqual(controller.tabBarItem.title, R.string.localizable.search())
         XCTAssertEqual(controller.tabBarItem.image, R.image.tabSearch())
         XCTAssertEqual(controller.tabBarItem.selectedImage, R.image.tabSearch())
+        XCTAssertTrue(controller.topViewController is SearchViewController)
     }
 
     func testMakeFavoritesFlowController() {
-        let controller = container.makeFavoritesFlowController()
+        let controller = container.makeFavoritesNavigationController()
         XCTAssertEqual(controller.tabBarItem.title, R.string.localizable.favorites())
         XCTAssertEqual(controller.tabBarItem.image, R.image.tabFavorites())
         XCTAssertEqual(controller.tabBarItem.selectedImage, R.image.tabFavorites())
+        XCTAssertTrue(controller.topViewController is FavoritesViewController)
     }
 
     func testMakeInfoViewController() {

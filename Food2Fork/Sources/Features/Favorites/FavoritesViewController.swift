@@ -75,24 +75,24 @@ final class FavoritesViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
             if recipes.isEmpty {
-                add(childController: viewControllerFactory.makeLoadingViewController())
+                add(childViewController: viewControllerFactory.makeLoadingViewController())
             }
         case .presenting(let recipes):
             self.recipes = recipes
             tableView.reloadData()
 
             if self.recipes.isEmpty {
-                add(childController: makeInfoViewController())
+                add(childViewController: makeInfoViewController())
             }
         case .failed:
             self.recipes = []
             tableView.reloadData()
-            add(childController: makeInfoViewController())
+            add(childViewController: makeInfoViewController())
         }
 
         if refreshControl.isRefreshing {

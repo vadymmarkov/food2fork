@@ -95,11 +95,11 @@ final class SearchViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<[Recipe]>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
 
         switch state {
         case .loading:
-            add(childController: makeInfoViewController())
+            add(childViewController: makeInfoViewController())
         case .presenting(let recipes):
             if paginator.page == 0 {
                 self.recipes = recipes
@@ -111,7 +111,7 @@ final class SearchViewController: UIViewController {
         case .failed(let error):
             self.recipes = []
             tableView.reloadData()
-            add(childController: makeErrorViewController(with: error))
+            add(childViewController: makeErrorViewController(with: error))
         }
     }
 

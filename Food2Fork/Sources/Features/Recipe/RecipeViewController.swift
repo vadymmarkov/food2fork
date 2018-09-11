@@ -74,6 +74,7 @@ final class RecipeViewController: UIViewController {
         scrollView.insertSubview(refreshControl, at: 0)
 
         refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+        headerView.button.addTarget(self, action: #selector(handlePublisherButtonTap), for: .touchUpInside)
 
         setupConstraints()
     }
@@ -93,7 +94,7 @@ final class RecipeViewController: UIViewController {
     }
 
     private func render(_ state: ViewState<Recipe>) {
-        removeAllChildControllers()
+        removeAllChildViewControllers()
         favoriteButton.isEnabled = false
 
         switch state {
