@@ -14,7 +14,7 @@ protocol SearchViewControllerDelegate: AnyObject {
 
 final class SearchViewController: UIViewController {
     weak var delegate: SearchViewControllerDelegate?
-    private let controllerFactory: InfoControllerFactory
+    private let controllerFactory: UtilityControllerFactory
     private let logicController: SearchLogicController
     private let paginator = Paginator()
     private var recipes = [Recipe]()
@@ -33,7 +33,7 @@ final class SearchViewController: UIViewController {
 
     // MARK: - Init
 
-    init(controllerFactory: InfoControllerFactory, logicController: SearchLogicController) {
+    init(controllerFactory: UtilityControllerFactory, logicController: SearchLogicController) {
         self.controllerFactory = controllerFactory
         self.logicController = logicController
         super.init(nibName: nil, bundle: nil)
