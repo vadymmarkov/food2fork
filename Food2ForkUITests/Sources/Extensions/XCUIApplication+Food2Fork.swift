@@ -9,17 +9,24 @@
 import XCTest
 
 extension XCUIApplication {
-    func launchWithCleanState() {
-        launchArguments.append("--reset")
+    func launchUITests() {
         launchArguments.append("--UITests")
         launch()
     }
 
     func hasNavigationTitle(_ title: String) -> Bool {
-        return navigationBars[title.uppercased()].exists
+        return navigationBars[title].exists
     }
 
     var leftNavigationButton: XCUIElement {
         return navigationBars.buttons.element(boundBy: 0)
+    }
+
+    var rightNavigationButton: XCUIElement {
+        return navigationBars.buttons.element(boundBy: 1)
+    }
+
+    var isDisplayingRecipeDetail: Bool {
+        return scrollViews.count == 1 && images.count == 1
     }
 }

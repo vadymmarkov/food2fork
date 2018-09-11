@@ -13,7 +13,7 @@ import CoreData
 
 final class FavoritesLogicControllerTests: XCTestCase {
     func testLoadWithRecipes() throws {
-        let store = NSManagedObjectContext.makeStub()
+        let store = NSManagedObjectContext.makeInMemoryContext()
         let controller = FavoritesLogicController(store: store)
         let loadExpectation = expectation(description: "load")
 
