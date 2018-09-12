@@ -4,6 +4,28 @@ The `Food2Fork` iOS app implemented as a part of
 [oboarding process](https://github.com/finn-no/ios-handbook/blob/master/ONBOARDING_PROJECT.md).
 at [FINN.no](https://github.com/finn-no).
 
+## Usage
+
+```sh
+git clone https://github.com/vadymmarkov/food2fork.git food2fork
+cd food2fork
+pod install
+open Food2Fork.xcworkspace
+```
+
+**Setup API keys:**
+* Sign up for Food2Fork Recipe API: https://www.food2fork.com/about/api
+* Create `APIConfig+Keys.swift` file in `Sources/Constants/API` folder
+* Copy the following code together with your API key there:
+
+```swift
+extension APIConfig {
+    var key: String {
+        return "YOUR_API_KEY"
+    }
+}
+```
+
 ## Features
 
 ### Explore
