@@ -18,6 +18,8 @@ final class ImageLoader {
         self.cache = cache
     }
 
+    // MARK: - Loading
+
     /// Loads image from web asynchronosly and caches it
     func loadImage(at urlString: String,
                    to imageView: UIImageView,
@@ -35,13 +37,13 @@ final class ImageLoader {
             completion?(image)
         } else {
             imageView.image = placeholder
-            loadAndCacheImage(to: imageView, using: request, completion: completion)
+            loadFromNetworkAndCacheImage(to: imageView, using: request, completion: completion)
         }
     }
 
-    private func loadAndCacheImage(to imageView: UIImageView,
-                                   using request: URLRequest,
-                                   completion: ((UIImage?) -> Void)? = nil) {
+    private func loadFromNetworkAndCacheImage(to imageView: UIImageView,
+                                              using request: URLRequest,
+                                              completion: ((UIImage?) -> Void)? = nil) {
         let completionHandler = { (image: UIImage?) in
             performUIUpdate {
                 completion?(image)

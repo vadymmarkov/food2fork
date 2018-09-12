@@ -65,8 +65,10 @@ final class ExploreViewController: UIViewController {
         navigationItem.title = R.string.localizable.explore()
         view.backgroundColor = R.color.seashell()
         view.addSubview(collectionView)
+
         collectionView.insertSubview(refreshControl, at: 0)
         refreshControl.addTarget(self, action: #selector(reload), for: .valueChanged)
+
         NSLayoutConstraint.pin(collectionView, toView: view)
     }
 

@@ -55,6 +55,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.layer.addSublayer(gradientLayer)
         contentView.addSubviews(titleLabel, subtitleLabel, accessoryLabel, favoriteView)
+
         setupStyles()
         setupConstraints()
     }
@@ -72,6 +73,7 @@ final class ExploreCollectionViewCell: UICollectionViewCell {
 
     private func setupStyles() {
         backgroundColor = R.color.milk()
+
         contentView.backgroundColor = R.color.milk()
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10

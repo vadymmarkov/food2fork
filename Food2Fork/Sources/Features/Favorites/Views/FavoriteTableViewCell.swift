@@ -70,6 +70,7 @@ final class FavoriteTableViewCell: UITableViewCell {
 
     private func setupStyles() {
         backgroundColor = R.color.milk()
+
         contentView.backgroundColor = R.color.milk()
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10

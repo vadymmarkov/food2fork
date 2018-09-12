@@ -27,27 +27,23 @@ final class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        startLaunch()
+        start()
     }
 }
 
 // MARK: - Flow
 
 private extension RootViewController {
-    func startLaunch() {
+    func start() {
         let launchViewController = viewControllerFactory.makeLaunchViewController()
         let snapshotView = launchViewController.view.makeSnapshot()
+        let viewController = viewControllerFactory.makeMainViewController()
 
-        startMain()
+        add(childViewController: viewController)
         animateAppearance(of: self, snapshotView: snapshotView)
     }
 
-    func startMain() {
-        let viewController = viewControllerFactory.makeMainViewController()
-        add(childViewController: viewController)
-    }
-
-    private func animateAppearance(of viewController: UIViewController, snapshotView: UIImageView) {
+    func animateAppearance(of viewController: UIViewController, snapshotView: UIImageView) {
         viewController.view.addSubview(snapshotView)
 
         UIView.animate(
