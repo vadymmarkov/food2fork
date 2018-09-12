@@ -1,7 +1,7 @@
 # Food2Fork
 
 The `Food2Fork` iOS app implemented as a part of
-[oboarding process](https://github.com/finn-no/ios-handbook/blob/master/ONBOARDING_PROJECT.md).
+[oboarding process](https://github.com/finn-no/ios-handbook/blob/master/ONBOARDING_PROJECT.md)
 at [FINN.no](https://github.com/finn-no).
 
 ## Usage
