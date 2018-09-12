@@ -17,7 +17,7 @@ final class DependencyContainer {
 
     private lazy var networking: Networking<Endpoint> = {
         let networking = Networking<Endpoint>(
-            mockProvider: Utilities.isTesting ? self.mockProvider: nil
+            mockProvider: isTesting ? self.mockProvider: nil
         )
         networking.beforeEach = { request in
             return request.adding(parameters: ["key": self.apiConfig.key], headers: [:])
@@ -50,7 +50,7 @@ final class DependencyContainer {
     private lazy var inMemoryManagedContext: NSManagedObjectContext = .makeInMemoryContext()
 
     private var store: NSManagedObjectContext {
-        return Utilities.isTesting ? inMemoryManagedContext : persistentContainer.viewContext
+        return isTesting ? inMemoryManagedContext : persistentContainer.viewContext
     }
 
     init() {
