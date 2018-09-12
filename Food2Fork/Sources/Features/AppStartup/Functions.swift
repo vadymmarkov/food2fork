@@ -16,3 +16,15 @@ func performUIUpdate(using closure: @escaping () -> Void) {
         DispatchQueue.main.async(execute: closure)
     }
 }
+
+var isTesting: Bool {
+    return isUITesting || isUnitTesting
+}
+
+var isUITesting: Bool {
+    return CommandLine.arguments.contains("--UITests")
+}
+
+var isUnitTesting: Bool {
+    return NSClassFromString("XCTest") != nil
+}
