@@ -50,14 +50,18 @@ let key = "YOUR_API_KEY"
 which contains all of the app's core utility objects that are directly injected
 as dependencies
 - The core logic of view controllers is extracted into matching logic controllers,
-where each action returns a new state to render as part of a completion handler.
+where each action returns a new state to render as part of a completion handler
 
-## Networking
+## Networking and API
 
 - [Malibu](https://github.com/vadymmarkov/Malibu) library is used as an
 abstraction layer for networking
 - Images are loaded by `ImageLoader` utility class, which plays the role of
 a wrapper around `URLSession` and `URLCache`
+- Food2Fork Recipe API documentation: https://www.food2fork.com/about/api
+- Note that the Free plan allows only 50 API calls per day
+- If you want to mock requests just open `DependencyContainer.swift` and
+create `Networking` instance with the same `MockProvider` as for UI and Unit tests
 
 ## Persistency
 
@@ -67,12 +71,9 @@ protocols for better separation of concerns
 - `URLCache` provides a composite in-memory and on-disk cache for images loaded
 from network
 
-## API
+## Tests
 
-- Food2Fork Recipe API documentation: https://www.food2fork.com/about/api
-- Note that the Free plan allows only 50 API calls per day
-- If you want to mock requests just open `DependencyContainer.swift` and
-create `Networking` instance with the same `MockProvider` as for UI and Unit tests.
+The app is covered by unit and UI tests: 82,18% according to XCode test coverage.
 
 ## Author
 
