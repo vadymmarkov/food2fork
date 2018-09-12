@@ -14,16 +14,12 @@ open Food2Fork.xcworkspace
 ```
 
 **Setup API keys:**
+
 * Sign up for Food2Fork Recipe API: https://www.food2fork.com/about/api
-* Create `APIConfig+Keys.swift` file in `Sources/Constants/API` folder
-* Copy the following code together with your API key there:
+* Copy your API key to `Sources/Constants/APIConfig.swift`:
 
 ```swift
-extension APIConfig {
-    var key: String {
-        return "YOUR_API_KEY"
-    }
-}
+let key = "YOUR_API_KEY"
 ```
 
 ## Features
@@ -78,3 +74,12 @@ from network
 - Note that the Free plan allows only 50 API calls per day
 - If you want to mock requests just open `DependencyContainer.swift` and
 create `Networking` instance with the same `MockProvider` as for UI and Unit tests.
+
+## Author
+
+Vadym Markov, markov.vadym@gmail.com
+
+## License
+
+See the [LICENSE](https://github.com/vadymmarkov/food2fork/blob/master/LICENSE.md)
+file for more info.

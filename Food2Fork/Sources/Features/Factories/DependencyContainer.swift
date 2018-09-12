@@ -55,6 +55,11 @@ final class DependencyContainer {
 
     init() {
         Endpoint.configure(with: self.apiConfig)
+        #if DEBUG
+            Malibu.logger.level = .verbose
+        #else
+            Malibu.logger.level = .error
+        #endif
     }
 }
 
