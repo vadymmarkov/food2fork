@@ -67,10 +67,12 @@ final class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = R.color.seashell()
-        favoriteButton.tintColor = R.color.carnation()
-        navigationItem.rightBarButtonItem = favoriteButton
-        scrollView.addSubview(stackView)
         view.addSubview(scrollView)
+
+        navigationItem.rightBarButtonItem = favoriteButton
+        favoriteButton.tintColor = R.color.carnation()
+
+        scrollView.addSubview(stackView)
         scrollView.insertSubview(refreshControl, at: 0)
 
         refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)

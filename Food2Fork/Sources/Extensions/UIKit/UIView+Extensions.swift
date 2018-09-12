@@ -17,6 +17,7 @@ extension UIView {
         subviews.forEach(addSubview)
     }
 
+    /// Make image snapshot from the view.
     func makeSnapshot() -> UIImageView {
         UIGraphicsBeginImageContext(frame.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)

@@ -8,6 +8,7 @@
 
 import CoreData
 
+/// NSInMemoryStoreType for unit and UI testing only
 extension NSManagedObjectContext {
     static func makeInMemoryContext() -> NSManagedObjectContext {
         let coordinator = makePersistentStoreCoordinator()

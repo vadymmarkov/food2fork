@@ -60,6 +60,7 @@ final class SearchViewController: UIViewController {
 
         view.addSubview(tableView)
         NSLayoutConstraint.pin(tableView, toView: view)
+
         render(.loading)
     }
 

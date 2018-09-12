@@ -27,7 +27,7 @@ final class RecipeHeaderView: UIView {
     private(set) lazy var button: UIButton = {
         let button = UIButton()
         button.contentHorizontalAlignment = .left
-        button.setBackgroundColor(R.color.underline(), forState: .normal)
+        button.setBackgroundColor(R.color.banana(), forState: .normal)
         button.titleLabel?.font = .subtitle
         button.setTitleColor(R.color.steel(), for: .normal)
         return button
