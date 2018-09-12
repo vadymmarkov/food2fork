@@ -51,12 +51,26 @@ final class RecipeLogicController {
             })
     }
 
-    func like(recipe: Recipe) throws {
-        try store.save(recipe)
+    func like(recipe: Recipe, then handler: @escaping Handler) {
+        do {
+            try store.save(recipe)
+            var recipe = recipe
+            recipe.isFavorite = true
+            handler(.presenting(recipe))
+        } catch {
+            handler(.failed(error))
+        }
     }
 
-    func unlike(recipe: Recipe) throws {
-        try store.delete(Recipe.self, predicate: makePredicate(with: recipe.id))
+    func unlike(recipe: Recipe, then handler: @escaping Handler) {
+        do {
+            try store.delete(Recipe.self, predicate: makePredicate(with: recipe.id))
+            var recipe = recipe
+            recipe.isFavorite = false
+            handler(.presenting(recipe))
+        } catch {
+            handler(.failed(error))
+        }
     }
 
     private func makePredicate(with id: String) -> NSPredicate {

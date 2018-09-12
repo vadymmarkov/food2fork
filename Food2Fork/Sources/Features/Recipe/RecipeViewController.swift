@@ -105,8 +105,8 @@ final class RecipeViewController: UIViewController {
         case .presenting(let recipe):
             self.recipe = recipe
             configureSubviews(with: recipe)
-        case .failed:
-            break
+        case .failed(let error):
+            presenter.present(.alert(error.localizedDescription), in: self)
         }
     }
 
@@ -129,13 +129,8 @@ final class RecipeViewController: UIViewController {
 
     @objc private func handleFavoriteButtonTap() {
         let action = recipe.isFavorite ? logicController.unlike : logicController.like
-
-        do {
-            try action(recipe)
-            recipe.isFavorite = !recipe.isFavorite
-            updateFavoriteButton(isFavorite: recipe.isFavorite)
-        } catch {
-            presenter.present(.alert(error.localizedDescription), in: self)
+        action(recipe) { [weak self] state in
+            self?.render(state)
         }
     }
 

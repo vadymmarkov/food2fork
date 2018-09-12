@@ -81,27 +81,54 @@ final class RecipeLogicControllerTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
 
-    func testLike() throws {
+    func testLike() {
         let recipe = Recipe.makeStub()
         let predicate = NSPredicate(format: "uid = %@", recipe.id)
         let controller = makeController(withMock: Mock(fileName: "recipe.json"))
+        let likeExpectation = expectation(description: "like")
 
-        try controller.like(recipe: recipe)
+        controller.like(recipe: recipe, then: { state in
+            switch state {
+            case .presenting(let recipe):
+                XCTAssertTrue(recipe.isFavorite)
+                do {
+                    let loadedRecipe: Recipe? = try self.store.loadObject(predicate: predicate)
+                    XCTAssertNotNil(loadedRecipe)
+                    likeExpectation.fulfill()
+                } catch {
+                    XCTFail("Failed with: \(error)")
+                }
+            case .loading, .failed:
+                XCTFail("Incorrect state: \(state)")
+            }
+        })
 
-        let loadedRecipe: Recipe? = try store.loadObject(predicate: predicate)
-        XCTAssertNotNil(loadedRecipe)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 
     func testUnlike() throws {
         let recipe = Recipe.makeStub()
         let predicate = NSPredicate(format: "uid = %@", recipe.id)
         let controller = makeController(withMock: Mock(fileName: "recipe.json"))
+        let unlikeExpectation = expectation(description: "like")
 
-        try controller.like(recipe: recipe)
-        try controller.unlike(recipe: recipe)
+        controller.unlike(recipe: recipe, then: { state in
+            switch state {
+            case .presenting(let recipe):
+                XCTAssertFalse(recipe.isFavorite)
+                do {
+                    let loadedRecipe: Recipe? = try self.store.loadObject(predicate: predicate)
+                    XCTAssertNil(loadedRecipe)
+                    unlikeExpectation.fulfill()
+                } catch {
+                    XCTFail("Failed with: \(error)")
+                }
+            case .loading, .failed:
+                XCTFail("Incorrect state: \(state)")
+            }
+        })
 
-        let loadedRecipe: Recipe? = try store.loadObject(predicate: predicate)
-        XCTAssertNil(loadedRecipe)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 
     // MARK: - Private
