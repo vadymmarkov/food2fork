@@ -34,7 +34,7 @@ final class ExploreLogicController {
             .validateStatusCodes()
             .decode(ExploreNetworkResponse.self)
             .done({ [weak self] response in
-                let recipes = self?.updateWithFavorites(recipes: response.recipes) ?? []
+                let recipes = self?.makeRecipesWithFavorites(from: response.recipes) ?? []
                 handler(.presenting(recipes))
             })
             .fail({ error in
@@ -42,7 +42,8 @@ final class ExploreLogicController {
             })
     }
 
-    private func updateWithFavorites(recipes: [Recipe]) -> [Recipe] {
+    /// Sets `isFavorite` to true for every recipe that exists in the local storage of favorite recipes.
+    private func makeRecipesWithFavorites(from recipes: [Recipe]) -> [Recipe] {
         guard let entities = try? store.loadObjects() as [Recipe] else {
             return []
         }

@@ -51,11 +51,13 @@ final class FavoritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = R.color.seashell()
         navigationItem.title = R.string.localizable.favorites()
+        view.backgroundColor = R.color.seashell()
         view.addSubview(tableView)
+
         tableView.insertSubview(refreshControl, at: 0)
         refreshControl.addTarget(self, action: #selector(loadContent), for: .valueChanged)
+
         NSLayoutConstraint.pin(tableView, toView: view)
     }
 

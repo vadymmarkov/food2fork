@@ -8,6 +8,8 @@
 
 import CoreData
 
+// MARK: - Store
+
 protocol ReadableStore {
     func loadObjects<T>() throws -> [T] where T: ManagedObjectInitializable
     func loadObject<T>(predicate: NSPredicate) throws -> T? where T: ManagedObjectInitializable

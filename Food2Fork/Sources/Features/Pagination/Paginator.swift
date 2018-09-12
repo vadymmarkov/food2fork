@@ -13,6 +13,8 @@ final class Paginator {
     var isLastPage = false
     private(set) var page = 1
 
+    // MARK: - Pagination
+
     func next() {
         page += 1
     }

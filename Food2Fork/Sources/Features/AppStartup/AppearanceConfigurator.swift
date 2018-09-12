@@ -14,6 +14,8 @@ final class AppearanceConfigurator: BootstrapConfiguring {
         configureSearchBar()
     }
 
+    // MARK: - Private
+
     private func configureNavigationBar() {
         let navigationBar = UINavigationBar.appearance()
         navigationBar.tintColor = R.color.brand()
