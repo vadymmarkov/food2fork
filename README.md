@@ -30,17 +30,27 @@ let key = "YOUR_API_KEY"
 - Use pull-to-refresh to reload content
 - Open recipe detail by selecting any recipe in the collection view
 
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/explore.png" width="368" height="798" align="center" />
+
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/recipe.png" width="368" height="798" align="right" />
+
 ### Search
 - Search recipes by ingredients or name (3 letters and more)
 - Open search bar by focusing in it or by tapping the `Search` button
 - Scroll to the bottom for pagination
 - Open recipe detail by selecting any recipe in the table view
 
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/search1.png" width="368" height="798" align="left" />
+
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/search2.png" width="368" height="798" align="right" />
+
 ### Favorites
 
 - Save your favorites for later by tapping ❤️ button on the recipe detail screen
 - See your favorite recipes offline (and online 😃) on the `Favorites` tab
 - Open recipe detail by selecting any recipe in the table view
+
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/favorites2.png" width="368" height="798" align="right" />
 
 ## Architecture
 
