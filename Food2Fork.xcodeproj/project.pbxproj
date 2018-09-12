@@ -48,6 +48,7 @@
 		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
 		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
 		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
+		CFBC4ECA21493835000AF1A4 /* APIConfig+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC4EC921493835000AF1A4 /* APIConfig+Keys.swift */; };
 		CFD13FDE2149089E000F8EE0 /* SystemPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD13FDD2149089E000F8EE0 /* SystemPresenterTests.swift */; };
 		CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */; };
 		CFDD33E82147F3610088C465 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E72147F3610088C465 /* Navigator.swift */; };
@@ -169,6 +170,7 @@
 		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
 		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
+		CFBC4EC921493835000AF1A4 /* APIConfig+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIConfig+Keys.swift"; sourceTree = "<group>"; };
 		CFD13FDD2149089E000F8EE0 /* SystemPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPresenterTests.swift; sourceTree = "<group>"; };
 		CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigator.swift; sourceTree = "<group>"; };
 		CFDD33E72147F3610088C465 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -329,7 +331,7 @@
 		CF0C50AB213E9079003989E4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3DFAE214017A900A39C71 /* APIConfig.swift */,
+				CFBC4EC821493814000AF1A4 /* API */,
 				DA25B1152145704C00933167 /* Dimensions.swift */,
 				CFA3DF9D213FF56200A39C71 /* Fonts.swift */,
 				CFA3DF8E213FF0EC00A39C71 /* R.generated.swift */,
@@ -529,6 +531,15 @@
 				CFD13FD8214902D0000F8EE0 /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFBC4EC821493814000AF1A4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3DFAE214017A900A39C71 /* APIConfig.swift */,
+				CFBC4EC921493835000AF1A4 /* APIConfig+Keys.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		CFD13FD72149027C000F8EE0 /* UIKit */ = {
@@ -1156,6 +1167,7 @@
 				DA477C8C214848A80043A5A8 /* NSManagedObjectContext+InMemory.swift in Sources */,
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */,
+				CFBC4ECA21493835000AF1A4 /* APIConfig+Keys.swift in Sources */,
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
 				CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,

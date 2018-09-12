@@ -6,4 +6,11 @@
 //  Copyright © 2018 FINN.no AS. All rights reserved.
 //
 
-import Foundation
+/// Sign up for Food2Fork Recipe API: https://www.food2fork.com/about/api
+/// Uncomment the following code and insert your API key:
+
+//extension APIConfig {
+//    var key: String {
+//        return "YOUR_API_KEY"
+//    }
+//}

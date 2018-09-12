@@ -32,6 +32,8 @@ at [FINN.no](https://github.com/finn-no).
 - Dependency injection is implemented using factory protocols and `DependencyContainer` class,
 which contains all of the app's core utility objects that are directly injected
 as dependencies
+- The core logic of view controllers is extracted into matching logic controllers,
+where each action returns a new state to render as part of a completion handler.
 
 ## Networking
 
@@ -50,5 +52,7 @@ from network
 
 ## API
 
-Food2Fork Recipe API documentation: https://www.food2fork.com/about/api.
-Note that the Free plan allows only 50 API calls per day.
+- Food2Fork Recipe API documentation: https://www.food2fork.com/about/api
+- Note that the Free plan allows only 50 API calls per day
+- If you want to mock requests just open `DependencyContainer.swift` and
+create `Networking` instance with the same `MockProvider` as for UI and Unit tests.
