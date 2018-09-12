@@ -38,3 +38,6 @@ Carthage
 
 # R.swift
 *.generated.swift
+
+# API
+APIConfig+Keys.swift
