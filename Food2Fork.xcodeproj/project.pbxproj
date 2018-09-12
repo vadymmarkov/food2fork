@@ -48,6 +48,7 @@
 		CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */; };
 		CFBBB4E321468D9B008F3943 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */; };
 		CFBBB4E521468F5D008F3943 /* UIViewControllerChildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */; };
+		CFD13FDE2149089E000F8EE0 /* SystemPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD13FDD2149089E000F8EE0 /* SystemPresenterTests.swift */; };
 		CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */; };
 		CFDD33E82147F3610088C465 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E72147F3610088C465 /* Navigator.swift */; };
 		CFDD33EA2147FB1A0088C465 /* SystemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */; };
@@ -77,9 +78,7 @@
 		DA25B12021458AFD00933167 /* BootstrapConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */; };
 		DA25B1222145B08400933167 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1212145B08400933167 /* RoundedLabel.swift */; };
 		DA25B1272145C19200933167 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */; };
-		DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */; };
 		DA25B12B2145D4AC00933167 /* XCUIApplication+Food2Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */; };
-		DA25B12D2145D4FB00933167 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25B12C2145D4FB00933167 /* Utilities.swift */; };
 		DA46518521405229005B3353 /* SearchNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518421405229005B3353 /* SearchNetworkResponse.swift */; };
 		DA46518721405441005B3353 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518621405441005B3353 /* Recipe.swift */; };
 		DA46518A21405DC8005B3353 /* RecipeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */; };
@@ -170,6 +169,7 @@
 		CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackgroundTests.swift; sourceTree = "<group>"; };
 		CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerChildTests.swift; sourceTree = "<group>"; };
+		CFD13FDD2149089E000F8EE0 /* SystemPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPresenterTests.swift; sourceTree = "<group>"; };
 		CFDD33E52147F34A0088C465 /* RecipeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigator.swift; sourceTree = "<group>"; };
 		CFDD33E72147F3610088C465 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPresenter.swift; sourceTree = "<group>"; };
@@ -205,9 +205,7 @@
 		DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapConfiguring.swift; sourceTree = "<group>"; };
 		DA25B1212145B08400933167 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		DA25B1262145C19200933167 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
-		DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTransitionManager.swift; sourceTree = "<group>"; };
 		DA25B12A2145D4AC00933167 /* XCUIApplication+Food2Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Food2Fork.swift"; sourceTree = "<group>"; };
-		DA25B12C2145D4FB00933167 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DA46518421405229005B3353 /* SearchNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworkResponse.swift; sourceTree = "<group>"; };
 		DA46518621405441005B3353 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DA46518921405DC8005B3353 /* RecipeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNetworkResponse.swift; sourceTree = "<group>"; };
@@ -284,14 +282,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF01FCC92146A6A500AD40AF /* Bootstrap */ = {
-			isa = PBXGroup;
-			children = (
-				CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */,
-			);
-			path = Bootstrap;
-			sourceTree = "<group>";
-		};
 		CF01FCCC2146A7DC00AD40AF /* Explore */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,18 +309,19 @@
 		CF0C50A8213E8F0F003989E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CFA1FF4A213ED782001394DB /* App */,
-				DA25B11C21458AD500933167 /* Bootstrap */,
+				CFA1FF4A213ED782001394DB /* AppStartup */,
 				CFA1FF3E213ED597001394DB /* Explore */,
 				CFDD33EC2147FCAC0088C465 /* Factories */,
 				CFA1FF40213ED5CF001394DB /* Favorites */,
 				DA25B0E12141C76400933167 /* Info */,
 				CF91F7CC2147B28D0036EB5E /* Loading */,
+				CFD13FD921490429000F8EE0 /* Navigation */,
 				CFA3DFAA214012C700A39C71 /* Networking */,
 				CF91F7CF2147B81D0036EB5E /* Pagination */,
 				DA4651A421406EDE005B3353 /* PersistenceLayer */,
 				CFA1FF41213ED605001394DB /* Recipe */,
 				CFA1FF3F213ED5C6001394DB /* Search */,
+				CFD13FDA21490560000F8EE0 /* State */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -383,8 +374,8 @@
 			isa = PBXGroup;
 			children = (
 				DA4651A521406EEF005B3353 /* ImageLoader.swift */,
-				CF91F7D42147BAC90036EB5E /* NetworkSession.swift */,
 				CF91F7D62147BC820036EB5E /* NetworkResponseCache.swift */,
+				CF91F7D42147BAC90036EB5E /* NetworkSession.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -428,8 +419,8 @@
 		CF91F7F02147E5EF0036EB5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */,
 				CF91F7EE2147E5EA0036EB5E /* RecipeNetworkResponseTests.swift */,
+				CF91F7EC2147E5DE0036EB5E /* RecipeTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -464,8 +455,8 @@
 		CFA1FF3F213ED5C6001394DB /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B0ED2141DF3300933167 /* SearchViewController.swift */,
 				DA25B0E82141DAC000933167 /* SearchLogicController.swift */,
+				DA25B0ED2141DF3300933167 /* SearchViewController.swift */,
 				DA46518321404D64005B3353 /* Models */,
 			);
 			path = Search;
@@ -493,25 +484,22 @@
 			path = Recipe;
 			sourceTree = "<group>";
 		};
-		CFA1FF4A213ED782001394DB /* App */ = {
+		CFA1FF4A213ED782001394DB /* AppStartup */ = {
 			isa = PBXGroup;
 			children = (
 				CFE067D0213D6F23000E95FC /* AppDelegate.swift */,
+				DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */,
+				DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */,
+				CF91F7DF2147CAF60036EB5E /* Functions.swift */,
 				CFDD33F321480D0B0088C465 /* RootViewController.swift */,
-				CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */,
 			);
-			path = App;
+			path = AppStartup;
 			sourceTree = "<group>";
 		};
 		CFA3DF96213FF37E00A39C71 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
-				CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */,
-				DA465194214061C7005B3353 /* UICollectionView+ReusableCells.swift */,
-				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
-				DA46519021406177005B3353 /* UIView+Extensions.swift */,
-				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
+				CFD13FD72149027C000F8EE0 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,32 +514,86 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		CFBBB4D821468488008F3943 /* App */ = {
+		CFBBB4D821468488008F3943 /* AppStartup */ = {
 			isa = PBXGroup;
 			children = (
+				CF01FCCA2146A6AF00AD40AF /* AppearanceConfiguratorTests.swift */,
 				CFBBB4D921468495008F3943 /* RootViewControllerTests.swift */,
-				CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */,
 			);
-			path = App;
+			path = AppStartup;
 			sourceTree = "<group>";
 		};
 		CFBBB4DD21468AC5008F3943 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */,
-				CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */,
-				CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */,
-				CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */,
+				CFD13FD8214902D0000F8EE0 /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFD13FD72149027C000F8EE0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DA46518E21406068005B3353 /* NSLayoutConstraints+Extensions.swift */,
+				CF5FAC292142C3EA00654E90 /* UIButton+Background.swift */,
+				DA465194214061C7005B3353 /* UICollectionView+ReusableCells.swift */,
+				DA4651922140619A005B3353 /* UITableView+Extensions.swift */,
+				DA46519021406177005B3353 /* UIView+Extensions.swift */,
+				CFA3DF97213FF39200A39C71 /* UIViewController+Child.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CFD13FD8214902D0000F8EE0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CFBBB4DE21468AEA008F3943 /* NSLayoutConstraintsExtensionsTests.swift */,
+				CFBBB4E021468C5E008F3943 /* UIButtonBackgroundTests.swift */,
+				CFBBB4E421468F5D008F3943 /* UIViewControllerChildTests.swift */,
+				CFBBB4E221468D9B008F3943 /* UIViewExtensionsTests.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CFD13FD921490429000F8EE0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CFDD33E72147F3610088C465 /* Navigator.swift */,
+				CFDD33E92147FB1A0088C465 /* SystemPresenter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CFD13FDA21490560000F8EE0 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				DA25B0F42143F04D00933167 /* ViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		CFD13FDB21490625000F8EE0 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				CFBBB4DB2146865F008F3943 /* DependencyContainerTests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		CFD13FDC21490888000F8EE0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CFD13FDD2149089E000F8EE0 /* SystemPresenterTests.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		CFDD33EC2147FCAC0088C465 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				CFA1FF3A213ED49A001394DB /* DependencyContainer.swift */,
-				CFA1FF3C213ED4E7001394DB /* ViewControllerFactory.swift */,
 				CFDD33F1214802250088C465 /* DependencyContainer+Factory.swift */,
+				CFA1FF3C213ED4E7001394DB /* ViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -625,7 +667,6 @@
 				CF0C50AB213E9079003989E4 /* Constants */,
 				CFA3DF96213FF37E00A39C71 /* Extensions */,
 				CF0C50A8213E8F0F003989E4 /* Features */,
-				DA25B0F32143F03100933167 /* Library */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -676,19 +717,6 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
-		DA25B0F32143F03100933167 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				CF91F7DF2147CAF60036EB5E /* Functions.swift */,
-				DA25B1282145CD8C00933167 /* LaunchTransitionManager.swift */,
-				DA25B1212145B08400933167 /* RoundedLabel.swift */,
-				DA25B12C2145D4FB00933167 /* Utilities.swift */,
-				DA25B0F42143F04D00933167 /* ViewState.swift */,
-				CFDD33E72147F3610088C465 /* Navigator.swift */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
 		DA25B102214554D800933167 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,10 +738,11 @@
 		DA25B1082145574B00933167 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CFBBB4D821468488008F3943 /* App */,
-				CF01FCC92146A6A500AD40AF /* Bootstrap */,
+				CFBBB4D821468488008F3943 /* AppStartup */,
 				CF01FCCC2146A7DC00AD40AF /* Explore */,
+				CFD13FDB21490625000F8EE0 /* Factories */,
 				CF01FCCD2146A7E500AD40AF /* Favorites */,
+				CFD13FDC21490888000F8EE0 /* Navigation */,
 				CF91F7DA2147BCFD0036EB5E /* Networking */,
 				CF91F7D02147B8380036EB5E /* Pagination */,
 				DA25B10B214557AF00933167 /* PersistenceLayer */,
@@ -726,8 +755,8 @@
 		DA25B10B214557AF00933167 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */,
 				CF91F7E72147DEE10036EB5E /* NSManagedObjectContextStoreTests.swift */,
+				DA25B10C214557CB00933167 /* RecipeManagedObjectConvertibleTests.swift */,
 			);
 			path = PersistenceLayer;
 			sourceTree = "<group>";
@@ -737,17 +766,9 @@
 			children = (
 				DA25B10F21455F6800933167 /* RecipeHeaderView.swift */,
 				DA25B1112145618C00933167 /* RecipeIngredientsView.swift */,
+				DA25B1212145B08400933167 /* RoundedLabel.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DA25B11C21458AD500933167 /* Bootstrap */ = {
-			isa = PBXGroup;
-			children = (
-				DA25B11D21458AE400933167 /* AppearanceConfigurator.swift */,
-				DA25B11F21458AFD00933167 /* BootstrapConfiguring.swift */,
-			);
-			path = Bootstrap;
 			sourceTree = "<group>";
 		};
 		DA25B1252145C17E00933167 /* Views */ = {
@@ -787,8 +808,8 @@
 		DA4651A421406EDE005B3353 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */,
 				DA91F6EA214704F7005EC2E1 /* NSManagedObjectContext+InMemory.swift */,
+				DA25B1002145476B00933167 /* NSManagedObjectContext+Store.swift */,
 				DA25B1072145554900933167 /* Conversions */,
 				DA25B102214554D800933167 /* Entities */,
 			);
@@ -1107,7 +1128,6 @@
 			files = (
 				DA25B105214554EF00933167 /* RecipeEntity+CoreDataClass.swift in Sources */,
 				CFA3DF98213FF39200A39C71 /* UIViewController+Child.swift in Sources */,
-				DA25B1292145CD8C00933167 /* LaunchTransitionManager.swift in Sources */,
 				CF91F7E02147CAF60036EB5E /* Functions.swift in Sources */,
 				CFE067D9213D6F23000E95FC /* Food2Fork.xcdatamodeld in Sources */,
 				CF91F7D72147BC820036EB5E /* NetworkResponseCache.swift in Sources */,
@@ -1137,7 +1157,6 @@
 				CFE067D1213D6F23000E95FC /* AppDelegate.swift in Sources */,
 				CFDD33E62147F34A0088C465 /* RecipeNavigator.swift in Sources */,
 				DA25B0F92145375D00933167 /* ManagedObjectConvertible.swift in Sources */,
-				DA25B12D2145D4FB00933167 /* Utilities.swift in Sources */,
 				CF5FAC28214291C800654E90 /* SearchSort.swift in Sources */,
 				CFA3DF8F213FF0EC00A39C71 /* R.generated.swift in Sources */,
 				DA25B1162145704C00933167 /* Dimensions.swift in Sources */,
@@ -1188,6 +1207,7 @@
 				CF91F7E22147D6450036EB5E /* DataDecodableTests.swift in Sources */,
 				CF91F7E62147DB710036EB5E /* EndpointTests.swift in Sources */,
 				CF91F7F82147EBBA0036EB5E /* SearchNetworkResponseTests.swift in Sources */,
+				CFD13FDE2149089E000F8EE0 /* SystemPresenterTests.swift in Sources */,
 				CF91F7ED2147E5DE0036EB5E /* RecipeTests.swift in Sources */,
 				CF91F7F52147EB180036EB5E /* SearchLogicControllerTests.swift in Sources */,
 				CFBBB4E121468C5E008F3943 /* UIButtonBackgroundTests.swift in Sources */,

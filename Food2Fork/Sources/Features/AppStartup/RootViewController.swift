@@ -37,14 +37,28 @@ private extension RootViewController {
     func startLaunch() {
         let launchViewController = viewControllerFactory.makeLaunchViewController()
         let snapshotView = launchViewController.view.makeSnapshot()
-        let transitionManager = LaunchTransitionManager()
 
         startMain()
-        transitionManager.animateAppearance(of: self, snapshotView: snapshotView)
+        animateAppearance(of: self, snapshotView: snapshotView)
     }
 
     func startMain() {
         let viewController = viewControllerFactory.makeMainViewController()
         add(childViewController: viewController)
+    }
+
+    private func animateAppearance(of viewController: UIViewController, snapshotView: UIImageView) {
+        viewController.view.addSubview(snapshotView)
+
+        UIView.animate(
+            withDuration: 0.8,
+            animations: ({
+                snapshotView.transform = CGAffineTransform(scaleX: 2, y: 2)
+                snapshotView.alpha = 0
+            }),
+            completion: ({ _ in
+                snapshotView.removeFromSuperview()
+            })
+        )
     }
 }
