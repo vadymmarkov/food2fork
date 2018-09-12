@@ -13,7 +13,6 @@ final class ExploreViewController: UIViewController {
     private let navigator: RecipeNavigator
     private let logicController: ExploreLogicController
     private let imageLoader: ImageLoader
-    private let paginator = Paginator()
     private var recipes = [Recipe]()
 
     private lazy var refreshControl = UIRefreshControl()
@@ -80,16 +79,9 @@ final class ExploreViewController: UIViewController {
     // MARK: - Content
 
     @objc private func reload() {
-        paginator.reset()
         render(.loading)
-        loadContent()
-    }
-
-    private func loadContent() {
-        paginator.isLocked = true
-        logicController.load(page: paginator.page, then: { [weak self] state in
+        logicController.load(then: { [weak self] state in
             self?.render(state)
-            self?.paginator.isLocked = false
         })
     }
 
@@ -102,12 +94,7 @@ final class ExploreViewController: UIViewController {
                 add(childViewController: viewControllerFactory.makeLoadingViewController())
             }
         case .presenting(let recipes):
-            if paginator.page == 0 {
-                self.recipes = recipes
-            } else {
-                self.recipes.append(contentsOf: recipes)
-            }
-            paginator.isLastPage = recipes.isEmpty
+            self.recipes = recipes
             collectionView.reloadData()
 
             if self.recipes.isEmpty {
@@ -174,13 +161,5 @@ extension ExploreViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let recipe = recipes[indexPath.item]
         navigator.navigate(to: recipe)
-    }
-
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard paginator.shouldPaginate(scrollView: scrollView) else {
-            return
-        }
-        paginator.next()
-        loadContent()
     }
 }

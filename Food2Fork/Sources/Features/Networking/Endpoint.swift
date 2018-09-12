@@ -14,7 +14,7 @@ enum Endpoint: RequestConvertible {
     static var baseUrl: URLStringConvertible?
     static var headers: [String: String] = [:]
 
-    case explore(page: Int)
+    case explore
     case search(text: String, sort: SearchSort, page: Int)
     case recipe(id: String)
 }
@@ -24,9 +24,8 @@ enum Endpoint: RequestConvertible {
 extension Endpoint {
     var request: Request {
         switch self {
-        case let .explore(page):
-            let parameters: [String: Any] = ["page": page]
-            return Request.get("search", parameters: parameters)
+        case .explore:
+            return Request.get("search")
         case let .search(text, sort, page):
             let parameters: [String: Any] = [
                 "q": text,
