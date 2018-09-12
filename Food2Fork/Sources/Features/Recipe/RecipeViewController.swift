@@ -108,6 +108,10 @@ final class RecipeViewController: UIViewController {
         case .failed(let error):
             presenter.present(.alert(error.localizedDescription), in: self)
         }
+
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
     }
 
     private func configureSubviews(with recipe: Recipe) {
