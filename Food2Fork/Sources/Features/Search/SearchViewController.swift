@@ -100,7 +100,7 @@ final class SearchViewController: UIViewController {
         case .loading:
             add(childViewController: makeInfoViewController())
         case .presenting(let recipes):
-            if paginator.page == 0 {
+            if paginator.page == 1 {
                 self.recipes = recipes
             } else {
                 self.recipes.append(contentsOf: recipes)

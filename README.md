@@ -26,9 +26,8 @@ let key = "YOUR_API_KEY"
 
 ### Explore
 
-- Discover new recipes from different publishers sorted by rating
+- Discover top 30 recipes from different publishers sorted by rating
 - Use pull-to-refresh to reload content
-- Scroll to the bottom for pagination
 - Open recipe detail by selecting any recipe in the collection view
 
 ### Search

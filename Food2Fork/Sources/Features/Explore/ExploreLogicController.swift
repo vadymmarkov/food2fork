@@ -27,10 +27,10 @@ final class ExploreLogicController {
 
     // MARK: - Logic
 
-    func load(page: Int, then handler: @escaping Handler) {
+    func load(then handler: @escaping Handler) {
         currentRequestPromise?.cancel()
         networking
-            .request(.explore(page: page))
+            .request(.explore)
             .validateStatusCodes()
             .decode(ExploreNetworkResponse.self)
             .done({ [weak self] response in
