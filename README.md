@@ -30,9 +30,9 @@ let key = "YOUR_API_KEY"
 - Use pull-to-refresh to reload content
 - Open recipe detail by selecting any recipe in the collection view
 
-<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/explore.png" width="368" height="798" align="center" />
+<img src="https://github.com/vadymmarkov/food2fork/blob/master/Images/explore.png" width="368" height="798" align="center" />
 
-<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/recipe.png" width="368" height="798" align="right" />
+<img src="https://github.com/vadymmarkov/food2fork/blob/master/Images/recipe.png" width="368" height="798" align="right" />
 
 ### Search
 - Search recipes by ingredients or name (3 letters and more)
@@ -40,9 +40,9 @@ let key = "YOUR_API_KEY"
 - Scroll to the bottom for pagination
 - Open recipe detail by selecting any recipe in the table view
 
-<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/search1.png" width="368" height="798" align="left" />
+<img src="https://github.com/vadymmarkov/food2fork/blob/master/Images/search1.png" width="368" height="798" align="left" />
 
-<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/search2.png" width="368" height="798" align="right" />
+<img src="https://github.com/vadymmarkov/food2fork/blob/master/Images/search2.png" width="368" height="798" align="right" />
 
 ### Favorites
 
@@ -50,7 +50,7 @@ let key = "YOUR_API_KEY"
 - See your favorite recipes offline (and online 😃) on the `Favorites` tab
 - Open recipe detail by selecting any recipe in the table view
 
-<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/favorites2.png" width="368" height="798" align="right" />
+<img src="https://github.com/vadymmarkov/food2fork/blob/master/Images/favorites2.png" width="368" height="798" align="right" />
 
 ## Architecture
 
