@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SafariServices
 @testable import Food2Fork
 
 final class DependencyContainerTests: XCTestCase {
@@ -84,6 +85,12 @@ final class DependencyContainerTests: XCTestCase {
         XCTAssertEqual(alertController.message, "Test")
         XCTAssertEqual(alertController.actions.first?.title, R.string.localizable.ok())
         XCTAssertEqual(alertController.actions.first?.style, .default)
+    }
+
+    func testMakeWebViewController() {
+        let url = URL(string: "https://test.com")!
+        let viewController = container.makeWebViewController(for: url) as? SFSafariViewController
+        XCTAssertEqual(viewController?.preferredControlTintColor, R.color.brand())
     }
 }
 
